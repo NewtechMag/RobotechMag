@@ -2,71 +2,74 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Voitures autonomes : les constructeurs passent la seconde</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voiture autonome : les constructeurs passent la seconde vitesse</title>
+  <link rel="stylesheet" href="article.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
 </head>
 <body>
-  <!-- En-tête avec logo animé -->
+
+  <!-- LOGO -->
   <header>
-    <div class="logo-container">
-      <lottie-player
-        src="https://www.dropbox.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&dl=1"
-        background="transparent"
-        speed="1"
-        style="position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 180px; height: 180px; z-index: 0;"
-        loop
-        autoplay>
-      </lottie-player>
-      <h1 class="site-title">NEWTECH MAG</h1>
+    <div class="logo-wrapper">
+      <div id="lottie-animation"></div>
+      <div class="logo-container">
+        <div class="logo">
+          <span class="logo-part-new">NEW</span><span class="logo-part-tech">TECH</span>
+        </div>
+      </div>
     </div>
-    <nav>
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
       <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">À propos</a></li>
+        <li><a href="#">IA</a></li>
+        <li><a href="#">Domotique</a></li>
+        <li><a href="#">Compagnon</a></li>
+        <li><a href="#">Santé</a></li>
+        <li><a href="#">Éducation</a></li>
+        <li><a href="#">Défense</a></li>
+        <li><a href="#">Sécurité</a></li>
+        <li><a href="#">Industrie</a></li>
+        <li><a href="#">Insolite</a></li>
+        <li><a href="#">Culture Pop</a></li>
+        <li><a href="#">Coups de cœur</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Article -->
+  <!-- ARTICLE -->
   <main class="article-container">
-    <h1>🚗 Voitures autonomes : les constructeurs passent la seconde</h1>
+    <h1>Voiture autonome : les constructeurs passent la seconde vitesse</h1>
+    <p class="date">Publié le 3 mai 2025</p>
+    <img src="images/Waymo_Austin.jpg" alt="Toyota et Waymo" class="article-image" />
 
-    <h2>L’innovation la plus fantasmée des films rétro-futuristes des années 80 s’impose aujourd’hui comme l’une des révolutions majeures du secteur automobile.</h2>
-    <p>La voiture autonome, autrefois simple délire de science-fiction, se matérialise aujourd’hui dans nos rues, portée par les géants de la tech et les constructeurs traditionnels. Avec des promesses de sécurité accrue, d’accessibilité et de transformation des modes de déplacement, l’autonomie véhicule une vision ambitieuse de l’avenir de la mobilité.</p>
+    <p>Innovation longtemps fantasmée dans les films rétro-futuristes des années 80, la voiture autonome s’impose aujourd’hui comme l’un des piliers les plus ambitieux de la mobilité moderne. Des prototypes aux essais publics, en passant par les premières flottes de robotaxis, les grands constructeurs automobiles redoublent d’efforts pour rendre cette technologie accessible, sûre et efficace.</p>
 
-    <h2>Waymo et Toyota : un partenariat stratégique pour démocratiser l’autonomie</h2>
-    <p>Waymo, filiale d’Alphabet (Google), continue d’asseoir sa position de leader dans le domaine des véhicules autonomes. Récemment, l’entreprise a annoncé une collaboration stratégique avec Toyota Motor Corp. et sa division logicielle Woven by Toyota. Leur objectif : accélérer le développement et la mise en circulation de véhicules autonomes accessibles au grand public.</p>
+    <h2>Waymo et Toyota : un partenariat stratégique</h2>
+    <p>Waymo, filiale d'Alphabet (Google), a annoncé une collaboration avec Toyota pour accélérer le développement des véhicules autonomes. Le projet implique également Woven by Toyota, la division logicielle du constructeur japonais.</p>
+    <p>« Waymo souhaite devenir le conducteur le plus fiable au monde », a déclaré Tekedra Mawakana, co-PDG de l'entreprise. Cette ambition passe par des partenaires comme Toyota, qui partagent une vision de sécurité routière accrue et de mobilité accessible.</p>
+    <p>Le partenariat prévoit l’intégration des technologies Waymo dans les véhicules Toyota, notamment dans les flottes de robotaxis mais aussi dans les véhicules personnels à long terme. Fort de ses millions de kilomètres parcourus et de sa présence dans plusieurs grandes villes américaines, Waymo affirme que ses AV réduisent de 81 % les accidents avec blessures par rapport à la moyenne humaine.</p>
 
-    <p>« Waymo’s mission is to be the world’s most trusted driver, » a déclaré Tekedra Mawakana, co-PDG de Waymo. L’entreprise affirme déjà fournir plus de <strong>250 000 trajets hebdomadaires</strong> dans des villes comme San Francisco, Los Angeles, Phoenix ou Austin, et ses véhicules auraient causé <strong>81 % de collisions avec blessures en moins</strong> que les conducteurs humains.</p>
+    <h2>D'autres constructeurs sur la ligne de départ</h2>
+    <p>Si Waymo occupe le devant de la scène, d'autres acteurs majeurs multiplient les initiatives. Tesla reste fidèle à son approche "Full Self-Driving", misant sur des mises à jour logicielles régulières et l’exploitation massive des données collectées sur route. Mercedes-Benz, de son côté, a obtenu l’homologation de son système Drive Pilot en Allemagne, permettant une autonomie de niveau 3 dans certaines conditions.</p>
+    <p>Ford et General Motors (via sa filiale Cruise) poursuivent également leurs tests dans plusieurs villes américaines. En Asie, Nissan, Hyundai et Baidu (avec Apollo Go) déploient progressivement des services de transport autonome dans des zones urbaines bien définies.</p>
 
-    <p>Cette alliance vise à intégrer la technologie de conduite autonome de Waymo à des véhicules particuliers (POVs), au-delà de ses robotaxis actuels. Toyota, qui possède déjà des systèmes avancés comme <strong>Toyota Safety Sense (TSS)</strong>, apporte son expertise technique pour créer une plateforme commune pour les véhicules autonomes de prochaine génération.</p>
-
-    <p>« Nous partageons une même vision avec Waymo : celle d’une société sans accident de la route », a affirmé Hiroki Nakajima, vice-président exécutif chez Toyota. Une telle collaboration pourrait redéfinir l’expérience de conduite pour des millions d’utilisateurs à travers le monde.</p>
-
-    <h2>Une course mondiale : Tesla, Mercedes, Cruise… tous sur la ligne de départ</h2>
-    <p>Mais Waymo et Toyota ne sont pas seuls. De nombreux acteurs mondiaux se livrent une compétition acharnée pour faire de la conduite autonome une réalité tangible.</p>
-
-    <p><strong>Tesla</strong> mise sur sa technologie <em>Autopilot</em> et le système <em>Full Self-Driving</em> (FSD), disponibles en version bêta pour certains conducteurs. Malgré des critiques liées à la sécurité, le constructeur californien continue d’innover par des mises à jour logicielles fréquentes et un réseau de données colossal.</p>
-
-    <p>En Europe, <strong>Mercedes-Benz</strong> a pris une avance notable avec <strong>Drive Pilot</strong>, un système de niveau 3 autorisé légalement sur certaines portions d’autoroute en Allemagne. Il permet au conducteur de déléguer complètement le contrôle du véhicule dans des conditions définies.</p>
-
-    <p><strong>Cruise</strong>, filiale de General Motors, déploie déjà ses robotaxis dans certaines villes américaines. <strong>Aurora</strong>, <strong>Zoox</strong> (Amazon), ou encore <strong>Nuro</strong>, spécialisé dans la livraison autonome, participent également à cette révolution.</p>
-
-    <p>Les constructeurs historiques comme <strong>BMW</strong>, <strong>Audi</strong>, ou <strong>Honda</strong> intègrent de plus en plus de fonctionnalités ADAS dans leurs gammes. La diversité des approches témoigne d’un secteur en pleine effervescence.</p>
-
-    <h2>Une route encore semée d’obstacles</h2>
-    <p>Malgré des avancées impressionnantes, la généralisation des voitures autonomes reste un défi de taille. Les <strong>questions réglementaires</strong>, la <strong>gestion des données</strong>, l’<strong>adaptation des infrastructures</strong> et les <strong>aspects éthiques</strong> freinent encore leur adoption massive.</p>
-
-    <p>La sécurité reste bien sûr la priorité absolue. Si les tests sont nombreux, les systèmes doivent encore prouver leur fiabilité dans des environnements complexes, face à l’imprévisibilité du comportement humain.</p>
-
-    <p>Mais le virage est pris. De l’assistance à la conduite à la suppression totale du volant, chaque innovation nous rapproche un peu plus d’un futur où la voiture se conduit toute seule — et peut-être même mieux que nous.</p>
-
-    <br><br>
-    <a href="index.html">← Retour à l'accueil</a>
+    <h2>Quels enjeux pour demain ?</h2>
+    <p>Au-delà des performances techniques, les véhicules autonomes posent des défis majeurs. La fiabilité des capteurs, la gestion des données, la cybersécurité, la cohabitation avec les conducteurs humains et les cadres juridiques représentent des chantiers ouverts. À cela s’ajoute une interrogation sociétale : quel modèle de mobilité pour demain ? Propriété privée, partage de véhicules, robotaxis ?</p>
+    <p>Une chose est certaine : les constructeurs passent la seconde. Et la route vers une mobilité autonome, bien que semée d’embûches, semble désormais bien tracée.</p>
   </main>
+
+  <script>
+    // Animation Lottie
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+    });
+  </script>
 </body>
 </html>
