@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Voitures Autonomes : Les Constructeurs Passent la Seconde</title>
-  <link rel="stylesheet" href="style.css" /> <!-- Lien vers ton CSS global -->
-  <link rel="stylesheet" href="article-style.css" /> <!-- Lien vers un CSS spécifique à l'article (si tu en as un) -->
+  <title>NEWTECH - Nouvelles Technologies</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
 </head>
 <body>
@@ -39,29 +38,45 @@
     </nav>
   </header>
 
-  <!-- SECTION ARTICLE -->
-  <section class="article-container">
-    <article>
-      <h1>Voitures Autonomes : Les Constructeurs Passent la Seconde</h1>
+  <!-- SECTION À LA UNE -->
+  <section class="a-la-une">
+    <div class="headline-banner">
+      <h2>À la Une</h2>
+    </div>
 
-      <p>Innovation la plus fantasmée des films rétro-futuristes des années 80, la voiture autonome s'impose aujourd'hui comme l'une des technologies les plus attendues du XXIe siècle. Elle suscite autant d'espoirs que d'inquiétudes, car son arrivée transforme en profondeur la manière dont nous concevons la mobilité et la sécurité routière.</p>
-
-      <h2>Les autres modèles de voitures autonomes</h2>
-      <p>Les constructeurs traditionnels ne sont pas en reste, avec des modèles de voitures autonomes qui n'ont rien à envier à la vision futuriste. Tesla, par exemple, a été un des premiers à lancer son système Autopilot, une technologie qui permet une conduite semi-autonome. Cependant, le constructeur américain va encore plus loin en développant un système totalement autonome. D'autres marques comme General Motors, Ford, Audi ou encore BMW ont également investi massivement dans les voitures autonomes, chacune cherchant à développer des véhicules capables de naviguer sans intervention humaine.</p>
-
-      <h2>Waymo : Une vision pour l'avenir</h2>
-      <p>Waymo, une filiale d'Alphabet (la maison mère de Google), est l'une des entreprises pionnières dans le domaine des véhicules autonomes. Ce n'est pas un constructeur automobile, mais une entreprise qui développe une technologie de conduite autonome pour les véhicules existants. Son partenariat stratégique avec Toyota vise à intégrer cette technologie à une gamme plus large de voitures et même à des véhicules personnels, au-delà des robotaxis. Waymo se distingue par son expérience de la conduite autonome sur les routes publiques, avec des millions de kilomètres parcourus et une sécurité améliorée par rapport aux conducteurs humains.</p>
-
-      <h2>Enjeux techniques et défis à relever</h2>
-      <p>Bien que la voiture autonome semble proche de la réalité, plusieurs défis techniques restent à surmonter avant qu'elles ne soient largement adoptées. Parmi ces défis, on compte la fiabilité des capteurs, la gestion des situations imprévues sur la route, ainsi que les questions liées à l'infrastructure routière. De plus, l'acceptation sociale et les questions éthiques, comme la responsabilité en cas d'accident, sont des enjeux importants qui détermineront l'avenir de cette technologie.</p>
-    </article>
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <a href="article-voiture-autonome.html" class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1000&q=80');">
+          <div class="overlay">
+            <h3>Voitures autonomes : les constructeurs passent la seconde</h3>
+            <p>Zoom sur les ambitions de Waymo, Tesla, Toyota et d'autres...</p>
+          </div>
+        </a>
+        <a href="#" class="carousel-item" style="background-image: url('https://picsum.photos/id/1011/1000/600');">
+          <div class="overlay">
+            <h3>Les robots au service de la santé</h3>
+            <p>Zoom sur les dernières innovations médicales robotiques</p>
+          </div>
+        </a>
+        <a href="#" class="carousel-item" style="background-image: url('https://picsum.photos/id/1025/1000/600');">
+          <div class="overlay">
+            <h3>Domotique et confort moderne</h3>
+            <p>Quand les maisons s’adaptent à nos besoins</p>
+          </div>
+        </a>
+        <a href="#" class="carousel-item" style="background-image: url('https://picsum.photos/id/1041/1000/600');">
+          <div class="overlay">
+            <h3>IA et éducation</h3>
+            <p>Transformer l'apprentissage grâce à l’intelligence artificielle</p>
+          </div>
+        </a>
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
   </section>
 
-  <!-- Footer ici -->
-  <footer>
-    <!-- Infos de bas de page -->
-  </footer>
-
+  <!-- LOTTIE & CAROUSEL SCRIPTS -->
   <script>
     // Animation Lottie
     lottie.loadAnimation({
@@ -70,6 +85,21 @@
       loop: true,
       autoplay: true,
       path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+    });
+
+    // Carousel
+    const track = document.querySelector('.carousel-track');
+    const items = Array.from(track.children);
+    let currentIndex = 0;
+
+    document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % items.length;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+
+    document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     });
   </script>
 </body>
