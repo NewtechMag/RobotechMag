@@ -164,3 +164,9 @@ header {
 .video-wrapper {
   margin: 30px 0;
 }
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #fefefe;
+}
+
