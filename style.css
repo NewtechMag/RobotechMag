@@ -173,63 +173,42 @@ body {
 .carousel-btn.next {
   right: 10px;
 }
- @media (max-width: 600px) {
-  .logo {
-    font-size: 48px;
-  }
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
-  #lottie-animation {
-    top: -30px;
-    width: 100px;
-    height: 100px;
-  }
-
+@media (max-width: 600px) {
   .main-nav {
-    overflow-x: auto;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0 10px;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   .main-nav ul {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 12px;
-    padding: 0;
-    margin: 0;
-    white-space: nowrap;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
   }
 
-  .main-nav li {
-    flex: 0 0 auto;
+  .main-nav ul.show {
+    display: flex;
   }
 
   .main-nav a {
-    font-size: 12px;
-    padding: 6px 8px;
-    white-space: nowrap;
-  }
-
-  .a-la-une {
-    padding: 0 10px;
-  }
-
-  .headline-banner h2 {
-    font-size: 20px;
-  }
-
-  .carousel-item {
-    height: 220px;
-  }
-
-  .carousel-btn {
-    font-size: 24px;
+    font-size: 14px;
     padding: 6px 10px;
-  }
-
-  .overlay h3 {
-    font-size: 16px;
-  }
-
-  .overlay p {
-    font-size: 12px;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
   }
 }
