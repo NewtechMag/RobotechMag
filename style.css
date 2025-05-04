@@ -173,3 +173,50 @@ body {
 .carousel-btn.next {
   right: 10px;
 }
+@media (max-width: 768px) {
+  .logo {
+    font-size: 48px;
+  }
+
+  #lottie-animation {
+    top: -30px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+
+  .a-la-une {
+    padding: 0 10px;
+  }
+
+  .headline-banner h2 {
+    font-size: 20px;
+  }
+
+  .carousel-item {
+    height: 220px;
+  }
+
+  .carousel-btn {
+    font-size: 24px;
+    padding: 6px 10px;
+  }
+
+  .overlay h3 {
+    font-size: 16px;
+  }
+
+  .overlay p {
+    font-size: 12px;
+  }
+}
+
