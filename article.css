@@ -122,3 +122,7 @@ body {
   margin-top: 8px;
   margin-bottom: 20px;
 }
+.video-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+}
