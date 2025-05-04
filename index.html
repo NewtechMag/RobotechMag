@@ -110,6 +110,14 @@
     document.querySelector('.main-nav ul').classList.toggle('show');
   });
 </script>
+  <script>
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1024) {
+        // Ferme le menu burger si ouvert
+        document.querySelector('.mobile-menu').classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
 
