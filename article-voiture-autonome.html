@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Voiture autonome : les constructeurs passent la seconde vitesse</title>
-  <link rel="stylesheet" href="article.css" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -23,10 +23,8 @@
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
-      <div class="burger" id="burger">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul id="nav-links">
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+      <ul>
         <li><a href="index.html"><i class="fas fa-robot"></i></a></li>
         <li><a href="#">Robotique</a></li>
         <li><a href="#">IA</a></li>
@@ -80,9 +78,8 @@
     <p>Une chose est certaine : les constructeurs passent la seconde. Et la route vers une mobilité autonome, bien que semée d’embûches, semble désormais bien tracée.</p>
   </main>
 
-  <!-- Scripts -->
   <script>
-    // Lottie animation
+    // Animation Lottie
     lottie.loadAnimation({
       container: document.getElementById('lottie-animation'),
       renderer: 'svg',
@@ -92,11 +89,8 @@
     });
 
     // Menu burger
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+      document.querySelector(".main-nav ul").classList.toggle("open");
     });
   </script>
 </body>
