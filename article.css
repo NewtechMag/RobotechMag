@@ -80,18 +80,24 @@ header {
 }
 
 /* Burger menu */
-.burger {
+/* ...reste du CSS inchangé... */
+
+/* Burger menu */
+.menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   color: #fff;
-  padding: 10px;
+  padding: 10px 20px;
+  background: none;
+  border: none;
   cursor: pointer;
-  text-align: right;
 }
 
 @media (max-width: 768px) {
-  .burger {
+  .menu-toggle {
     display: block;
+    text-align: right;
+    width: 100%;
   }
 
   .main-nav ul {
@@ -101,7 +107,7 @@ header {
     width: 100%;
   }
 
-  .main-nav ul.show {
+  .main-nav ul.open {
     display: flex;
   }
 
