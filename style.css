@@ -173,7 +173,7 @@ body {
 .carousel-btn.next {
   right: 10px;
 }
-@media (max-width: 768px) {
+ @media (max-width: 600px) {
   .logo {
     font-size: 48px;
   }
@@ -184,14 +184,24 @@ body {
     height: 100px;
   }
 
+ 
+  .main-nav {
+    overflow-x: auto;
+    padding: 0 10px;
+  }
+
   .main-nav ul {
-    align-items: center;
-    gap: 10px;
+    flex-wrap: nowrap;
+    gap: 12px;
   }
 
   .main-nav a {
-    font-size: 14px;
+    font-size: 12px;
+    padding: 6px 8px;
+    white-space: nowrap;
   }
+}
+
 
   .a-la-une {
     padding: 0 10px;
