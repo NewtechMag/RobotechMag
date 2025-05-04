@@ -121,6 +121,11 @@ header {
   padding: 30px 20px;
   background-color: #fff;
 }
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #fefefe;
+}
 
 .article-container h1 {
   font-size: 32px;
@@ -163,10 +168,5 @@ header {
 /* Vidéo */
 .video-wrapper {
   margin: 30px 0;
-}
-main {
-  display: flex;
-  justify-content: center;
-  background-color: #fefefe;
 }
 
