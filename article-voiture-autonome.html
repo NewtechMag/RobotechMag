@@ -23,7 +23,10 @@
 
     <!-- NAVIGATION -->
     <nav class="main-nav">
-      <ul>
+      <div class="burger" id="burger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul id="nav-links">
         <li><a href="index.html"><i class="fas fa-robot"></i></a></li>
         <li><a href="#">Robotique</a></li>
         <li><a href="#">IA</a></li>
@@ -33,7 +36,7 @@
         <li><a href="#">Sécurité</a></li>
         <li><a href="#">Automobile</a></li>
         <li><a href="#">Industrie</a></li>
-        <li><a href="#">Évènement</a></li>
+        <li><a href="#">Evènement</a></li>
         <li><a href="#">Culture</a></li>
         <li><a href="#">Coups de cœur</a></li>
         <li><a href="#">Contact</a></li>
@@ -48,10 +51,12 @@
     <img src="Waymo_Austin.jpg" alt="Toyota et Waymo" class="article-image" />
     <p class="image-caption">Waymo déploie ses robotaxis à Austin</p>
 
-    <p>Innovation longtemps fantasmée dans les films rétro-futuristes des années 80, la voiture autonome s’impose aujourd’hui comme l’un des piliers les plus ambitieux de la mobilité moderne...</p>
+    <p>Innovation longtemps fantasmée dans les films rétro-futuristes des années 80, la voiture autonome s’impose aujourd’hui comme l’un des piliers les plus ambitieux de la mobilité moderne. Des prototypes aux essais publics, en passant par les premières flottes de robotaxis, les grands constructeurs automobiles redoublent d’efforts pour rendre cette technologie accessible, sûre et efficace.</p>
 
     <h2>Waymo et Toyota : un partenariat stratégique</h2>
-    <p>Waymo, filiale d'Alphabet (Google), a annoncé une collaboration avec Toyota...</p>
+    <p>Waymo, filiale d'Alphabet (Google), a annoncé une collaboration avec Toyota pour accélérer le développement des véhicules autonomes. Le projet implique également Woven by Toyota, la division logicielle du constructeur japonais.</p>
+    <p>« Waymo souhaite devenir le conducteur le plus fiable au monde », a déclaré Tekedra Mawakana, co-PDG de l'entreprise. Cette ambition passe par des partenaires comme Toyota, qui partagent une vision de sécurité routière accrue et de mobilité accessible.</p>
+    <p>Le partenariat prévoit l’intégration des technologies Waymo dans les véhicules Toyota, notamment dans les flottes de robotaxis mais aussi dans les véhicules personnels à long terme. Fort de ses millions de kilomètres parcourus et de sa présence dans plusieurs grandes villes américaines, Waymo affirme que ses AV réduisent de 81 % les accidents avec blessures par rapport à la moyenne humaine.</p>
 
     <div class="video-wrapper">
       <iframe 
@@ -67,20 +72,31 @@
     </div>
 
     <h2>D'autres constructeurs sur la ligne de départ</h2>
-    <p>Si Waymo occupe le devant de la scène...</p>
+    <p>Si Waymo occupe le devant de la scène, d'autres acteurs majeurs multiplient les initiatives. Tesla reste fidèle à son approche "Full Self-Driving", misant sur des mises à jour logicielles régulières et l’exploitation massive des données collectées sur route. Mercedes-Benz, de son côté, a obtenu l’homologation de son système Drive Pilot en Allemagne, permettant une autonomie de niveau 3 dans certaines conditions.</p>
+    <p>Ford et General Motors (via sa filiale Cruise) poursuivent également leurs tests dans plusieurs villes américaines. En Asie, Nissan, Hyundai et Baidu (avec Apollo Go) déploient progressivement des services de transport autonome dans des zones urbaines bien définies.</p>
 
     <h2>Quels enjeux pour demain ?</h2>
-    <p>Au-delà des performances techniques, les véhicules autonomes posent des défis majeurs...</p>
+    <p>Au-delà des performances techniques, les véhicules autonomes posent des défis majeurs. La fiabilité des capteurs, la gestion des données, la cybersécurité, la cohabitation avec les conducteurs humains et les cadres juridiques représentent des chantiers ouverts. À cela s’ajoute une interrogation sociétale : quel modèle de mobilité pour demain ? Propriété privée, partage de véhicules, robotaxis ?</p>
+    <p>Une chose est certaine : les constructeurs passent la seconde. Et la route vers une mobilité autonome, bien que semée d’embûches, semble désormais bien tracée.</p>
   </main>
 
+  <!-- Scripts -->
   <script>
-    // Animation Lottie
+    // Lottie animation
     lottie.loadAnimation({
       container: document.getElementById('lottie-animation'),
       renderer: 'svg',
       loop: true,
       autoplay: true,
       path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+    });
+
+    // Menu burger
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
     });
   </script>
 </body>
