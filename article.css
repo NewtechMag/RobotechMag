@@ -126,3 +126,28 @@ body {
   max-width: 800px;
   margin: 30px auto;
 }
+/* === ADAPTATION MOBILE === */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 48px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .article-container {
+    padding: 0 10px;
+  }
+
+  .article-container h1 {
+    font-size: 28px;
+  }
+
+  .video-wrapper iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
