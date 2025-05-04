@@ -222,7 +222,7 @@ body {
   border: none;
   cursor: pointer;
   width: 100%;
-  text-align: right;
+  text-align: left;
 }
 @media (max-width: 768px) {
   .menu-toggle {
