@@ -1,85 +1,80 @@
-/* Style global */
+/* Global */
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #fefefe;
   color: #333;
   line-height: 1.6;
 }
 
+/* Header */
 header {
-  position: relative;
   background-color: #000;
-  padding: 10px 0;
+  padding: 10px 0 0;
   text-align: center;
+  position: relative;
 }
 
-/* Logo avec animation */
+/* Logo + Lottie */
 .logo-wrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100px;
 }
-
 #lottie-animation {
   position: absolute;
   top: -25px;
   height: 90px;
   z-index: 0;
 }
-
 .logo-container {
   z-index: 1;
 }
-
 .logo {
   font-size: 36px;
   font-weight: bold;
 }
-
 .logo-part-new {
   color: #00ffcc;
 }
-
 .logo-part-tech {
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Navigation */
 .main-nav {
   background-color: #111;
-  padding: 0;
 }
-
 .main-nav ul {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
+  padding: 10px 0;
   margin: 0;
-  padding: 0;
-  justify-content: center;
 }
-
 .main-nav li {
-  margin: 10px;
+  margin: 0 10px;
 }
-
 .main-nav a {
   color: #fff;
   text-decoration: none;
   padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
-
 .main-nav a:hover {
   background-color: #00ffcc;
   color: #000;
 }
 
-/* Burger menu */
+/* Burger Menu */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -88,78 +83,70 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  width: 100%;
+  text-align: right;
 }
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    text-align: right;
-    width: 100%;
   }
-
   .main-nav ul {
     display: none;
     flex-direction: column;
-    background-color: #111;
     width: 100%;
   }
-
   .main-nav ul.open {
     display: flex;
   }
-
   .main-nav li {
     margin: 10px 0;
-    text-align: center;
   }
 }
 
-/* Article layout */
-.article-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 30px 20px;
-  background-color: #fff;
-}
+/* Main article layout */
 main {
   display: flex;
   justify-content: center;
-  background-color: #fefefe;
+  padding: 20px;
 }
 
+.article-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 30px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Article content */
 .article-container h1 {
   font-size: 32px;
   margin-bottom: 10px;
   text-align: center;
 }
-
 .article-container .date {
   font-size: 14px;
   color: #777;
   text-align: center;
   margin-bottom: 20px;
 }
-
 .article-image {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
   margin-bottom: 10px;
 }
-
 .image-caption {
   text-align: center;
   font-size: 13px;
   color: #666;
   margin-bottom: 30px;
 }
-
 .article-container h2 {
   margin-top: 40px;
   font-size: 24px;
   color: #111;
 }
-
 .article-container p {
   margin-bottom: 20px;
   font-size: 18px;
@@ -169,4 +156,3 @@ main {
 .video-wrapper {
   margin: 30px 0;
 }
-
