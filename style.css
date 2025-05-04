@@ -184,15 +184,22 @@ body {
     height: 100px;
   }
 
- 
   .main-nav {
     overflow-x: auto;
     padding: 0 10px;
   }
 
   .main-nav ul {
+    display: flex;
     flex-wrap: nowrap;
     gap: 12px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .main-nav li {
+    flex: 0 0 auto;
   }
 
   .main-nav a {
@@ -200,8 +207,6 @@ body {
     padding: 6px 8px;
     white-space: nowrap;
   }
-}
-
 
   .a-la-une {
     padding: 0 10px;
@@ -228,4 +233,3 @@ body {
     font-size: 12px;
   }
 }
-
