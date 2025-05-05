@@ -305,7 +305,7 @@ main {
 /* Article content */
 .article-container h1 {
   font-size: 42px; /* Plus grand que 32px */
-  font-weight: 8000; /* Bien plus gras que la valeur par défaut */
+  font-weight: 800; /* Bien plus gras que la valeur par défaut */
   text-align: center;
   margin-bottom: 20px;
   line-height: 1.2;
