@@ -113,78 +113,38 @@
 
   <!-- LOTTIE & CAROUSEL SCRIPTS -->
   <script>
-    // Animation Lottie
-    lottie.loadAnimation({
-      container: document.getElementById('lottie-animation'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
-    });
-
-    // Carousel
-    const track = document.querySelector('.carousel-track');
-    const items = Array.from(track.children);
-    let currentIndex = 0;
-
-    document.querySelector('.carousel-btn.next').addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % items.length;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-
-    document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-  </script>
-  <script>
-  document.querySelector('.menu-toggle').addEventListener('click', function () {
-    document.querySelector('.main-nav ul').classList.toggle('show');
+  // Animation Lottie
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
   });
-</script>
-  <script>
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 1024) {
-        // Ferme le menu burger si ouvert
-        document.querySelector('.mobile-menu').classList.remove('open');
-      }
-    });
-  </script>
-  <script>
-  // ======== CAROUSEL ========
+
   document.addEventListener('DOMContentLoaded', function () {
+    // Carousel
     const track = document.querySelector('.carousel-track');
     const items = document.querySelectorAll('.carousel-item');
     const prevButton = document.querySelector('.carousel-btn.prev');
     const nextButton = document.querySelector('.carousel-btn.next');
-
     let index = 0;
-    const totalItems = items.length;
 
     function updateCarousel() {
-      const offset = -index * 100;
-      track.style.transform = `translateX(${offset}%)`;
+      track.style.transform = `translateX(-${index * 100}%)`;
     }
 
     nextButton.addEventListener('click', () => {
-      index = (index + 1) % totalItems;
+      index = (index + 1) % items.length;
       updateCarousel();
     });
 
     prevButton.addEventListener('click', () => {
-      index = (index - 1 + totalItems) % totalItems;
+      index = (index - 1 + items.length) % items.length;
       updateCarousel();
     });
 
-    // (Optionnel) Changement auto toutes les 5 secondes
-    // setInterval(() => {
-    //   index = (index + 1) % totalItems;
-    //   updateCarousel();
-    // }, 5000);
-  });
-
-  // ======== MENU BURGER (style Kotaku) ========
-  document.addEventListener('DOMContentLoaded', function () {
+    // Menu burger façon Kotaku
     const burgerButton = document.querySelector('.burger-circle button');
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeButton = document.querySelector('.mobile-menu .close-btn');
@@ -197,16 +157,20 @@
       mobileMenu.classList.remove('show');
     });
 
-    // (Optionnel) Fermer si on clique à l'extérieur
     window.addEventListener('click', (e) => {
       if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
         mobileMenu.classList.remove('show');
       }
     });
+
+    // Responsive : referme menu mobile si trop large
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1024) {
+        mobileMenu.classList.remove('show');
+      }
+    });
   });
 </script>
-
-  
 </body>
 </html>
 
