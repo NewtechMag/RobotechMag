@@ -440,16 +440,23 @@ main {
 .article .overlay {
   position: absolute;
   bottom: 0;
-  padding: 1rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  left: 0;
+  right: 0;
+  padding: 20px;
   color: white;
-  transition: all 0.3s ease;
-  width: 100%;
-  transform: translateY(100%);
-  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  opacity: 1;
+  transform: translateY(0%);
+}
+.article .overlay h3 {
+  font-size: 1.6rem; /* ou essaye 2rem si tu veux vraiment grand */
+  font-weight: 700;  /* 700 = gras */
+  margin: 0;
 }
 
-.article:hover .overlay {
-  transform: translateY(0);
-  opacity: 1;
+.article .overlay h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
 }
+
