@@ -143,20 +143,7 @@
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
     });
   </script>
-  <script>
-  document.querySelector('.menu-toggle').addEventListener('click', function () {
-    document.querySelector('.main-nav ul').classList.toggle('show');
-  });
-</script>
-  <script>
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 1024) {
-        // Ferme le menu burger si ouvert
-        document.querySelector('.mobile-menu').classList.remove('open');
-      }
-    });
-  </script>
-  <script>
+  
   // ======== CAROUSEL ========
   document.addEventListener('DOMContentLoaded', function () {
     const track = document.querySelector('.carousel-track');
@@ -188,6 +175,7 @@
     //   updateCarousel();
     // }, 5000);
   });
+    
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const burgerButton = document.querySelector('.menu-toggle');
