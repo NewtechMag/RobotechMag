@@ -190,7 +190,7 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #00aaff;
+  background-color: #1e3a6b;
   color: white;
   border: none;
   font-size: 18px;
@@ -200,7 +200,7 @@ body {
 
 /* Supprimer style bouton par défaut */
 .burger-circle button {
-  background-color: #00aaff;
+  background-color: #1e3a6b;
 }
 
 /* Lignes bleues entre les cercles */
@@ -210,7 +210,7 @@ body {
   position: absolute;
   top: 50%;
   height: 2px;
-  background: #00aaff;
+  background: #1e3a6b;
   width: 30px;
   z-index: -1;
 }
