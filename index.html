@@ -150,6 +150,62 @@
       }
     });
   </script>
+  <script>
+  // ======== CAROUSEL ========
+  document.addEventListener('DOMContentLoaded', function () {
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-btn.prev');
+    const nextButton = document.querySelector('.carousel-btn.next');
+
+    let index = 0;
+    const totalItems = items.length;
+
+    function updateCarousel() {
+      const offset = -index * 100;
+      track.style.transform = `translateX(${offset}%)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+      index = (index + 1) % totalItems;
+      updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+      index = (index - 1 + totalItems) % totalItems;
+      updateCarousel();
+    });
+
+    // (Optionnel) Changement auto toutes les 5 secondes
+    // setInterval(() => {
+    //   index = (index + 1) % totalItems;
+    //   updateCarousel();
+    // }, 5000);
+  });
+
+  // ======== MENU BURGER (style Kotaku) ========
+  document.addEventListener('DOMContentLoaded', function () {
+    const burgerButton = document.querySelector('.burger-circle button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+    burgerButton.addEventListener('click', () => {
+      mobileMenu.classList.add('show');
+    });
+
+    closeButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+    });
+
+    // (Optionnel) Fermer si on clique à l'extérieur
+    window.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+        mobileMenu.classList.remove('show');
+      }
+    });
+  });
+</script>
+
   
 </body>
 </html>
