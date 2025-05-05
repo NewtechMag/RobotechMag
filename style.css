@@ -326,54 +326,130 @@ main {
 }
 .latest-articles {
   max-width: 1000px;
-  margin: 3rem auto;
-  padding: 1rem;
+  margin: 60px auto;
+  padding: 0 1rem;
 }
 
 .article-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  height: 500px;
 }
 
-.article-card {
-  background: white;
-  border-radius: 16px;
+.article {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
-}
-
-.article-card:hover {
-  transform: translateY(-5px);
-}
-
-.article-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.article-card h3 {
-  font-size: 1.2rem;
-  margin: 1rem 1rem 0.5rem;
-  color: #111;
-}
-
-.article-card p {
-  font-size: 0.95rem;
-  margin: 0 1rem 1rem;
-  color: #444;
-}
-
-.article-card a {
-  display: block;
-  margin: 0 1rem 1rem;
-  color: #007bff;
   text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.article:hover {
+  transform: scale(1.03);
+}
+
+.article.big {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.article.small.top {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.article.small.bottom {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.article .overlay {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  width: 100%;
+}
+
+.article h3, .article h4 {
+  margin: 0 0 5px;
   font-weight: bold;
 }
 
-.article-card a:hover {
-  text-decoration: underline;
+.article p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .article-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .article {
+    height: 300px;
+  }
+}
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-areas:
+    "big small-top"
+    "big small-bottom";
+  gap: 1.5rem;
+}
+
+.article.big {
+  grid-area: big;
+  height: 100%;
+  background-image: url('robot-jardinier.jpg'); /* mets ton image ici */
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article.small.top {
+  grid-area: small-top;
+  background-image: url('lunettes-ar.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article.small.bottom {
+  grid-area: small-bottom;
+  background-image: url('chine-robotique.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article .overlay {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  transition: all 0.3s ease;
+  width: 100%;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.article:hover .overlay {
+  transform: translateY(0);
+  opacity: 1;
 }
