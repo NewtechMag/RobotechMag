@@ -10,36 +10,68 @@
 </head>
 <body>
   <!-- LOGO -->
-  <header>
-    <div class="logo-wrapper">
-      <div id="lottie-animation"></div>
-      <div class="logo-container">
-        <div class="logo">
-          <span class="logo-part-new">ROBO</span><span class="logo-part-tech">TECH</span>
-        </div>
+<header>
+  <div class="logo-wrapper">
+    <div id="lottie-animation"></div>
+    <div class="logo-container">
+      <div class="logo">
+        <span class="logo-part-new">ROBO</span><span class="logo-part-tech">TECH</span>
       </div>
     </div>
+  </div>
 
-    <!-- NAVIGATION -->
-    <nav class="main-nav">
-        <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-robot"></i></a></li>
-        <li><a href="#">Robotique</a></li>
-        <li><a href="#">IA</a></li>
-        <li><a href="#">Domotique</a></li>
-        <li><a href="#">Santé</a></li>
-        <li><a href="#">Éducation</a></li>
-        <li><a href="#">Sécurité</a></li>
-        <li><a href="#">Automobile</a></li>
-        <li><a href="#">Industrie</a></li>
-        <li><a href="#">Evènement</a></li>
-        <li><a href="#">Culture</a></li>
-        <li><a href="#">Coups de cœur</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="main-nav">
+    <!-- Bouton Accueil -->
+    <div class="home-circle">
+      <a href="index.html" aria-label="Accueil">
+        <i class="fas fa-robot"></i>
+      </a>
+    </div>
+
+    <!-- Menu principal -->
+    <ul class="nav-links">
+      <li><a href="#">Robotique</a></li>
+      <li><a href="#">IA</a></li>
+      <li><a href="#">Domotique</a></li>
+      <li><a href="#">Santé</a></li>
+      <li><a href="#">Éducation</a></li>
+      <li><a href="#">Sécurité</a></li>
+      <li><a href="#">Automobile</a></li>
+      <li><a href="#">Industrie</a></li>
+      <li><a href="#">Évènement</a></li>
+      <li><a href="#">Culture</a></li>
+      <li><a href="#">Coups de cœur</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Bouton Burger -->
+    <div class="burger-circle">
+      <button class="menu-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" aria-label="Fermer le menu">&times;</button>
+    <ul>
+      <li><a href="#">Robotique</a></li>
+      <li><a href="#">IA</a></li>
+      <li><a href="#">Domotique</a></li>
+      <li><a href="#">Santé</a></li>
+      <li><a href="#">Éducation</a></li>
+      <li><a href="#">Sécurité</a></li>
+      <li><a href="#">Automobile</a></li>
+      <li><a href="#">Industrie</a></li>
+      <li><a href="#">Évènement</a></li>
+      <li><a href="#">Culture</a></li>
+      <li><a href="#">Coups de cœur</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
 
   <!-- SECTION À LA UNE -->
   <section class="a-la-une">
@@ -120,5 +152,4 @@
   </script>
 </body>
 </html>
-
 
