@@ -1,7 +1,4 @@
 body {
-  *, *::before, *::after {
-  box-sizing: border-box;
-}
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
@@ -130,7 +127,7 @@ body {
 }
 
 .carousel-item {
-  flex: 0 0 100%;
+  min-width: 100%;
   height: 350px;
   background-size: cover;
   background-position: center;
@@ -327,91 +324,17 @@ main {
   object-fit: cover;
   margin-bottom: 10px;
 }
-  
-.carousel-row {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: flex-start; /* Pour que l'image et le carrousel soient alignés en haut */
-  margin: 0 auto 60px auto;
-}
-
-.carousel-container {
-  max-width: 1000px;
-  width: 100%;
-}
-
-.carousel-image {
-  position: absolute;
-  right: calc((100% - 1000px) / 2 - 220px); /* 220px = largeur image + marge */
-  top: 0;
-  width: 200px;
-  height: 350px;
-  display: block;
-}
-
-.carousel-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Cacher l'image sur mobile */
-@media (max-width: 1200px) {
-  .carousel-image {
-    display: none;
-  }
-}
-/* Wrapper horizontal avec flex */
-.articles-row {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: 0 auto 60px auto;
-}
-
 .latest-articles {
-  width: 100%;
-  flex: 1;
   max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 1rem;
 }
-
-
-.articles-image {
-  position: absolute;
-  right: calc((100% - 1000px) / 2 - 220px); /* Comme pour le carousel */
-  top: 0;
-  width: 200px;
-  height: 350px;
-  display: block;
-}
-
-.articles-image img {
-  width: 100%;
-  height:162%;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-@media (max-width: 1200px) {
-  .articles-image {
-    display: none;
-  }
-}
-
-
-/* Section des articles : largeur fixe */
 
 .article-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-template-areas:
-    "big small-top"
-    "big small-bottom";
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
   height: 500px;
 }
 
@@ -423,34 +346,26 @@ main {
   overflow: hidden;
   text-decoration: none;
   color: white;
-  transition: none; /* Enlève la transformation globale */
+  transition: transform 0.3s ease;
 }
 
 .article:hover {
-  /* N'ajoute plus de transformation globale */
-}
-
-/* Ajouter un effet dynamique uniquement sur l'image */
-.article:hover .big {
-  transform: scale(1.03); /* Applique uniquement la transformation à l'image */
+  transform: scale(1.03);
 }
 
 .article.big {
-  grid-column: 1 / 2;
+  grid-column: 2 / 3;
   grid-row: 1 / 3;
-  background-image: url('robot-jardinier.jpg');
 }
 
 .article.small.top {
-  grid-column: 2 /  3;
+  grid-column: 1 / 2;
   grid-row: 1 / 2;
-  background-image: url('lunettes-ar.jpg');
 }
 
 .article.small.bottom {
-  grid-column: 2/ 3;
+  grid-column: 1 / 2;
   grid-row: 2 / 3;
-  background-image: url('chine-robotique.jpg');
 }
 
 .article .overlay {
@@ -459,7 +374,6 @@ main {
   padding: 20px;
   background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
   width: 100%;
-  transition: opacity 0.3s ease;
 }
 
 .article h3, .article h4 {
@@ -472,17 +386,6 @@ main {
   font-size: 14px;
 }
 
-.article .overlay {
-  opacity: 1;
-  transform: translateY(0%);
-}
-
-/* Lors du survol de l'image, l'overlay reste fixe */
-.article:hover .overlay {
-  transform: translateY(0%); /* Garder le texte en place */
-  opacity: 1;
-}
-
 @media (max-width: 768px) {
   .article-grid {
     display: flex;
@@ -493,21 +396,66 @@ main {
   .article {
     height: 300px;
   }
-
-  .carousel-container,
-  .latest-articles,
-  .carousel-row,
-  .articles-row {
-    padding: 0 16px;
-  }
 }
-@media (max-width: 768px) {
-  .carousel-container {
-    width: 100%;
-    max-width: 100%;
-  }
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-areas:
+    "big small-top"
+    "big small-bottom";
+  gap: 1.5rem;
+}
 
-  .carousel-item {
-    height: 250px; /* moins haut sur mobile si besoin */
-  }
+.article.big {
+  grid-area: big;
+  height: 100%;
+  background-image: url('robot-jardinier.jpg'); /* mets ton image ici */
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article.small.top {
+  grid-area: small-top;
+  background-image: url('lunettes-ar.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article.small.bottom {
+  grid-area: small-bottom;
+  background-image: url('chine-robotique.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  opacity: 1;
+  transform: translateY(0%);
+}
+.article .overlay h3 {
+  font-size: 1.6rem; /* ou essaye 2rem si tu veux vraiment grand */
+  font-weight: 700;  /* 700 = gras */
+  margin: 0;
+}
+
+.article .overlay h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
 }
