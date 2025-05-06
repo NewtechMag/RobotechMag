@@ -1,7 +1,7 @@
 body {
   *, *::before, *::after {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
@@ -122,7 +122,6 @@ body {
   overflow: hidden;
   max-width: 1000px;
   margin: 0 auto;
-  width: 100%; /* Flexibilité de largeur */
 }
 
 .carousel-track {
@@ -289,357 +288,199 @@ body {
   .main-nav li {
     margin: 10px 0;
   }
-
-  /* CAROUSEL - Mobile */
-  .carousel-container {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .carousel-item {
-    height: 250px; /* Moins haut sur mobile */
-  }
-
-  .carousel-image {
-    display: none;
-  }
 }
 
+/* Main article layout */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.article-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 30px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Article content */
+.article-container h1 {
+  font-size: 42px; /* Plus grand que 32px */
+  font-weight: 800; /* Bien plus gras que la valeur par défaut */
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.article-container .date {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.article-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+  
+.carousel-row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: flex-start; /* Pour que l'image et le carrousel soient alignés en haut */
+  margin: 0 auto 60px auto;
+}
+
+.carousel-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.carousel-image {
+  position: absolute;
+  right: calc((100% - 1000px) / 2 - 220px); /* 220px = largeur image + marge */
+  top: 0;
+  width: 200px;
+  height: 350px;
+  display: block;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Cacher l'image sur mobile */
 @media (max-width: 1200px) {
   .carousel-image {
     display: none;
   }
 }
-
-@media (max-width: 768px) {
-  .article-grid {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-
-  .article {
-    height: 300px;
-  }
-
-  .carousel-container,
-  .latest-articles,
-  .carousel-row,
-  .articles-row {
-    padding: 0 16px;
-  }
-}
-body {
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
-  color: #000;
-}
-
-/* LOGO + LOTTIE */
-.logo-wrapper {
+/* Wrapper horizontal avec flex */
+.articles-row {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  height: 150px;
-}
-
-#lottie-animation {
-  position: absolute;
-  top: -50px;
-  width: 150px;
-  height: 150px;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.logo-container {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 80px;
-  font-weight: 900;
-  text-align: center;
-}
-
-.logo-part-new {
-  color: #000;
-}
-
-.logo-part-tech {
-  color: #1e3a6b; /* Bleu métal */
-}
-
-/* NAVIGATION */
-.main-nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  position: relative;
-  align-items: center;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  gap: 20px;
-  align-items: center;
-}
-
-.main-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #000;
-  font-size: 13px;
-  position: relative;
-  padding: 4px 6px;
-  transition: all 0.3s ease;
-}
-
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #1e3a6b; /* Bleu métal */
-  bottom: -4px;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-.main-nav a:hover::after {
-  width: 100%;
-}
-
-/* SECTION À LA UNE */
-.a-la-une {
+  align-items: flex-start;
   max-width: 1000px;
   margin: 0 auto 60px auto;
 }
 
-.headline-banner {
-  background-color: #1e3a6b; /* Bleu métal */
-  padding: 8px 20px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.headline-banner h2 {
-  margin: 0;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* CAROUSEL */
-.carousel-container {
-  position: relative;
-  overflow: hidden;
+.latest-articles {
+  width: 100%;
+  flex: 1;
   max-width: 1000px;
-  margin: 0 auto;
-  width: 100%; /* Flexibilité de largeur */
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
 
-.carousel-item {
-  flex: 0 0 100%;
+.articles-image {
+  position: absolute;
+  right: calc((100% - 1000px) / 2 - 220px); /* Comme pour le carousel */
+  top: 0;
+  width: 200px;
   height: 350px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  text-decoration: none;
-  overflow: hidden;
+  display: block;
+}
+
+.articles-image img {
+  width: 100%;
+  height:162%;
+  object-fit: contain;
   border-radius: 10px;
 }
 
-.carousel-item .overlay {
+@media (max-width: 1200px) {
+  .articles-image {
+    display: none;
+  }
+}
+
+
+/* Section des articles : largeur fixe */
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-areas:
+    "big small-top"
+    "big small-bottom";
+  gap: 1.5rem;
+  height: 500px;
+}
+
+.article {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: none; /* Enlève la transformation globale */
+}
+
+.article:hover {
+  /* N'ajoute plus de transformation globale */
+}
+
+/* Ajouter un effet dynamique uniquement sur l'image */
+.article:hover .big {
+  transform: scale(1.03); /* Applique uniquement la transformation à l'image */
+}
+
+.article.big {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-image: url('robot-jardinier.jpg');
+}
+
+.article.small.top {
+  grid-column: 2 /  3;
+  grid-row: 1 / 2;
+  background-image: url('lunettes-ar.jpg');
+}
+
+.article.small.bottom {
+  grid-column: 2/ 3;
+  grid-row: 2 / 3;
+  background-image: url('chine-robotique.jpg');
+}
+
+.article .overlay {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
   padding: 20px;
-  color: white;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-  transform: translateY(100%);
-  opacity: 0;
-  transition: all 0.4s ease;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  width: 100%;
+  transition: opacity 0.3s ease;
 }
 
-.carousel-item:hover .overlay {
-  transform: translateY(0%);
+.article h3, .article h4 {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.article p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.article .overlay {
   opacity: 1;
+  transform: translateY(0%);
 }
 
-/* FLÈCHES */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  cursor: pointer;
-  padding: 10px 15px;
-  z-index: 10;
-  color: #333;
-}
-
-.carousel-btn:hover {
-  background-color: #1e3a6b; /* Bleu métal */
-  color: white;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-/* Cercles bleus Accueil + Burger */
-.home-circle a, .burger-circle button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #1e3a6b;
-  color: white;
-  border: none;
-  font-size: 18px;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-/* Supprimer style bouton par défaut */
-.burger-circle button {
-  background-color: #1e3a6b;
-}
-
-/* Lignes bleues entre les cercles */
-.main-nav::before,
-.main-nav::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  height: 2px;
-  background: #1e3a6b;
-  width: 30px;
-  z-index: -1;
-}
-
-.main-nav::before {
-  left: 70px;
-}
-
-.main-nav::after {
-  right: 70px;
-}
-
-/* Menu mobile façon Kotaku */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  max-width: 300px;
-  height: 100%;
-  background: #111;
-  color: white;
-  padding: 20px;
-  transition: left 0.3s ease;
-  z-index: 1000;
-}
-
-.mobile-menu.show {
-  left: 0;
-}
-
-.mobile-menu .close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 26px;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  cursor: pointer;
-}
-
-.mobile-menu ul {
-  list-style: none;
-  padding-top: 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.mobile-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .main-nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .main-nav ul.open {
-    display: flex;
-  }
-
-  .main-nav li {
-    margin: 10px 0;
-  }
-
-  /* CAROUSEL - Mobile */
-  .carousel-container {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .carousel-item {
-    height: 250px; /* Moins haut sur mobile */
-  }
-
-  .carousel-image {
-    display: none;
-  }
-}
-
-@media (max-width: 1200px) {
-  .carousel-image {
-    display: none;
-  }
+/* Lors du survol de l'image, l'overlay reste fixe */
+.article:hover .overlay {
+  transform: translateY(0%); /* Garder le texte en place */
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -658,5 +499,15 @@ body {
   .carousel-row,
   .articles-row {
     padding: 0 16px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .carousel-item {
+    height: 250px; /* moins haut sur mobile si besoin */
   }
 }
