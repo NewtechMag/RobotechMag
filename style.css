@@ -360,15 +360,42 @@ main {
   }
 }
 /* Wrapper horizontal avec flex */
-.articles-wrapper {
+.articles-row {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px; /* Espace entre les deux blocs */
-  max-width: 1220px; /* 1000px + 200px + marge */
-  margin: 60px auto;
-  padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
 }
+
+.latest-articles {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.articles-image {
+  position: absolute;
+  right: calc((100% - 1000px) / 2 - 220px); /* Comme pour le carousel */
+  top: 0;
+  width: 200px;
+  height: 350px;
+  display: block;
+}
+
+.articles-image img {
+  width: 100%;
+  height:162%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .articles-image {
+    display: none;
+  }
+}
+
 
 /* Section des articles : largeur fixe */
 .latest-articles {
@@ -463,3 +490,11 @@ main {
 
   .article {
     height: 300px;
+@media (max-width: 768px) {
+  .carousel-container,
+  .latest-articles,
+  .carousel-row,
+  .articles-row {
+    padding: 0 16px;
+  }
+}
