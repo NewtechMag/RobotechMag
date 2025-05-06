@@ -419,13 +419,23 @@ main {
 
 @media (max-width: 768px) {
   .article-grid {
-    display: flex;
-    flex-direction: column;
-    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "big"
+      "small-top"
+      "small-bottom";
+    gap: 1rem;
   }
 
   .article {
-    height: 300px;
+    height: 250px;
+  }
+
+  .article.big,
+  .article.small.top,
+  .article.small.bottom {
+    height: 250px;
   }
 }
 .article-grid {
