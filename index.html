@@ -10,63 +10,68 @@
 </head>
 <body>
   <!-- LOGO -->
-  <header>
-    <div class="logo-wrapper">
-      <div id="lottie-animation"></div>
-      <div class="logo-container">
-        <div class="logo">
-          <span class="logo-part-new">ROBO</span><span class="logo-part-tech">TECH</span>
-        </div>
+<header>
+  <div class="logo-wrapper">
+    <div id="lottie-animation"></div>
+    <div class="logo-container">
+      <div class="logo">
+        <span class="logo-part-new">ROBO</span><span class="logo-part-tech">TECH</span>
       </div>
     </div>
+  </div>
 
-    <nav class="main-nav">
-      <div class="home-circle">
-        <a href="index.html" aria-label="Accueil">
-          <i class="fas fa-robot"></i>
-        </a>
-      </div>
-
-      <ul class="nav-links">
-        <li><a href="#">Robotique</a></li>
-        <li><a href="#">IA</a></li>
-        <li><a href="#">Domotique</a></li>
-        <li><a href="#">Santé</a></li>
-        <li><a href="#">Éducation</a></li>
-        <li><a href="#">Sécurité</a></li>
-        <li><a href="#">Automobile</a></li>
-        <li><a href="#">Industrie</a></li>
-        <li><a href="#">Évènement</a></li>
-        <li><a href="#">Culture</a></li>
-        <li><a href="#">Coups de cœur</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-
-      <div class="burger-circle">
-        <button class="menu-toggle" aria-label="Menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </nav>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <button class="close-btn" aria-label="Fermer le menu">&times;</button>
-      <ul>
-        <li><a href="#">Robotique</a></li>
-        <li><a href="#">IA</a></li>
-        <li><a href="#">Domotique</a></li>
-        <li><a href="#">Santé</a></li>
-        <li><a href="#">Éducation</a></li>
-        <li><a href="#">Sécurité</a></li>
-        <li><a href="#">Automobile</a></li>
-        <li><a href="#">Industrie</a></li>
-        <li><a href="#">Évènement</a></li>
-        <li><a href="#">Culture</a></li>
-        <li><a href="#">Coups de cœur</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <nav class="main-nav">
+    <!-- Bouton Accueil -->
+    <div class="home-circle">
+      <a href="index.html" aria-label="Accueil">
+        <i class="fas fa-robot"></i>
+      </a>
     </div>
-  </header>
+
+    <!-- Menu principal -->
+    <ul class="nav-links">
+      <li><a href="#">Robotique</a></li>
+      <li><a href="#">IA</a></li>
+      <li><a href="#">Domotique</a></li>
+      <li><a href="#">Santé</a></li>
+      <li><a href="#">Éducation</a></li>
+      <li><a href="#">Sécurité</a></li>
+      <li><a href="#">Automobile</a></li>
+      <li><a href="#">Industrie</a></li>
+      <li><a href="#">Évènement</a></li>
+      <li><a href="#">Culture</a></li>
+      <li><a href="#">Coups de cœur</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Bouton Burger -->
+    <div class="burger-circle">
+      <button class="menu-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" aria-label="Fermer le menu">&times;</button>
+    <ul>
+      <li><a href="#">Robotique</a></li>
+      <li><a href="#">IA</a></li>
+      <li><a href="#">Domotique</a></li>
+      <li><a href="#">Santé</a></li>
+      <li><a href="#">Éducation</a></li>
+      <li><a href="#">Sécurité</a></li>
+      <li><a href="#">Automobile</a></li>
+      <li><a href="#">Industrie</a></li>
+      <li><a href="#">Évènement</a></li>
+      <li><a href="#">Culture</a></li>
+      <li><a href="#">Coups de cœur</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
 
   <!-- SECTION À LA UNE -->
   <section class="a-la-une">
@@ -74,99 +79,131 @@
       <h2>À la Une</h2>
     </div>
 
-    <div class="carousel-row">
-      <div class="carousel-container">
-        <button class="carousel-btn prev">&#10094;</button>
-        <div class="carousel-track">
-          <a href="article-voiture-autonome.html" class="carousel-item" style="background-image: url('Waymo_Austin.jpg');">
-            <div class="overlay">
-              <h3>Voitures autonomes : les constructeurs passent la seconde</h3>
-              <p>Zoom sur les ambitions de Waymo, Tesla, Toyota et d'autres...</p>
-            </div>
-          </a>
-          <a href="article-Summit2025.html" class="carousel-item" style="background-image: url('roboticssummit.jpg');">
-            <div class="overlay">
-              <h3>Retour sur le Robotics Summit & Expo 2025</h3>
-              <p>La robotique commerciale en pleine effervescence à Boston</p>
-            </div>
-          </a>
-        </div>
-        <button class="carousel-btn next">&#10095;</button>
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <a href="article-voiture-autonome.html" class="carousel-item" style="background-image: url('Waymo_Austin.jpg');">
+          <div class="overlay">
+            <h3>Voitures autonomes : les constructeurs passent la seconde</h3>
+            <p>Zoom sur les ambitions de Waymo, Tesla, Toyota et d'autres...</p>
+          </div>
+        </a>
+        <a href="article-Summit2025.html" class="carousel-item" style="background-image: url('roboticssummit.jpg');">
+          <div class="overlay">
+            <h3>Retour sur le Robotics Summit & Expo 2025</h3>
+            <p>La robotique commerciale en pleine effervescence à Boston</p>
+          </div>
+        </a>
+        <a href="#" class="carousel-item" style="background-image: url('https://picsum.photos/id/1025/1000/600');">
+          <div class="overlay">
+            <h3>Domotique et confort moderne</h3>
+            <p>Quand les maisons s’adaptent à nos besoins</p>
+          </div>
+        </a>
+        <a href="#" class="carousel-item" style="background-image: url('https://picsum.photos/id/1041/1000/600');">
+          <div class="overlay">
+            <h3>IA et éducation</h3>
+            <p>Transformer l'apprentissage grâce à l’intelligence artificielle</p>
+          </div>
+        </a>
       </div>
-
-      <!-- Image à droite -->
-      <div class="carousel-image">
-        <img src="https://picsum.photos/id/1050/1000/600" alt="Image de droite" />
-      </div>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
   </section>
-
-  <!-- SECTION Derniers articles -->
-  <div class="articles-row">
-    <section class="latest-articles">
-      <div class="headline-banner">
-        <h2>Derniers articles</h2>
-      </div>
-
-      <div class="article-grid">
-        <a href="article_egopower.html" class="article big" style="background-image: url('Egopower1.jpg');">
-          <div class="overlay">
-            <h3>Robot jardinier EgoPower+</h3>
-            <p>Une révolution connectée pour votre pelouse</p>
-          </div>
-        </a>
-        <a href="article_lunettes_ar.html" class="article small top" style="background-image: url('images/lunettes-ar.jpg');">
-          <div class="overlay">
-            <h4>Lunettes AR</h4>
-            <p>Les innovations de demain</p>
-          </div>
-        </a>
-        <a href="article_chine_robotique.html" class="article small bottom" style="background-image: url('images/chine-robotique.jpg');">
-          <div class="overlay">
-            <h4>Chine et robotique</h4>
-            <p>Un géant en mouvement</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- IMAGE placée en dehors de la section -->
-    <div class="articles-image">
-      <img src="https://picsum.photos/id/1050/1000/600" alt="Robot image" />
+  <div class="articles-wrapper">
+  <section class="latest-articles">
+    <div class="headline-banner">
+      <h2>Derniers articles</h2>
     </div>
-  </div>
 
+    <div class="article-grid">
+      <a href="article_egopower.html" class="article big" style="background-image: url('Egopower1.jpg');">
+        <div class="overlay">
+          <h3>Robot jardinier EgoPower+</h3>
+          <p>Une révolution connectée pour votre pelouse</p>
+        </div>
+      </a>
+
+      <a href="article_lunettes_ar.html" class="article small top" style="background-image: url('images/lunettes-ar.jpg');">
+        <div class="overlay">
+          <h4>Lunettes AR</h4>
+          <p>Les innovations de demain</p>
+        </div>
+      </a>
+
+      <a href="article_chine_robotique.html" class="article small bottom" style="background-image: url('images/chine-robotique.jpg');">
+        <div class="overlay">
+          <h4>Chine et robotique</h4>
+          <p>Un géant en mouvement</p>
+        </div>
+      </a>
+    </div>
+   
+  </section>
+
+</div>
+
+
+
+  <!-- LOTTIE & CAROUSEL SCRIPTS -->
   <script>
-    lottie.loadAnimation({
-      container: document.getElementById('lottie-animation'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+  // Animation Lottie
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Carousel
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-btn.prev');
+    const nextButton = document.querySelector('.carousel-btn.next');
+    let index = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+      index = (index + 1) % items.length;
+      updateCarousel();
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-      // Carousel
-      const track = document.querySelector('.carousel-track');
-      const items = document.querySelectorAll('.carousel-item');
-      const prevButton = document.querySelector('.carousel-btn.prev');
-      const nextButton = document.querySelector('.carousel-btn.next');
-      let index = 0;
+    prevButton.addEventListener('click', () => {
+      index = (index - 1 + items.length) % items.length;
+      updateCarousel();
+    });
 
-      function updateCarousel() {
-        track.style.transform = `translateX(-${index * 100}%)`;
+    // Menu burger façon Kotaku
+    const burgerButton = document.querySelector('.burger-circle button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+    burgerButton.addEventListener('click', () => {
+      mobileMenu.classList.add('show');
+    });
+
+    closeButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+        mobileMenu.classList.remove('show');
       }
-
-      nextButton.addEventListener('click', () => {
-        index = (index + 1) % items.length;
-        updateCarousel();
-      });
-
-      prevButton.addEventListener('click', () => {
-        index = (index - 1 + items.length) % items.length;
-        updateCarousel();
-      });
     });
-  </script>
+
+    // Responsive : referme menu mobile si trop large
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1024) {
+        mobileMenu.classList.remove('show');
+      }
+    });
+  });
+</script>
 </body>
 </html>
