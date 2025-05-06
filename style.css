@@ -420,3 +420,16 @@ main {
     height: 300px;
   }
 }
+.floating-banner {
+  position: absolute;
+  top: 0;
+  left: 100%; /* positionne juste à droite du container */
+  margin-left: 20px; /* petit espace entre les deux */
+  width: 200px; /* largeur de la bannière */
+}
+
+.floating-banner img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
