@@ -493,12 +493,13 @@ main {
 
   .article {
     height: 300px;
+  }
 
-}
-    @media (max-width: 768px) {
   .carousel-container,
   .latest-articles,
   .carousel-row,
   .articles-row {
     padding: 0 16px;
   }
+}
+
