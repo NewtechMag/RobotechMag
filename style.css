@@ -349,24 +349,17 @@ main {
   overflow: hidden;
   text-decoration: none;
   color: white;
-  transition: none; /* Enlève la transformation globale */
-}
-.article {
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease; /* Ajouté ici proprement */
 }
 
 .article:hover {
-  /* N'ajoute plus de transformation globale */
+  /* Pas de transformation globale ici, c’est volontaire */
 }
 
-/* Ajouter un effet dynamique uniquement sur l'image */
-.article.big:hover {
-  transform: scale(1.03);
-}
+.article.big:hover,
 .article.small:hover {
   transform: scale(1.03);
 }
-
 
 .article.big {
   grid-column: 1 / 2;
@@ -375,13 +368,13 @@ main {
 }
 
 .article.small.top {
-  grid-column: 2 /  3;
+  grid-column: 2 / 3;
   grid-row: 1 / 2;
   background-image: url('lunettes-ar.jpg');
 }
 
 .article.small.bottom {
-  grid-column: 2/ 3;
+  grid-column: 2 / 3;
   grid-row: 2 / 3;
   background-image: url('chine-robotique.jpg');
 }
@@ -394,6 +387,7 @@ main {
   width: 100%;
   transition: opacity 0.3s ease;
 }
+
 
 .article h3, .article h4 {
   margin: 0 0 5px;
