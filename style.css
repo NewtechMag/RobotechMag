@@ -374,8 +374,10 @@ main {
 
 .latest-articles {
   width: 100%;
+  flex: 1;
   max-width: 1000px;
 }
+
 
 .articles-image {
   position: absolute;
@@ -401,10 +403,6 @@ main {
 
 
 /* Section des articles : largeur fixe */
-.latest-articles {
-  flex: 1;
-  max-width: 1000px;
-}
 
 .article-grid {
   display: grid;
