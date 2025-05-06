@@ -324,11 +324,56 @@ main {
   object-fit: cover;
   margin-bottom: 10px;
 }
+  
+.carousel-row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: flex-start; /* Pour que l'image et le carrousel soient alignés en haut */
+  margin: 0 auto 60px auto;
+}
 
-.latest-articles {
-  max-width: 1000px;
+.carousel-container {
+  width: 1000px;
+}
+
+.carousel-image {
+  position: absolute;
+  right: calc((100% - 1000px) / 2 - 220px); /* 220px = largeur image + marge */
+  top: 0;
+  width: 200px;
+  height: 350px;
+  display: block;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Cacher l'image sur mobile */
+@media (max-width: 1200px) {
+  .carousel-image {
+    display: none;
+  }
+}
+/* Wrapper horizontal avec flex */
+.articles-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* Espace entre les deux blocs */
+  max-width: 1220px; /* 1000px + 200px + marge */
   margin: 60px auto;
   padding: 0 1rem;
+}
+
+/* Section des articles : largeur fixe */
+.latest-articles {
+  flex: 1;
+  max-width: 1000px;
 }
 
 .article-grid {
@@ -349,16 +394,16 @@ main {
   overflow: hidden;
   text-decoration: none;
   color: white;
-  transition: transform 0.4s ease; /* Ajouté ici proprement */
+  transition: none; /* Enlève la transformation globale */
 }
 
 .article:hover {
-  /* Pas de transformation globale ici, c’est volontaire */
+  /* N'ajoute plus de transformation globale */
 }
 
-.article.big:hover,
-.article.small:hover {
-  transform: scale(1.03);
+/* Ajouter un effet dynamique uniquement sur l'image */
+.article:hover .big {
+  transform: scale(1.03); /* Applique uniquement la transformation à l'image */
 }
 
 .article.big {
@@ -368,13 +413,13 @@ main {
 }
 
 .article.small.top {
-  grid-column: 2 / 3;
+  grid-column: 2 /  3;
   grid-row: 1 / 2;
   background-image: url('lunettes-ar.jpg');
 }
 
 .article.small.bottom {
-  grid-column: 2 / 3;
+  grid-column: 2/ 3;
   grid-row: 2 / 3;
   background-image: url('chine-robotique.jpg');
 }
@@ -387,7 +432,6 @@ main {
   width: 100%;
   transition: opacity 0.3s ease;
 }
-
 
 .article h3, .article h4 {
   margin: 0 0 5px;
@@ -419,18 +463,3 @@ main {
 
   .article {
     height: 300px;
-  }
-}
-.floating-banner {
-  position: absolute;
-  top: 0;
-  left: 100%; /* positionne juste à droite du container */
-  margin-left: 20px; /* petit espace entre les deux */
-  width: 200px; /* largeur de la bannière */
-}
-
-.floating-banner img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
