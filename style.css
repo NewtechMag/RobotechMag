@@ -421,31 +421,32 @@ main {
   .article-grid {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
       "big"
       "small-top"
       "small-bottom";
     gap: 1rem;
+    height: auto; /* ou fixe si tu veux contrôler */
   }
 
   .article {
-    height: 250px;
+    height: 250px; /* taille fixe ou % si tu veux des hauteurs flexibles */
   }
 
-  .article.big,
-  .article.small.top,
+  .article.big {
+    grid-area: big;
+  }
+
+  .article.small.top {
+    grid-area: small-top;
+  }
+
   .article.small.bottom {
-    height: 250px;
+    grid-area: small-bottom;
   }
 }
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-template-areas:
-    "big small-top"
-    "big small-bottom";
-  gap: 1.5rem;
-}
+
 
 .article.big {
   grid-area: big;
