@@ -351,15 +351,22 @@ main {
   color: white;
   transition: none; /* Enlève la transformation globale */
 }
+.article {
+  transition: transform 0.4s ease;
+}
 
 .article:hover {
   /* N'ajoute plus de transformation globale */
 }
 
 /* Ajouter un effet dynamique uniquement sur l'image */
-.article:hover .big {
-  transform: scale(1.03); /* Applique uniquement la transformation à l'image */
+.article.big:hover {
+  transform: scale(1.03);
 }
+.article.small:hover {
+  transform: scale(1.03);
+}
+
 
 .article.big {
   grid-column: 1 / 2;
