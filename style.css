@@ -337,7 +337,8 @@ main {
 }
 
 .carousel-container {
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .carousel-image {
@@ -500,4 +501,13 @@ main {
     padding: 0 16px;
   }
 }
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+    max-width: 100%;
+  }
 
+  .carousel-item {
+    height: 250px; /* moins haut sur mobile si besoin */
+  }
+}
