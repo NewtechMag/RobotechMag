@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
-  color: #000;
+  color: #fff;
 }
 
 /* LOGO + LOTTIE */
@@ -313,7 +313,7 @@ main {
 
 .article-container .date {
   font-size: 14px;
-  color: #777;
+  color: #black;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -515,7 +515,7 @@ body {
   right: 0;
   padding: 20px;
   color: white;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
   transform: translateY(100%);
   opacity: 0;
   transition: all 0.4s ease;
@@ -552,7 +552,10 @@ body {
 .carousel-btn.next {
   right: 10px;
 }
-
+.carousel-item .overlay h3,
+.carousel-item .overlay p {
+  color: white;
+}
 /* Cercles bleus Accueil + Burger */
 .home-circle a, .burger-circle button {
   display: flex;
@@ -684,7 +687,7 @@ main {
 
 .article-container .date {
   font-size: 14px;
-  color: #777;
+  color: #fff;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -726,7 +729,7 @@ main {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: inherit;
+  color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -775,4 +778,75 @@ main {
 
 .article.small .article-img {
   height: 140px;
+}
+.article-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.article-grid .article.big {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.article-grid .article-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.article-grid .overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+.article-grid .small-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-grid .article.small {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.article-grid .article.small .overlay {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+.article .overlay h3,
+.article .overlay h4,
+.article .overlay p {
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-grid .small-articles {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .article-grid .article.small {
+    flex: 1 1 48%;
+  }
 }
