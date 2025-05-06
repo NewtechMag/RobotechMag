@@ -74,11 +74,16 @@
 
 
   <!-- SECTION À LA UNE -->
-  <section class="a-la-une">
-    <div class="headline-banner">
-      <h2>À la Une</h2>
-    </div>
+<section class="a-la-une">
+  <div class="headline-banner">
+    <h2>À la Une</h2>
+  </div>
 
+  <!-- CONTENEUR FLEX -->
+  <div class="carousel-row">
+    
+    <!-- Carrousel -->
+    <div class="carousel-row">
     <div class="carousel-container">
       <button class="carousel-btn prev">&#10094;</button>
       <div class="carousel-track">
@@ -109,40 +114,48 @@
       </div>
       <button class="carousel-btn next">&#10095;</button>
     </div>
-  </section>
-    <div class="banner-wrapper" style="position: relative;">
-  <section class="latest-articles">
-  <div class="headline-banner">
-    <h2>Derniers articles</h2>
-  </div>
 
-  <div class="article-grid">
-    <a href="article_egopower.html" class="article big" style="background-image: url('Egopower1.jpg');">
-      <div class="overlay">
-        <h3>Robot jardinier EgoPower+</h3>
-        <p>Une révolution connectée pour votre pelouse</p>
-      </div>
-    </a>
+    <!-- Image à droite -->
+    <div class="carousel-image">
+      <img src="https://picsum.photos/id/1050/1000/600" alt="Image de droite" />
+    </div>
 
-    <a href="article_lunettes_ar.html" class="article small top" style="background-image: url('images/lunettes-ar.jpg');">
-      <div class="overlay">
-        <h4>Lunettes AR</h4>
-        <p>Les innovations de demain</p>
-      </div>
-    </a>
-
-    <a href="article_chine_robotique.html" class="article small bottom" style="background-image: url('images/chine-robotique.jpg');">
-      <div class="overlay">
-        <h4>Chine et robotique</h4>
-        <p>Un géant en mouvement</p>
-      </div>
-    </a>
-  </div>
+  </div> <!-- Fin de .carousel-row -->
 </section>
-<div class="floating-banner">
-  <img src="Egopower1.jpg" alt="Publicité" />
+
+  <div class="articles-wrapper">
+  <section class="latest-articles">
+    <div class="headline-banner">
+      <h2>Derniers articles</h2>
+    </div>
+
+    <div class="article-grid">
+      <a href="article_egopower.html" class="article big" style="background-image: url('Egopower1.jpg');">
+        <div class="overlay">
+          <h3>Robot jardinier EgoPower+</h3>
+          <p>Une révolution connectée pour votre pelouse</p>
+        </div>
+      </a>
+
+      <a href="article_lunettes_ar.html" class="article small top" style="background-image: url('images/lunettes-ar.jpg');">
+        <div class="overlay">
+          <h4>Lunettes AR</h4>
+          <p>Les innovations de demain</p>
+        </div>
+      </a>
+
+      <a href="article_chine_robotique.html" class="article small bottom" style="background-image: url('images/chine-robotique.jpg');">
+        <div class="overlay">
+          <h4>Chine et robotique</h4>
+          <p>Un géant en mouvement</p>
+        </div>
+      </a>
+    </div>
+   
+  </section>
+
 </div>
-</div>
+
 
 
   <!-- LOTTIE & CAROUSEL SCRIPTS -->
