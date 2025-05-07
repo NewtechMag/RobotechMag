@@ -343,7 +343,7 @@ main {
   right: calc((100% - 1000px) / 2 - 220px); /* Comme pour le carousel */
   top: 0;
   width: 210px;
-  height: 370px;
+  height: 470px;
   display: block;
 }
 
