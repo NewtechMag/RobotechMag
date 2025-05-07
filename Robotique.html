@@ -12,107 +12,103 @@
   <!-- Inclusion du header -->
   <div id="header-placeholder"></div>
 
-  <!-- Section principale des articles -->
-  <main class="articles-container">
-    <h1 class="theme-title">Articles sur la Robotique</h1>
-    <div class="article-grid">
-      <a href="article1.html" class="article">
-        <img src="img1.jpg" alt="Titre article 1" class="article-img">
-        <div class="article-themes">
-          <div class="article-theme">Robotique</div>
-        </div>
-        <div class="overlay">
-          <h3>Titre article 1</h3>
-          <p>Petit résumé de l'article 1</p>
-        </div>
-      </a>
+  <!-- Section principale des articles par thème -->
+ <main class="theme-robotique-container">
+  <h1 class="theme-robotique-title">Articles sur la Robotique</h1>
+  <div class="theme-robotique-list">
 
-      <a href="article2.html" class="article">
-        <img src="img2.jpg" alt="Titre article 2" class="article-img">
-        <div class="article-themes">
-          <div class="article-theme">Robotique</div>
+    <a href="article1.html" class="theme-robotique-item">
+      <img src="https://images.unsplash.com/photo-1581091012184-5c8fbe3c0ee5?auto=format&fit=crop&w=800&q=80" alt="Robot industriel" class="theme-robotique-img">
+      <div class="theme-robotique-overlay">
+        <h3>Les robots industriels redéfinissent la production</h3>
+        <p>Les bras robotiques de dernière génération transforment les lignes d'assemblage grâce à l'intelligence artificielle et à une précision inégalée.</p>
+        <div class="theme-robotique-tags">
+          <span class="theme-robotique-tag">Industrie</span>
+          <span class="theme-robotique-tag">IA</span>
         </div>
-        <div class="overlay">
-          <h3>Titre article 2</h3>
-          <p>Petit résumé de l'article 2</p>
-        </div>
-      </a>
+      </div>
+    </a>
 
-      <!-- Ajoute ici d'autres articles liés au thème -->
-    </div>
+    <a href="article2.html" class="theme-robotique-item">
+      <img src="https://images.unsplash.com/photo-1616141207175-184b6dbde4b3?auto=format&fit=crop&w=800&q=80" alt="Robot de service" class="theme-robotique-img">
+      <div class="theme-robotique-overlay">
+        <h3>Des robots d’assistance dans les hôpitaux</h3>
+        <p>Les robots d’assistance médicale participent aux soins, à la logistique et à l'accueil des patients dans de nombreux établissements européens.</p>
+        <div class="theme-robotique-tags">
+          <span class="theme-robotique-tag">Santé</span>
+          <span class="theme-robotique-tag">Service</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="article3.html" class="theme-robotique-item">
+      <img src="https://images.unsplash.com/photo-1554475901-4538ddfbccc4?auto=format&fit=crop&w=800&q=80" alt="Robot humanoïde" class="theme-robotique-img">
+      <div class="theme-robotique-overlay">
+        <h3>Les humanoïdes entrent dans les écoles japonaises</h3>
+        <p>Plusieurs écoles au Japon expérimentent l’usage de robots humanoïdes pour enseigner les langues et interagir avec les élèves de manière ludique.</p>
+        <div class="theme-robotique-tags">
+          <span class="theme-robotique-tag">Éducation</span>
+          <span class="theme-robotique-tag">Japon</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
   </main>
 
-  <!-- Scripts en fin de page -->
+  <!-- Lottie + Header -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
   <script>
     fetch('header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-        bodymovin.loadAnimation({
-          container: document.getElementById('lottie-animation'),
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path: 'lottie/robot.json'
+
+        requestAnimationFrame(() => {
+          const container = document.getElementById('lottie-animation');
+          if (container) {
+            lottie.loadAnimation({
+              container: container,
+              renderer: 'svg',
+              loop: true,
+              autoplay: true,
+              path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+            });
+          } else {
+            console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
+          }
         });
       });
-    
   </script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
-<script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
 
-      // ⚠️ Important : attendre le cycle de rendu du DOM
-      requestAnimationFrame(() => {
-        const container = document.getElementById('lottie-animation');
-        if (container) {
-          lottie.loadAnimation({
-            container: container,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
-          });
-        } else {
-          console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
+  <!-- Menu burger (à conserver si non déjà dans le header) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burgerButton = document.querySelector('.burger-circle button');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+      burgerButton.addEventListener('click', () => {
+        mobileMenu.classList.add('show');
+      });
+
+      closeButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('show');
+      });
+
+      window.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+          mobileMenu.classList.remove('show');
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 1024) {
+          mobileMenu.classList.remove('show');
         }
       });
     });
-</script>
-
-
-    // Menu burger façon Kotaku
-  <script>
-    const burgerButton = document.querySelector('.burger-circle button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const closeButton = document.querySelector('.mobile-menu .close-btn');
-
-    burgerButton.addEventListener('click', () => {
-      mobileMenu.classList.add('show');
-    });
-
-    closeButton.addEventListener('click', () => {
-      mobileMenu.classList.remove('show');
-    });
-
-    window.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
-        mobileMenu.classList.remove('show');
-      }
-    });
-
-    // Responsive : referme menu mobile si trop large
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 1024) {
-        mobileMenu.classList.remove('show');
-      }
-    });
-  });
-</script>
+  </script>
 
 </body>
 </html>
