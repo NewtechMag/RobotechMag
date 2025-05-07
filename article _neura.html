@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voiture autonome : les constructeurs passent la seconde vitesse</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- LOGO -->
+  <header>
+    <div class="logo-wrapper">
+      <div id="lottie-animation"></div>
+      <div class="logo-container">
+        <div class="logo">
+          <span class="logo-part-new">ROBO</span><span class="logo-part-tech">TECH</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+      <div class="home-circle">
+        <a href="index.html" aria-label="Accueil">
+          <i class="fas fa-robot"></i>
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#">Robotique</a></li>
+        <li><a href="#">IA</a></li>
+        <li><a href="#">Domotique</a></li>
+        <li><a href="#">Santé</a></li>
+        <li><a href="#">Éducation</a></li>
+        <li><a href="#">Sécurité</a></li>
+        <li><a href="#">Automobile</a></li>
+        <li><a href="#">Industrie</a></li>
+        <li><a href="#">Evènement</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Coups de cœur</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="burger-circle">
+        <button class="menu-toggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <button class="close-btn" aria-label="Fermer le menu"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="#">Robotique</a></li>
+        <li><a href="#">IA</a></li>
+        <li><a href="#">Domotique</a></li>
+        <li><a href="#">Santé</a></li>
+        <li><a href="#">Éducation</a></li>
+        <li><a href="#">Sécurité</a></li>
+        <li><a href="#">Automobile</a></li>
+        <li><a href="#">Industrie</a></li>
+        <li><a href="#">Evènement</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Coups de cœur</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ARTICLE -->
+  <main>
+    <div class="article-container">
+    <h1>Neuralink : contrôler un ordinateur par la pensée devient réalité</h1>
+    <p class="date">Publié le 3 mai 2025</p>
+    <img src="nlink1.png" alt="Implant Neuralink" class="article-img">
+    
+
+    <p>
+      Et si l’on pouvait publier une vidéo YouTube sans toucher ni clavier ni souris, simplement par la pensée ? 
+      Ce qui relevait hier encore de la science-fiction est désormais possible. Bradford Smith, un patient paralysé 
+      atteint de la maladie de Charcot (ALS), est devenu le troisième humain à recevoir un implant Neuralink. Grâce 
+      à cette interface cerveau-machine développée par l’entreprise d’Elon Musk, il a pu éditer et publier une vidéo 
+      en ligne uniquement par la force de l’esprit. Pour la narration, une intelligence artificielle a recréé sa propre 
+      voix à partir d’enregistrements réalisés avant sa perte de parole. Ce témoignage saisissant montre à quel point 
+      la frontière entre l’homme et la machine s’amincit.
+    </p>
+
+    <h2>Une technologie qui lit les signaux du cerveau</h2>
+    <p>
+      La technologie de Neuralink repose sur une puce implantée directement dans le cortex moteur. Cette interface 
+      capte les signaux neuronaux et les transmet sans fil à un ordinateur. Dans le cas de Bradford Smith, les ingénieurs 
+      ont affiné le système en l’associant à l’imagerie mentale de mouvements de la langue, permettant un contrôle plus 
+      précis du curseur. L’implant, inséré avec une extrême précision par un robot chirurgical, vise à minimiser les risques 
+      liés à l’opération. Relié à un MacBook Pro, l’ensemble fonctionne en temps réel, offrant aux patients un contrôle 
+      direct de l’environnement numérique, que ce soit pour écrire, créer ou simplement interagir.
+    </p>
+
+    <h2>Une frontière floue entre progrès et éthique</h2>
+     <img src="nlink2.png" alt="Implant Neuralink" class="article-img">
+    <p>
+      Mais au-delà des prouesses techniques, c’est une foule de questions qui surgit. Quels seront les usages futurs de 
+      cette technologie ? Offrir une autonomie nouvelle aux personnes paralysées ou... permettre à tout un chacun d'interfacer 
+      son cerveau avec des machines ? Jusqu’où sommes-nous prêts à aller dans cette fusion homme-machine ? En accédant à nos 
+      pensées les plus profondes, ces implants posent des enjeux majeurs en matière de vie privée, de sécurité et de consentement. 
+      Qui possédera les données cérébrales ? Qui en assurera la protection ? Neuralink ouvre une porte fascinante, mais dérangeante. 
+      Une technologie révolutionnaire, certes — mais une révolution à encadrer avec autant de vigilance que d’enthousiasme.
+    </p>
+        </div>
+  </main>
+
+  <!-- LOTTIE ANIMATION -->
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+    });
+  </script>
+
+  <!-- MENU BURGER FONCTIONNEL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burgerButton = document.querySelector('.menu-toggle');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.close-btn');
+
+      if (burgerButton && mobileMenu && closeButton) {
+        burgerButton.addEventListener('click', () => {
+          mobileMenu.classList.add('show');
+        });
+
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- CAROUSEL (si utilisé quelque part) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.querySelector('.carousel-track');
+      const items = document.querySelectorAll('.carousel-item');
+      const prevButton = document.querySelector('.carousel-btn.prev');
+      const nextButton = document.querySelector('.carousel-btn.next');
+
+      if (track && items.length && prevButton && nextButton) {
+        let index = 0;
+        const totalItems = items.length;
+
+        function updateCarousel() {
+          const offset = -index * 100;
+          track.style.transform = `translateX(${offset}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+          index = (index + 1) % totalItems;
+          updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+          index = (index - 1 + totalItems) % totalItems;
+          updateCarousel();
+        });
+
+        // Auto défilement si souhaité :
+        // setInterval(() => {
+        //   index = (index + 1) % totalItems;
+        //   updateCarousel();
+        // }, 5000);
+      }
+    });
+  </script>
+
+</body>
+</html>
