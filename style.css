@@ -698,6 +698,14 @@ main {
   object-fit: cover;
   margin-bottom: 10px;
 }
+
+.image-caption {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
 .articles-row {
   position: relative;
   display: flex;
