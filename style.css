@@ -870,3 +870,106 @@ main {
   border-radius: 4px;
   text-transform: uppercase;
 }
+/* ==== Page Thème Robotique ==== */
+
+.theme-robotique-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.theme-robotique-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.theme-robotique-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.theme-robotique-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.3s ease;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.theme-robotique-item:hover {
+  background: #f3f3f3;
+}
+
+.theme-robotique-img {
+  width: 280px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.theme-robotique-overlay {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.theme-robotique-overlay h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.theme-robotique-overlay p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.theme-robotique-tags {
+  margin-top: 0.5rem;
+}
+
+.theme-robotique-tag {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .theme-robotique-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .theme-robotique-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .theme-robotique-overlay {
+    align-items: center;
+  }
+}
+
+
