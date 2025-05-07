@@ -92,7 +92,7 @@ body {
 
 /* SECTION À LA UNE */
 .a-la-une {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto 60px auto;
 }
 
@@ -117,7 +117,7 @@ body {
 .carousel-container {
   position: relative;
   overflow: hidden;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -296,7 +296,7 @@ main {
 
 .article-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   background: #fff;
   padding: 30px 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -329,18 +329,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto 60px auto;
 }
 
 .latest-articles {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .articles-image {
   position: absolute;
-  right: calc((100% - 1000px) / 2 - 220px); /* Comme pour le carousel */
+  right: calc((100% - 1100px) / 2 - 220px); /* Comme pour le carousel */
   top: 0;
   width: 200px;
   height: 350px;
@@ -463,7 +463,7 @@ body {
 
 /* SECTION À LA UNE */
 .a-la-une {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto 60px auto;
 }
 
@@ -670,7 +670,7 @@ main {
 
 .article-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   background: #fff;
   padding: 30px 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -703,20 +703,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto 60px auto;
 }
 
 .latest-articles {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .article-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 24px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px 40px;
 }
@@ -783,7 +783,7 @@ main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2px;
 }
@@ -873,7 +873,7 @@ main {
 /* ==== Page Thème Robotique ==== */
 
 .theme-robotique-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1rem;
   display: flex;
