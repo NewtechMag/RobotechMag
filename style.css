@@ -850,7 +850,7 @@ main {
     flex: 1 1 48%;
   }
 }
-article-themes {
+.article-themes {
   position: absolute;
   top: 10px;
   left: 10px;
