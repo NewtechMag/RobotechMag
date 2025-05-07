@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thème - Robotique</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+
+  <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
+
+  <!-- Section principale des articles -->
+  <main class="articles-container">
+    <h1 class="theme-title">Articles sur la Robotique</h1>
+    <div class="article-grid">
+      <a href="article1.html" class="article">
+        <img src="img1.jpg" alt="Titre article 1" class="article-img">
+        <div class="article-themes">
+          <div class="article-theme">Robotique</div>
+        </div>
+        <div class="overlay">
+          <h3>Titre article 1</h3>
+          <p>Petit résumé de l'article 1</p>
+        </div>
+      </a>
+
+      <a href="article2.html" class="article">
+        <img src="img2.jpg" alt="Titre article 2" class="article-img">
+        <div class="article-themes">
+          <div class="article-theme">Robotique</div>
+        </div>
+        <div class="overlay">
+          <h3>Titre article 2</h3>
+          <p>Petit résumé de l'article 2</p>
+        </div>
+      </a>
+
+      <!-- Ajoute ici d'autres articles liés au thème -->
+    </div>
+  </main>
+
+  <!-- Scripts en fin de page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+        bodymovin.loadAnimation({
+          container: document.getElementById('lottie-animation'),
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'lottie/robot.json'
+        });
+      });
+  </script>
+</body>
+</html>
