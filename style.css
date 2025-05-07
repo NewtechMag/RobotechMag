@@ -808,7 +808,7 @@ main {
   bottom: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
   color: white;
-  padding: 20px;
+  padding: 0px;
   width: 100%;
 }
 
