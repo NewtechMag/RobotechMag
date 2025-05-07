@@ -342,8 +342,8 @@ main {
   position: absolute;
   right: calc((100% - 1000px) / 2 - 220px); /* Comme pour le carousel */
   top: 0;
-  width: 200px;
-  height: 400px;
+  width: 220px;
+  height: 380px;
   display: block;
 }
 
