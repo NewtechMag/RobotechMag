@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thème - Evenement</title>
+  <title>Thème - Robotique</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
@@ -12,61 +12,49 @@
   <!-- Inclusion du header -->
   <div id="header-placeholder"></div>
 
-  <!-- Section principale des articles -->
-  <main class="articles-container">
-    <h1 class="theme-title">Evenement</h1>
-    <div class="article-grid">
-      <a href="article1.html" class="article">
-        <img src="img1.jpg" alt="Titre article 1" class="article-img">
-        <div class="article-themes">
-          <div class="article-theme">Robotique</div>
-        </div>
-        <div class="overlay">
-          <h3>Titre article 1</h3>
-          <p>Petit résumé de l'article 1</p>
-        </div>
-      </a>
+  <!-- Section principale des articles par thème -->
+ <main class="theme-robotique-container">
+  <div class="headline-banner">
+  <h2>Robotique</h2>
+</div>
+  <div class="theme-robotique-list">
 
-      <a href="article2.html" class="article">
-        <img src="img2.jpg" alt="Titre article 2" class="article-img">
-        <div class="article-themes">
-          <div class="article-theme">Robotique</div>
+    <a href="article-Summit2025.html" class="theme-robotique-item">
+      <img src='roboticssummit.jpg' alt="Robot industriel" class="theme-robotique-img">
+      <div class="theme-robotique-overlay">
+        <h3>Retour sur le Robotics Summit & Expo 2025</h3>
+        <p>La robotique commerciale en pleine effervescence à Boston</p>
+        <div class="theme-robotique-tags">
+          <span class="theme-robotique-tag">Robotique</span>
+          <span class="theme-robotique-tag">Evenement</span>
         </div>
-        <div class="overlay">
-          <h3>Titre article 2</h3>
-          <p>Petit résumé de l'article 2</p>
-        </div>
-      </a>
+      </div>
+    </a>
 
-      <!-- Ajoute ici d'autres articles liés au thème -->
-    </div>
+    <a href="article3.html" class="theme-robotique-item">
+      <img src="https://images.unsplash.com/photo-1554475901-4538ddfbccc4?auto=format&fit=crop&w=800&q=80" alt="Robot humanoïde" class="theme-robotique-img">
+      <div class="theme-robotique-overlay">
+        <h3>Les humanoïdes entrent dans les écoles japonaises</h3>
+        <p>Plusieurs écoles au Japon expérimentent l’usage de robots humanoïdes pour enseigner les langues et interagir avec les élèves de manière ludique.</p>
+        <div class="theme-robotique-tags">
+          <span class="theme-robotique-tag">Éducation</span>
+          <span class="theme-robotique-tag">Japon</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
   </main>
 
-  <!-- Scripts en fin de page -->
+  <!-- Lottie + Header -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
   <script>
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-        bodymovin.loadAnimation({
-          container: document.getElementById('lottie-animation'),
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path: 'lottie/robot.json'
-        });
-      });
-    
-  </script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
-<script>
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
 
-      // ⚠️ Important : attendre le cycle de rendu du DOM
+      // Charger l'animation Lottie
       requestAnimationFrame(() => {
         const container = document.getElementById('lottie-animation');
         if (container) {
@@ -81,38 +69,38 @@
           console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
         }
       });
+
+      // ✅ Menu burger : le code est exécuté une fois que le DOM du header est injecté
+      const burgerButton = document.querySelector('.burger-circle button');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+      if (burgerButton && mobileMenu && closeButton) {
+        burgerButton.addEventListener('click', () => {
+          mobileMenu.classList.add('show');
+        });
+
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 1024) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+      } else {
+        console.warn('❌ Élément du menu burger introuvable.');
+      }
     });
 </script>
 
-
-    // Menu burger façon Kotaku
-  <script>
-    const burgerButton = document.querySelector('.burger-circle button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const closeButton = document.querySelector('.mobile-menu .close-btn');
-
-    burgerButton.addEventListener('click', () => {
-      mobileMenu.classList.add('show');
-    });
-
-    closeButton.addEventListener('click', () => {
-      mobileMenu.classList.remove('show');
-    });
-
-    window.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
-        mobileMenu.classList.remove('show');
-      }
-    });
-
-    // Responsive : referme menu mobile si trop large
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 1024) {
-        mobileMenu.classList.remove('show');
-      }
-    });
-  });
-</script>
 
 </body>
 </html>
