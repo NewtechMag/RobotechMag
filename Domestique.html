@@ -1,90 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NEWTECH - Nouvelles Technologies</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    .logo-wrapper {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 180px;
-    }
-
-    .gif-background {
-      position: absolute;
-      top: -20px; /* Légèrement au-dessus du logo */
-      z-index: 0;
-      width: 150px;
-      height: auto;
-      opacity: 0.8;
-      pointer-events: none; /* Ne pas interférer avec les clics */
-    }
-
-    .logo-container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .logo {
-      font-size: 48px;
-      font-weight: bold;
-    }
-
-    .logo-part-new {
-      color: #2ecc71;
-    }
-
-    .logo-part-tech {
-      color: #3498db;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thème - Robotique</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
-  <!-- LOGO -->
-  <header>
-    <div class="logo-wrapper">
-      <img src="output_with_white_bg.gif" alt="Robot animé" class="gif-background">
-      <div class="logo-container">
-        <div class="logo">
-          <span class="logo-part-new">ROBO</span><span class="logo-part-tech">TECH</span>
-        </div>
-      </div>
-    </div>
-  </header>
-</body>
-</html>
 
+  <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
 
   <!-- Section principale des articles par thème -->
  <main class="theme-robotique-container">
-  <h1 class="theme-robotique-title">Domestique</h1>
+  <div class="headline-banner">
+  <h2>Robotique</h2>
+</div>
   <div class="theme-robotique-list">
-
-    <a href="article1.html" class="theme-robotique-item">
-      <img src="https://images.unsplash.com/photo-1581091012184-5c8fbe3c0ee5?auto=format&fit=crop&w=800&q=80" alt="Robot industriel" class="theme-robotique-img">
+    
+    <a href="article_egopower.html" class="theme-robotique-item">
+      <img src='Egopower1.jpg' class="theme-robotique-img">
       <div class="theme-robotique-overlay">
-        <h3>Les robots industriels redéfinissent la production</h3>
-        <p>Les bras robotiques de dernière génération transforment les lignes d'assemblage grâce à l'intelligence artificielle et à une précision inégalée.</p>
+        <h3>EgoPower+: Les robots ont la main verte</h3>
+        <p>Une révolution connectée pour votre pelouse</p>
         <div class="theme-robotique-tags">
-          <span class="theme-robotique-tag">Industrie</span>
-          <span class="theme-robotique-tag">IA</span>
+          <span class="theme-robotique-tag">Robotique</span>
+          <span class="theme-robotique-tag">Domestique</span>
         </div>
       </div>
     </a>
 
-    <a href="article2.html" class="theme-robotique-item">
-      <img src="https://images.unsplash.com/photo-1616141207175-184b6dbde4b3?auto=format&fit=crop&w=800&q=80" alt="Robot de service" class="theme-robotique-img">
+     <a href="article-SPCPolaris.html" class="theme-robotique-item">
+      <img src='SPC_POLARIS.webp' alt="Robot industriel" class="theme-robotique-img">
       <div class="theme-robotique-overlay">
-        <h3>Des robots d’assistance dans les hôpitaux</h3>
-        <p>Les robots d’assistance médicale participent aux soins, à la logistique et à l'accueil des patients dans de nombreux établissements européens.</p>
+        <h3>Réduire la fracture numérique</h3>
+        <p>SPC Polaris,une technologie pensée pour les seniors et leurs proches</p>
         <div class="theme-robotique-tags">
+          <span class="theme-robotique-tag">Domestique</span>
           <span class="theme-robotique-tag">Santé</span>
-          <span class="theme-robotique-tag">Service</span>
         </div>
       </div>
     </a>
@@ -104,7 +58,60 @@
   </div>
   </main>
 
+  <!-- Lottie + Header -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
 
+      // Charger l'animation Lottie
+      requestAnimationFrame(() => {
+        const container = document.getElementById('lottie-animation');
+        if (container) {
+          lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+          });
+        } else {
+          console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
+        }
+      });
+
+      // ✅ Menu burger : le code est exécuté une fois que le DOM du header est injecté
+      const burgerButton = document.querySelector('.burger-circle button');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+      if (burgerButton && mobileMenu && closeButton) {
+        burgerButton.addEventListener('click', () => {
+          mobileMenu.classList.add('show');
+        });
+
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 1024) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+      } else {
+        console.warn('❌ Élément du menu burger introuvable.');
+      }
+    });
+</script>
 
 
 </body>
