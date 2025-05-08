@@ -933,18 +933,6 @@ main {
 
 .theme-robotique-item:hover {
   background: #f3f3f3;
-  
-}
-.theme-robotique-overlay img {
-  max-width: 100%;
-  max-height: 200px;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  border-radius: 6px;
-  display: block;
-  margin-top: 1rem;
-}
 
 .theme-robotique-img {
   width: 280px;
