@@ -987,6 +987,18 @@ main {
   border-radius: 12px;
   margin-right: 0.5rem;
 }
+.theme-robotique-overlay img {
+  display: block;
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  margin: 1rem auto; /* centré verticalement */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optionnel : un peu d’esthétique */
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
