@@ -937,11 +937,10 @@ main {
 .theme-robotique-img {
   width: 280px;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   flex-shrink: 0;
 }
-
 .theme-robotique-overlay {
   flex: 1;
   display: flex;
