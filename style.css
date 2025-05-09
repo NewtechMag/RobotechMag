@@ -1029,6 +1029,7 @@ main {
   grid-template-rows: 1fr 1fr;
   gap: 10px;
   height: 500px;
+  border: 1px solid red;
 }
 
 body {
@@ -1823,6 +1824,7 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 10px;
+  border: 1px solid blue;
 }
 
 .article.big2 {
