@@ -996,12 +996,21 @@ main {
   }
 }
 .kit-media {
-  flex: 1;
-  max-width: 400px;     /* Limite la largeur du cadre */
-  padding: 15px;
-  box-sizing: border-box;
-  height: fit-content;
-  margin: 0 auto;        /* Centre le cadre si besoin */
+  position: absolute;
+  top: 0;
+  width: 220px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.9); /* Fond opaque */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Titre en haut */
+  z-index: 1;
+  margin-right: 20px; /* Optionnel : petit espace avec le bord droit */
+}        /* Centre le cadre si besoin */
 }
 .kit-title {
    text-align: center;
