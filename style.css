@@ -1018,4 +1018,9 @@ main {
   display: block;
   max-height: 300px;
   object-fit: cover;
+  flex: 1;
+  max-width: 400px; /* ou la valeur qui te convient */
+  padding: 15px;
+  box-sizing: border-box;
+  height: fit-content;
 }
