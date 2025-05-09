@@ -1781,10 +1781,12 @@ main {
 }
 
 /* SECTION ARTICLE + KIT MEDIA */
-.article-kit-section {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 20px;
+.article.big {
+  display: block;
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .article-kit-container {
