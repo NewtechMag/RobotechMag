@@ -399,7 +399,7 @@ main {
 
 /* Grande carte (gauche) */
 .article.big {
-  height: 100%;
+  height: auto;
 }
 
 /* Colonne droite contenant 2 petits articles empilés */
@@ -411,7 +411,7 @@ main {
 
 /* Petits articles */
 .article.small {
-  height: 100%;
+  height: auto;
 }
 
 .article.small .article-img {
@@ -522,6 +522,15 @@ main {
   .article-grid .article.small {
     flex: 1 1 48%;
   }
+    .article-grid .article.big {
+    /* Ajoutez un comportement spécifique pour les écrans plus petits */
+    min-height: 300px; /* Ajustez la hauteur pour qu'il soit visible sur mobile */
+    display: block; /* Assurez-vous que l'article big est bien affiché */
+  }
+
+  .articles-image {
+    position: relative; /* Changez la position en relative pour éviter le chevauchement */
+    r
 }
 
 .article-themes {
