@@ -104,17 +104,17 @@
       <button class="carousel-btn next">&#10095;</button>
     </div>
   </section>
- <!-- SECTION DERNIERS ARTICLES -->
 <div class="articles-row">
   <section class="latest-articles">
     <div class="headline-banner">
       <h2>Derniers articles</h2>
     </div>
 
+    <!-- Première ligne : article principal + petits articles -->
     <div class="article-grid">
       <!-- Article principal -->
       <a href="article_egopower.html" class="article big">
-        <img src='Egopower1.jpg' alt="Robot jardinier EgoPower+" class="article-img">
+        <img src="Egopower1.jpg" alt="Robot jardinier EgoPower+" class="article-img">
         <div class="article-themes">
           <div class="article-theme">Robotique</div>
           <div class="article-theme">Domestique</div>
@@ -150,9 +150,30 @@
           </div>
         </a>
       </div>
+    </div> <!-- fin de .article-grid -->
+
+    <!-- Deuxième ligne : BIG article 2 + image -->
+    <div class="article-row-bottom">
+      <a href="article_big2.html" class="article big">
+        <img src="big2.jpg" alt="Article BIG 2" class="article-img">
+        <div class="article-themes">
+          <div class="article-theme">Innovation</div>
+          <div class="article-theme">Mobilité</div>
+        </div>
+        <div class="overlay">
+          <h3>Le futur des robots mobiles</h3>
+          <p>Entre intelligence autonome et design agile</p>
+        </div>
+      </a>
+
+      <div class="article-image-frame">
+        <img src="illustration_speciale.jpg" alt="Illustration spéciale">
+      </div>
     </div>
+
   </section>
 </div>
+
 
 <!-- LOTTIE & CAROUSEL SCRIPTS -->
   <script>
