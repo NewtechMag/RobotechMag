@@ -1838,3 +1838,13 @@ main {
   width: 100%;
   padding: 20px;
 }
+@media (max-width: 768px) {
+  .article-kit-container {
+    flex-direction: column;
+  }
+
+  .article-big,
+  .kit-media-box {
+    flex: 1 1 100%;
+  }
+}
