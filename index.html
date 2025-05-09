@@ -150,6 +150,7 @@
           </div>
         </a>
       </div>
+ 
  <!-- Section principale des articles par thème -->
  <main class="theme-robotique-container">
   <div class="headline-banner">
@@ -192,15 +193,15 @@
         </div>
       </div>
     </a>
-
   </div>
   </main>
-      <aside class="kit-media">
-        <a href="https://heyzine.com/flip-book/ce000e056b.html">
+           <aside class="kit-media">
   <h2 class="kit-title">Kit media</h2>
   <img src="kitmedia2.png" alt="Kit media visuel" class="kit-image">
-           </a>
 </aside>
+      </section>
+        
+
 <!-- LOTTIE & CAROUSEL SCRIPTS -->
   <script>
   // Animation Lottie
@@ -221,7 +222,7 @@
     let index = 0;
 
     function updateCarousel() {
-      track.style.transform = `translateX(-${index * 100}%)`;
+      track.style.transform = translateX(-${index * 100}%);
     }
 
     nextButton.addEventListener('click', () => {
