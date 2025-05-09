@@ -997,12 +997,12 @@ main {
 }
 .kit-media {
   flex: 1;
-  border: 2px ;
+  max-width: 400px;     /* Limite la largeur du cadre */
   padding: 15px;
   box-sizing: border-box;
   height: fit-content;
+  margin: 0 auto;        /* Centre le cadre si besoin */
 }
-
 .kit-title {
    text-align: center;
   font-size: 1.4em;
@@ -1018,9 +1018,6 @@ main {
   display: block;
   max-height: 300px;
   object-fit: cover;
-  flex: 1;
-  max-width: 400px; /* ou la valeur qui te convient */
-  padding: 15px;
-  box-sizing: border-box;
-  height: fit-content;
+  border-radius: 8px;    /* Optionnel : coins arrondis */
 }
+
