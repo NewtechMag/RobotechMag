@@ -986,6 +986,7 @@ main {
     text-align: center;
   }
 
+  
   .theme-robotique-img {
     width: 100%;
     height: auto;
@@ -995,38 +996,3 @@ main {
     align-items: center;
   }
 }
-.kit-media {
-  position: absolute;
-  top: 0;
-  width: 220px;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0.9); /* Fond opaque */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px 10px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Titre en haut */
-  z-index: 1;
-  margin-right: 20px; /* Optionnel : petit espace avec le bord droit */
-}        /* Centre le cadre si besoin */
-}
-.kit-title {
-   text-align: center;
-  font-size: 1.4em;
-  color: #1e3a6b;
-  border-bottom: 2px solid #1e3a6b;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-.kit-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;    /* Optionnel : coins arrondis */
-}
-
