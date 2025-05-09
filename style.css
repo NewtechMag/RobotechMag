@@ -995,3 +995,27 @@ main {
     align-items: center;
   }
 }
+.kit-media {
+  flex: 1;
+  border: 2px ;
+  padding: 15px;
+  box-sizing: border-box;
+  height: fit-content;
+}
+
+.kit-title {
+   text-align: center;
+  font-size: 1.4em;
+  color: #1e3a6b;
+  border-bottom: 2px solid #1e3a6b;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.kit-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 300px;
+  object-fit: cover;
+}
