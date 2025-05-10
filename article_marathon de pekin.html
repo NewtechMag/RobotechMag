@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thème - Robotique</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+
+  <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+<div class="article-container">
+  <h1>Les robots chinois prennent le départ : entre marathon humanoïde et stratégie industrielle</h1>
+  <p>Publié le 10 mai 2025</p>
+  <img src="robot_marathon_pekin.jpg" alt="Robots humanoïdes au départ du semi-marathon" class="article-image" />
+  <p class="image-caption">21 robots ont couru aux côtés de 12 000 humains à Pékin. Source : Xinhua</p>
+
+  <p>Le 19 avril 2025, la Chine a créé l’événement à Pékin en organisant le tout premier semi-marathon de robots humanoïdes, une initiative inédite mêlant prouesse technique et communication géopolitique. Aux côtés de 12 000 coureurs humains, 21 robots bipèdes ont pris le départ dans le quartier high-tech de Yizhuang. L’objectif ? Montrer les avancées technologiques chinoises en matière de robotique autonome et d’intelligence artificielle.</p>
+
+  <h2>Encore loin de pouvoir rivaliser avec la mécanique humaine</h2>
+  <p>La course n’a pas été sans encombre. De nombreux robots ont chuté, percuté des barrières ou souffert de problèmes techniques (surchauffe, perte d'équilibre, consommation excessive). Chaque machine était accompagnée par une équipe humaine, mettant en évidence les limites actuelles de l'autonomie robotique. Parmi ces robots, seuls six ont terminé la course de 21,1 km. Le plus rapide, Tiangong Ultra, conçu par le Beijing Humanoid Robot Innovation Center en partenariat avec UBTech, a franchi la ligne d’arrivée en 2h40 — après trois changements de batterie et une chute. Pesant 55 kg pour 1,80 m, il incarne une nouvelle génération de robots plus stables, endurants et adaptatifs.</p>
+
+  <p>Mais au-delà de la simple comparaison entre l’homme et la machine, l’enjeu principal de cette course était ailleurs : démontrer que la Chine ne court pas seulement pour la gloire technologique, mais pour la première place sur le podium mondial de la robotique.</p>
+
+  <h2>La Chine, puissance montante de la robotique</h2>
+  <p>Tandis que d'autres pays sont encore ralentis par les dissonances entre politique publique, recherche et investissement privé, la Chine avance à grande vitesse grâce à un front uni. La Commission nationale du développement et de la réforme a récemment annoncé la création d’un fonds de capital-risque soutenu par l’État, dédié à la robotique, à l’intelligence artificielle et à l’innovation. Objectif : mobiliser 1 000 milliards de yuans (environ 137,8 milliards de dollars) sur 20 ans en partenariat avec les gouvernements locaux et les entreprises privées.</p>
+
+  <p>Selon la Fédération internationale de robotique (IFR), cette stratégie a déjà porté ses fruits : en dix ans, la part de la Chine dans les installations mondiales de robots industriels est passée d’un cinquième à plus de la moitié. En 2023, elle a même dépassé l’Allemagne et le Japon en densité robotique avec 470 robots pour 10 000 employés.</p>
+
+  <p>Le pays ne se contente plus d’acheter des robots, il les fabrique. En 2023, 47 % des robots industriels installés dans le pays venaient de fournisseurs chinois, contre 30 % en 2020. Les entreprises locales comme UBTech, Fourier Intelligence, Xpeng Robotics, ou encore Unitree Robotics se démarquent par leurs innovations dans les domaines de la robotique de service, industrielle et humanoïde.</p>
+
+  <h2>Les humanoïdes comme technologie stratégique</h2>
+  <p>Les robots humanoïdes sont désormais considérés comme une technologie de rupture par le ministère chinois de l’Industrie. Une stratégie nationale, renforcée par le 14ᵉ Plan quinquennal, a été mise en place pour stimuler leur développement. En juillet 2024, cinq organisations de Shanghai ont rédigé des directives pour encadrer le développement de robots humanoïdes.</p>
+
+  <p>Des initiatives comme la China International Industry Fair, qui met en lumière des robots industriels et humanoïdes, ou encore la plateforme de partage de données lancée par le National Humanoid Robot Innovation Center, témoignent de l’ampleur de l'engagement public.</p>
+
+  <p>Parmi les entreprises emblématiques, Xpeng Motors a récemment annoncé vouloir investir jusqu’à 100 milliards de yuans (13,8 milliards de dollars) dans le développement de son robot humanoïde Iron, déjà en activité dans une usine automobile.</p>
+
+  <h2>Une course technologique mondiale</h2>
+  <p>Les investissements massifs de la Chine dans la robotique inquiètent ses concurrents. En Allemagne, la VDMA Robotics + Automation alerte sur une perte de compétitivité européenne. L’Union européenne est appelée à adopter des politiques industrielles plus ambitieuses pour ne pas se faire distancer.</p>
+
+  <p>« L’Europe ne doit pas rester à la traîne dans ce domaine critique », avertit Dr. Dietmar Ley, président de la VDMA. « Il est essentiel que la technologie humanoïde européenne sorte des laboratoires pour entrer dans une production compétitive à grande échelle. »</p>
+
+  <h2>La Chine en tête de course ?</h2>
+  <p>Le semi-marathon de robots humanoïdes n’était pas qu’une démonstration technologique ; c’était une vitrine politique. Il incarne la convergence entre spectacle médiatique, stratégie industrielle et soft power technologique. La Chine ne cherche pas seulement à participer à la course mondiale à l’innovation : elle veut la dominer. Et pour cela, elle court déjà bien plus vite que beaucoup ne l’imaginent.</p>
+</div>
+</main>
+
+ <!-- Lottie + Header -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Charger l'animation Lottie
+      requestAnimationFrame(() => {
+        const container = document.getElementById('lottie-animation');
+        if (container) {
+          lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+          });
+        } else {
+          console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
+        }
+      });
+
+      // ✅ Menu burger : le code est exécuté une fois que le DOM du header est injecté
+      const burgerButton = document.querySelector('.burger-circle button');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+      if (burgerButton && mobileMenu && closeButton) {
+        burgerButton.addEventListener('click', () => {
+          mobileMenu.classList.add('show');
+        });
+
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 1024) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+      } else {
+        console.warn('❌ Élément du menu burger introuvable.');
+      }
+    });
+</script>
+
+
+</body>
+</html>
