@@ -166,66 +166,77 @@
 
        
 
-<!-- LOTTIE & CAROUSEL SCRIPTS -->
   <script>
-  // Animation Lottie
-  lottie.loadAnimation({
-    container: document.getElementById('lottie-animation'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
-  });
-
-  document.addEventListener('DOMContentLoaded', function () {
-    // Carousel
-    const track = document.querySelector('.carousel-track');
-    const items = document.querySelectorAll('.carousel-item');
-    const prevButton = document.querySelector('.carousel-btn.prev');
-    const nextButton = document.querySelector('.carousel-btn.next');
-    let index = 0;
-
-    function updateCarousel() {
-      track.style.transform = translateX(-${index * 100}%);
-    }
-
-    nextButton.addEventListener('click', () => {
-      index = (index + 1) % items.length;
-      updateCarousel();
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
     });
+  </script>
 
-    prevButton.addEventListener('click', () => {
-      index = (index - 1 + items.length) % items.length;
-      updateCarousel();
-    });
+  <!-- MENU BURGER FONCTIONNEL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burgerButton = document.querySelector('.menu-toggle');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.close-btn');
 
-    // Menu burger façon Kotaku
-    const burgerButton = document.querySelector('.burger-circle button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const closeButton = document.querySelector('.mobile-menu .close-btn');
+      if (burgerButton && mobileMenu && closeButton) {
+        burgerButton.addEventListener('click', () => {
+          mobileMenu.classList.add('show');
+        });
 
-    burgerButton.addEventListener('click', () => {
-      mobileMenu.classList.add('show');
-    });
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
 
-    closeButton.addEventListener('click', () => {
-      mobileMenu.classList.remove('show');
-    });
-
-    window.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
-        mobileMenu.classList.remove('show');
+        window.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+          }
+        });
       }
     });
+  </script>
 
-    // Responsive : referme menu mobile si trop large
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 1024) {
-        mobileMenu.classList.remove('show');
+  <!-- CAROUSEL (si utilisé quelque part) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.querySelector('.carousel-track');
+      const items = document.querySelectorAll('.carousel-item');
+      const prevButton = document.querySelector('.carousel-btn.prev');
+      const nextButton = document.querySelector('.carousel-btn.next');
+
+      if (track && items.length && prevButton && nextButton) {
+        let index = 0;
+        const totalItems = items.length;
+
+        function updateCarousel() {
+          const offset = -index * 100;
+          track.style.transform = `translateX(${offset}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+          index = (index + 1) % totalItems;
+          updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+          index = (index - 1 + totalItems) % totalItems;
+          updateCarousel();
+        });
+
+        // Auto défilement si souhaité :
+        // setInterval(() => {
+        //   index = (index + 1) % totalItems;
+        //   updateCarousel();
+        // }, 5000);
       }
     });
-  });
-</script>
+  </script>
+
    
 </body>
 </html>
