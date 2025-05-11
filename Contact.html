@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contactez-nous</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+
+  <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
+
+  <header class="header">
+    <h1>Contactez notre équipe</h1>
+    <p>Pour toute question, suggestion ou demande de partenariat, remplissez le formulaire ci-dessous ou contactez directement l'un de nos services.</p>
+  </header>
+
+  <main class="contact-container">
+    <section class="contact-form">
+      <h2>Formulaire de contact</h2>
+      <form action="https://formsubmit.co/tonemail@example.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://tonsite.com/merci.html">
+
+        <label for="name">Nom *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Sujet</label>
+        <input type="text" id="subject" name="subject">
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <aside class="contact-info">
+      <h2>Coordonnées</h2>
+      <p><strong>Email général :</strong> contact@tonsite.com</p>
+      <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+      <p><strong>Adresse :</strong><br>123 Rue de la Robotique<br>75000 Paris, France</p>
+
+      <h3>Équipe éditoriale</h3>
+      <p><strong>Rédacteur en chef :</strong> redac@tonsite.com</p>
+      <p><strong>Partenariats :</strong> partenariat@tonsite.com</p>
+    </aside>
+  </main>
+
+    <!-- Lottie + Header -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Charger l'animation Lottie
+      requestAnimationFrame(() => {
+        const container = document.getElementById('lottie-animation');
+        if (container) {
+          lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+          });
+        } else {
+          console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
+        }
+      });
+
+      // ✅ Menu burger : le code est exécuté une fois que le DOM du header est injecté
+      const burgerButton = document.querySelector('.burger-circle button');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+      if (burgerButton && mobileMenu && closeButton) {
+        burgerButton.addEventListener('click', () => {
+          mobileMenu.classList.add('show');
+        });
+
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 1024) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+      } else {
+        console.warn('❌ Élément du menu burger introuvable.');
+      }
+    });
+</script>
+
+
+</body>
+</html>
