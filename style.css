@@ -663,6 +663,14 @@ main {
   font-style: italic;
 }
 
+blockquote {
+      font-style: italic;
+      background-color: #eee;
+      padding: 10px 20px;
+      border-left: 4px solid #ccc;
+      margin: 20px 0;
+    }
+
 .articles-row {
   position: relative;
   display: flex;
