@@ -1020,6 +1020,20 @@ body {
 }
 
 /* Derniers articles */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  background-color: #1f3b74;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .articles-grid {
   display: flex;
   gap: 20px;
@@ -1034,22 +1048,31 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
 }
 
 .article-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.article-card:hover img {
+  transform: scale(1.1);
 }
 
 .article-text {
-  position: absolute;
   bottom: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
   color: white;
   width: 100%;
   padding: 10px;
 }
+
 
 /* Robotique + pub */
 .robotique-pub-section {
