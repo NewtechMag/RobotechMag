@@ -852,7 +852,7 @@ main {
 }
 
 .article-themes {
-  position: absolute;
+  position: relative;
   top: 10px;
   left: 10px;
   display: flex;
@@ -1072,6 +1072,7 @@ body {
 }
 
 .robotique-item {
+  position:relative;
   display: flex;
   text-decoration: none;
   background: white;
