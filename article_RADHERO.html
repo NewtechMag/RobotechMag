@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Le HERO humanoïde qui révolutionne la surveillance autonome</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #1a1a1a;
+    }
+    blockquote {
+      font-style: italic;
+      background-color: #eee;
+      padding: 10px 20px;
+      border-left: 4px solid #ccc;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+     <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
+
+    <main>
+<div class="article-container">
+  <h1>Le HERO humanoïde qui révolutionne la surveillance autonome</h1>
+  <p class="date">Publié le 10 mai 2025</p>
+  <img src="s-reinharz-welcomes-hero-to-the-rad-family-1920x1080-1-1024x576.jpg" alt="Le HERO humanoïde qui révolutionne la surveillance autonome" class="article-image" />
+  <p class="image-caption">S.Reinharz(RAD CEO) et HERO. Source : radsecurity.com</p>
+  <h1>Le HERO humanoïde qui révolutionne la surveillance autonome</h1>
+
+  <p><strong>Robotic Assistance Devices (RAD)</strong>, filiale de l'entreprise américaine Artificial Intelligence Technology Solutions (AITX), a récemment dévoilé HERO (Humanoid Enforcement & Response Officer), un robot de sécurité humanoïde conçu pour transformer la manière dont les organisations abordent la sécurité et la gestion opérationnelle.</p>
+
+  <h2>Une intelligence artificielle au service de la sécurité</h2>
+  <p>HERO est équipé de SARA (Speaking Autonomous Responsive Agent), une plateforme d'intelligence artificielle développée par RAD. Le système SARA permet un traitement instantané des alertes, assurant une réponse rapide et efficace face aux menaces détectées. Grâce à son intelligence avancée, il surveille en continu l'environnement, analysant les données en temps réel pour identifier les risques potentiels.</p>
+
+  <p>Cette surveillance automatisée réduit considérablement les coûts opérationnels, en prenant en charge des tâches de sécurité traditionnellement gérées par des équipes humaines, tout en garantissant une gestion plus précise et plus réactive des incidents.</p>
+
+  <p>L'intégration de l'IA dans les systèmes de sécurité robotisés augmente la capacité des organisations à surveiller leurs installations en temps réel. Elle permet également une détection plus fine des menaces. Si l'adoption de l'IA dans la cybersécurité est en forte croissance, son application dans les robots de sécurité physiques reste rare. RAD tente de combler ce vide avec des solutions concrètes et innovantes.</p>
+
+  <p>Peu d'acteurs s'attaquent à ce marché de la sécurité physique autonome. RAD, en combinant IA et robotique humanoïde, propose une nouvelle génération de robots capables d’assurer la surveillance, l’analyse et l’intervention sans supervision constante.</p>
+
+  <h2>Une interaction humaine renforcée</h2>
+  <p>Contrairement aux systèmes de surveillance traditionnels, HERO adopte une forme humanoïde pour favoriser l'interaction avec les personnes. Ce design rassure les civils et facilite la communication.</p>
+
+  <p>Le robot peut répondre aux menaces en temps réel, dissuader verbalement des comportements indésirables et gérer des situations d'escalade verbale grâce à des protocoles de désescalade. Il ajuste son comportement selon le contexte, allant de la courtoisie à l'intimidation si nécessaire, rendant ses interventions aussi efficaces que flexibles.</p>
+
+  <h2>RAD : Un acteur innovant dans la robotique de sécurité</h2>
+  <p>Fondée en 2016 à Ferndale, Michigan, RAD développe des solutions de sécurité intégrant l'intelligence artificielle. Parmi ses produits phares : HERO, ROAMEO, RADDOG LE2, et AVA. L'entreprise a remporté le prix du <em>SIA New Product Showcase 2025</em> pour ses avancées dans la détection et la réponse aux menaces.</p>
+
+  <blockquote>
+    "Depuis le premier jour, nous avons cherché à développer des technologies qui transformeraient la manière dont les organisations abordent la sécurité et la gestion opérationnelle. Notre mission est claire : continuer à développer les technologies de sécurité les plus avancées, alimentées par l'IA, qui aident les entreprises à fonctionner plus efficacement et en toute sécurité tout en rendant le monde plus sûr." – Steve Reinharz, PDG de RAD
+  </blockquote>
+
+  <h2>Une vision d'avenir pour la sécurité autonome</h2>
+  <p>Attendu pour une commercialisation fin 2025, HERO s'annonce comme une innovation majeure. En alliant IA avancée, interaction humaine et autonomie d’action, il pourrait bien incarner l’avenir de la sécurité professionnelle dans les années à venir.</p>
+
+     <!-- Lottie + Header -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Charger l'animation Lottie
+      requestAnimationFrame(() => {
+        const container = document.getElementById('lottie-animation');
+        if (container) {
+          lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+          });
+        } else {
+          console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
+        }
+      });
+
+      // ✅ Menu burger : le code est exécuté une fois que le DOM du header est injecté
+      const burgerButton = document.querySelector('.burger-circle button');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+      if (burgerButton && mobileMenu && closeButton) {
+        burgerButton.addEventListener('click', () => {
+          mobileMenu.classList.add('show');
+        });
+
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 1024) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+      } else {
+        console.warn('❌ Élément du menu burger introuvable.');
+      }
+    });
+</script>
+
+
+</body>
+</html>
