@@ -61,12 +61,34 @@
     });
   </script>
 
-  <!-- MENU BURGER FONCTIONNEL -->
+   <!-- Lottie + Header -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const burgerButton = document.querySelector('.menu-toggle');
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Charger l'animation Lottie
+      requestAnimationFrame(() => {
+        const container = document.getElementById('lottie-animation');
+        if (container) {
+          lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+          });
+        } else {
+          console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
+        }
+      });
+
+      // ✅ Menu burger : le code est exécuté une fois que le DOM du header est injecté
+      const burgerButton = document.querySelector('.burger-circle button');
       const mobileMenu = document.querySelector('.mobile-menu');
-      const closeButton = document.querySelector('.close-btn');
+      const closeButton = document.querySelector('.mobile-menu .close-btn');
 
       if (burgerButton && mobileMenu && closeButton) {
         burgerButton.addEventListener('click', () => {
@@ -82,45 +104,18 @@
             mobileMenu.classList.remove('show');
           }
         });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 1024) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+      } else {
+        console.warn('❌ Élément du menu burger introuvable.');
       }
     });
-  </script>
+</script>
 
-  <!-- CAROUSEL (si utilisé quelque part) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const track = document.querySelector('.carousel-track');
-      const items = document.querySelectorAll('.carousel-item');
-      const prevButton = document.querySelector('.carousel-btn.prev');
-      const nextButton = document.querySelector('.carousel-btn.next');
-
-      if (track && items.length && prevButton && nextButton) {
-        let index = 0;
-        const totalItems = items.length;
-
-        function updateCarousel() {
-          const offset = -index * 100;
-          track.style.transform = `translateX(${offset}%)`;
-        }
-
-        nextButton.addEventListener('click', () => {
-          index = (index + 1) % totalItems;
-          updateCarousel();
-        });
-
-        prevButton.addEventListener('click', () => {
-          index = (index - 1 + totalItems) % totalItems;
-          updateCarousel();
-        });
-
-        // Auto défilement si souhaité :
-        // setInterval(() => {
-        //   index = (index + 1) % totalItems;
-        //   updateCarousel();
-        // }, 5000);
-      }
-    });
-  </script>
 
 </body>
 </html>
