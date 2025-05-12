@@ -1292,20 +1292,8 @@ blockquote {
   background: yellow;
   border: 2px solid red;
 }
+.publicite {
+  display: block !important;
+}
 
-.publicite-item {
-  position:relative;
-  display: flex;
-  text-decoration: none;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  color: inherit;
-}
-.publicite-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
