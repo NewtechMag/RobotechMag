@@ -1292,13 +1292,24 @@ blockquote {
   display: block !important;
 }
 
-@media (max-width: 768px) {
-  /* Ajuster le menu principal */
-  /* Rendre l'aside responsive */
-  aside {
-    display: block;
-    width: 100%; /* S'assurer qu'il occupe toute la largeur disponible */
-    margin: 0 auto;
-  }
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
+main .aside-colonne {
+  width: 45%; /* ajustez la largeur selon votre préférence */
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* Empile les éléments en colonne */
+  }
+
+  main .aside-colonne {
+    width: 100%; /* L'aside prend toute la largeur sur petits écrans */
+    margin-bottom: 20px; /* Espace entre les éléments */
+  }
+}
