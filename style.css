@@ -1129,6 +1129,37 @@ blockquote {
   color: #555;
   margin: 0;
 }
+.aside-colonne {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.publicite, .instagram {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.instagram-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.instagram-embed-container {
+  display: flex;
+  justify-content: center;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
