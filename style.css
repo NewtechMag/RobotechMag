@@ -1288,6 +1288,11 @@ blockquote {
   display: flex;
   justify-content: center;
 }
+.aside-colonne {
+  background: yellow;
+  border: 2px solid red;
+}
+
 
 
 
