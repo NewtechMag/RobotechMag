@@ -1292,23 +1292,13 @@ blockquote {
   display: block !important;
 }
 
-main {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-main .aside-colonne {
-  width: 45%; /* ajustez la largeur selon votre préférence */
-}
-
 /* Media queries pour les petits écrans */
 @media (max-width: 768px) {
-  main {
+  aside {
     flex-direction: column; /* Empile les éléments en colonne */
   }
 
-  main .aside-colonne {
+  aside {
     width: 100%; /* L'aside prend toute la largeur sur petits écrans */
     margin-bottom: 20px; /* Espace entre les éléments */
   }
