@@ -1293,13 +1293,26 @@ blockquote {
 }
 
 /* Media queries pour les petits écrans */
+/* Pour les écrans plus petits, transformer les asides */
 @media (max-width: 768px) {
-  aside {
-    flex-direction: column; /* Empile les éléments en colonne */
+  main {
+    display: block; /* Revenir à une disposition en bloc */
+    padding: 10px;
   }
 
-  aside {
-    width: 100%; /* L'aside prend toute la largeur sur petits écrans */
-    margin-bottom: 20px; /* Espace entre les éléments */
+  .aside-colonne {
+    width: 100%; /* L'aside prend toute la largeur */
+    margin-bottom: 20px; /* Ajoute un espacement entre les sections */
+  }
+
+  .kit img {
+    width: 100%; /* S'assurer que l'image est responsive */
+    height: auto;
+  }
+
+  .instagram-embed-container iframe {
+    width: 100%; /* Rendre l'iframe responsive */
+    height: auto; /* Ajuste la hauteur en fonction de la largeur */
   }
 }
+
