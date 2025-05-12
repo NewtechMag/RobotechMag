@@ -1295,7 +1295,7 @@ blockquote {
 /* Media queries pour les petits écrans */
 /* Pour les écrans plus petits, transformer les asides */
 @media (max-width: 768px) {
-  main {
+  body {
     display: block; /* Revenir à une disposition en bloc */
     padding: 10px;
   }
