@@ -1231,7 +1231,7 @@ blockquote {
   padding: 10px;
 }
 /* Publicité */
-.publicite {
+.kit {
   flex: 1;
   background: white;
   padding: 10px;
@@ -1239,7 +1239,7 @@ blockquote {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.publicite img {
+.kit img {
   width: 100%;
   border-radius: 6px;
 }
@@ -1265,7 +1265,7 @@ blockquote {
   gap: 20px;
 }
 
-.publicite, .instagram {
+.kit, .instagram {
   background: #f8f8f8;
   padding: 15px;
   border-radius: 8px;
@@ -1288,7 +1288,7 @@ blockquote {
   display: flex;
   justify-content: center;
 }
-.publicite {
+.kit {
   display: block !important;
 }
 
