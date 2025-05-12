@@ -334,35 +334,24 @@ main {
 
 /* LOGO + LOTTIE */
 .logo-wrapper {
-  position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  height: 150px;
-}
-
-#lottie-animation {
-  position: absolute;
-  top: -50px;
-  width: 150px;
-  height: 150px;
-  z-index: 0;
-  pointer-events: none;
+  z-index: 1;
 }
 
 .logo-container {
-  z-index: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .logo {
   font-family: 'Impact', 'Arial Black', sans-serif;
   font-size: 80px;
   font-weight: 900;
-  text-align: center;
 }
 
 .logo-part-new {
@@ -371,6 +360,39 @@ main {
 
 .logo-part-tech {
   color: #1e3a6b; /* Bleu métal */
+}
+
+.logo-subtitle {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: black;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+.logo-subtitle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(0, 183, 255, 0.2) 0%, rgba(0, 183, 255, 0.8) 50%, rgba(0, 183, 255, 0.2) 100%);
+  animation: shine 3s infinite;
+  transform: skewX(-20deg);
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 
 /* NAVIGATION */
