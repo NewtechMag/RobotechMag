@@ -267,6 +267,11 @@ body {
   text-decoration: none;
   font-size: 18px;
 }
+.mobile-menu ul li {
+  padding: 12px 0;
+  border-bottom: 2px solid #1e3a6b;
+  margin: 0 20px; /* <-- espace de 20px à gauche et à droite */
+}
 
 @media (max-width: 768px) {
   .menu-toggle {
