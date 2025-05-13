@@ -1297,6 +1297,7 @@ blockquote {
 /* Cacher les asides sur les petits écrans */
 @media (max-width: 768px) {
   .aside-colonne {
-    display: none; /* Cache l'aside */
-  }
+  display: none !important;
 }
+  }
+
