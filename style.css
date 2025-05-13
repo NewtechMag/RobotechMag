@@ -1240,7 +1240,7 @@ blockquote {
 }
 
 .kit img {
-  width: 100%;
+  width: 50%;
   border-radius: 6px;
 }
 .text {
@@ -1279,7 +1279,7 @@ blockquote {
 
 .instagram-section {
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 10px auto;
   padding: 20px;
   text-align: center;
 }
