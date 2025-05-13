@@ -1240,7 +1240,8 @@ blockquote {
 }
 
 .kit img {
-  width: 50%;
+  width: 100%;
+  max-height: 300px;
   border-radius: 6px;
 }
 .text {
