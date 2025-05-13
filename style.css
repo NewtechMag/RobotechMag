@@ -1293,26 +1293,9 @@ blockquote {
 }
 
 /* Media queries pour les petits écrans */
-/* Pour les écrans plus petits, transformer les asides */
+/* Cacher les asides sur les petits écrans */
 @media (max-width: 768px) {
-  body {
-    display: block; /* Revenir à une disposition en bloc */
-    padding: 10px;
-  }
-
   .aside-colonne {
-    width: 100%; /* L'aside prend toute la largeur */
-    margin-bottom: 20px; /* Ajoute un espacement entre les sections */
-  }
-
-  .kit img {
-    width: 100%; /* S'assurer que l'image est responsive */
-    height: auto;
-  }
-
-  .instagram-embed-container iframe {
-    width: 100%; /* Rendre l'iframe responsive */
-    height: auto; /* Ajuste la hauteur en fonction de la largeur */
+    display: none; /* Cache l'aside */
   }
 }
-
