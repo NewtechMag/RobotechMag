@@ -621,6 +621,7 @@ main {
   object-fit: contain; /* ou 'cover' si tu veux remplir */
   border-radius: 10px;
   display: block;
+  }
 
 /* FLÈCHES */
 .carousel-btn {
