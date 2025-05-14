@@ -728,7 +728,7 @@ padding-bottom: 40px;
 
 .mobile-menu ul {
   list-style: none;
-  padding-top: 60px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
