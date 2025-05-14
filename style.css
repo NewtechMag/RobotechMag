@@ -696,6 +696,7 @@ main {
   padding: 20px;
   transition: left 0.3s ease;
   z-index: 1000;
+  overflow-y: auto;
 }
 
 .mobile-menu.show {
