@@ -1309,6 +1309,7 @@ blockquote {
   }
 
 .site-footer {
+  width:100%
   background-color: #f9f9f9;
   padding: 30px 20px 10px;
   font-family: 'Arial', sans-serif;
@@ -1318,8 +1319,8 @@ blockquote {
 }
 
 .footer-separator {
-  height: 4px;
-  background-color: #007BFF; /* Bleu vif */
+  height: 10px;
+  background-color: #1e3a6b; /* Bleu vif */
   margin-bottom: 20px;
   width: 100%;
 }
