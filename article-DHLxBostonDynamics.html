@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DHL et Boston Dynamics accélèrent leur partenariat </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+     <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
+
+    <main>
+<div class="article-container">
+  <h1>DHL et Boston Dynamics accélèrent leur partenariat</h1>
+  <p class="date">Publié le 15 mai 2025</p>
+  <img src="Stretch-BostonDynamics.jpg" alt="DHL et Boston Dynamics accélèrent leur partenariat" class="article-image" />
+  <p class="DHL achète plus de 1 000 robots Stretch à Boston Dynamics">. Source : Boston Dynamics</p>
+
+
+  <h2>DHL, géant mondial et force logistique</h2>
+  <p>DHL, l’incontestable leader mondial de la logistique, gère chaque jour un volume colossal de 4,4 millions de colis à travers le globe. Au moins un tiers de ses quelque 600 000 employés sont directement impliqués dans des activités logistiques, un travail titanesque qui exige rigueur, efficacité et réactivité.</p>
+
+  <h2>Une stratégie ambitieuse d’automatisation</h2>
+  <p>Consciente des défis liés à cette charge croissante, l’entreprise a engagé une stratégie ambitieuse de transformation digitale et robotique. En seulement trois ans, DHL a investi plus d’un milliard d’euros dans son pôle de logistique contractuelle, déployant plus de 7 500 robots à l’échelle mondiale pour optimiser ses processus. Parmi ses partenaires figurent plusieurs leaders de la robotique comme Boston Dynamics, AutoStore, Fox Robotics, Geek+ et Locus Robotics.</p>
+
+  <p>La collaboration avec Locus Robotics s’est révélée particulièrement impressionnante : DHL a récemment annoncé avoir dépassé les 500 millions de prélèvements effectués grâce aux robots autonomes de Locus. Pour mesurer l’accélération du phénomène, il a fallu 28 mois pour atteindre les 100 premiers millions après les 10 premiers, mais seulement 154 jours pour les 100 derniers. Ces chiffres témoignent de l’efficacité grandissante des robots mobiles autonomes dans les entrepôts.Sally Miller, Directrice des Systèmes d’Information de DHL Supply Chain, insiste sur la transformation profonde que traverse l’entreprise via la digitalisation. DHL souhaite désormais aller au-delà de la simple adoption technologique, en devenant un acteur actif du co-développement des solutions robotiques de demain, adaptées aux exigences spécifiques de la chaîne logistique moderne. Et cela passe par sa collaboration avec Boston Dynamics</p>
+
+  <h2>Un partenariat stratégique avec Boston Dynamics</h2>
+  <div class="video-wrapper">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/qgGH6Vk8nY8?si=Dd9iprvJHG06_vnm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <p>La collaboration entre DHL et Boston Dynamics remonte à 2018, marquant le début d’un partenariat stratégique autour de la robotisation des entrepôts. C’est en 2023 que DHL a commencé à déployer le robot <strong>Stretch</strong> en Amérique du Nord, suivi par le Royaume-Uni et d'autres pays européens. Conçu pour automatiser le déchargement de conteneurs, Stretch a rapidement fait ses preuves avec une cadence allant jusqu’à 700 colis par heure. En 2025, DHL a annoncé le déploiement de plus de 1 000 unités supplémentaires d’ici 2030, tout en explorant de nouveaux cas d’usage. L’une des priorités futures est le développement du <strong>case picking</strong>, une tâche particulièrement chronophage. En élargissant les capacités de Stretch, DHL ambitionne d’en faire un robot polyvalent au service de toute la chaîne logistique.</p>
+  <p>Pour Robert Playter, PDG de Boston Dynamics, cette alliance s’inscrit dans une continuité logique : « Ensemble, nous fixons une nouvelle norme pour l’industrie logistique. » Stretch pourrait devenir le premier robot multifonction logistique à grande échelle.</p>
+
+  <h2>Une nouvelle ère pour la logistique mondiale</h2>
+  <p>L'accélération du partenariat entre DHL et Boston Dynamics illustre clairement l’orientation prise par le secteur logistique. Face à l’augmentation des cadences, aux enjeux de performance et à la pénibilité des tâches, la robotisation n’est plus un luxe mais une nécessité. Cette alliance stratégique pourrait bien préfigurer une nouvelle ère pour la logistique mondiale, combinant innovation, résilience et productivité à grande échelle.</p>
+  </div>
+</main>
+     <!-- Lottie + Header -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Charger l'animation Lottie
+      requestAnimationFrame(() => {
+        const container = document.getElementById('lottie-animation');
+        if (container) {
+          lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://dl.dropboxusercontent.com/scl/fi/7h7n7ve3xjlchks0lm375/Animation-1746211827088.json?rlkey=ysvzenol7e3vhqnyj1vtthm9x&raw=1'
+          });
+        } else {
+          console.warn('❌ Élément #lottie-animation non trouvé dans le header.html');
+        }
+      });
+
+      // ✅ Menu burger : le code est exécuté une fois que le DOM du header est injecté
+      const burgerButton = document.querySelector('.burger-circle button');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.mobile-menu .close-btn');
+
+      if (burgerButton && mobileMenu && closeButton) {
+        burgerButton.addEventListener('click', () => {
+          mobileMenu.classList.add('show');
+        });
+
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 1024) {
+            mobileMenu.classList.remove('show');
+          }
+        });
+      } else {
+        console.warn('❌ Élément du menu burger introuvable.');
+      }
+    });
+</script>
+
+
+</body>
+</html>
