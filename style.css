@@ -554,12 +554,16 @@ main {
 }
 
 .headline-banner {
-  background-color: #1e3a6b; /* Bleu métal */
+  background: linear-gradient(135deg, #1e3a6b, #375ac4, #1e3a6b); /* effet métal */
   padding: 8px 20px;
   border-radius: 4px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3); /* brillance */
+  color: white; /* pour un bon contraste */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* plus de relief au texte */
 }
 
 .headline-banner h2 {
@@ -1147,12 +1151,18 @@ blockquote {
 }
 
 .section-title {
-  text-align: center;
-  background-color: #1f3b74;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
+  background: linear-gradient(135deg, #1e3a6b, #375ac4, #1e3a6b); /* effet métal */
+  padding: 8px 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3); /* brillance */
+  color: white; /* pour un bon contraste */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* plus de relief au texte */
 }
+
 
 /* Derniers articles */
 .articles-grid {
