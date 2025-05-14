@@ -701,7 +701,9 @@ main {
   left: -100%;
   width: 80%;
   max-width: 300px;
-  height: 100vh;
+  height: 100dvh;
+max-height: 100dvh;
+overflow-y: auto;
   background: #111;
   color: white;
   padding: 20px;
