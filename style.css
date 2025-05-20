@@ -1397,3 +1397,12 @@ blockquote {
   font-size: 12px;
   color: #888;
 }
+h2 {
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+}
