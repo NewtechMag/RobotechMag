@@ -372,17 +372,20 @@ main {
 }
 
 .logo {
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 80px;
-  font-weight: 900;
+  font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      letter-spacing: -1px;
 }
 
 .logo-part-new {
-  color: #000;
+  color: #0d1b2a;
 }
 
 .logo-part-tech {
-  color: #1e3a6b; /* Bleu métal */
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 }
 
 .logo-subtitle {
