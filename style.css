@@ -40,7 +40,7 @@ body {
 }
 
 .logo-part-new {
-  color: #000;
+  color: #0d1b2a;
 }
 
 .logo-part-tech {
@@ -461,11 +461,13 @@ main {
 }
 
 .logo-part-new {
-  color: #000;
+  color: #0d1b2a;
 }
 
 .logo-part-tech {
-  color: #1e3a6b; /* Bleu métal */
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; /* Bleu métal */
 }
 
 .logo-subtitle {
