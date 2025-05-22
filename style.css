@@ -559,19 +559,16 @@ main {
 }
 
 .headline-banner {
-  background: linear-gradient(90deg, #00b4d8, #0077b6); /* nouveau fond dégradé horizontal */
+   background: linear-gradient(135deg, #1e3a6b, #375ac4, #1e3a6b); /* effet métal */
   padding: 8px 20px;
   border-radius: 4px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2),
-              0 4px 10px rgba(0, 0, 0, 0.3); /* brillance */
-  color: white; /* texte blanc */
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3); /* brillance */
+  color: white; /* pour un bon contraste */
   font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* relief du texte */
-  font-size: 1.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* plus de relief au texte */
 }
 
 .headline-banner h2 {
@@ -1175,19 +1172,16 @@ blockquote {
 }
 
 .section-title {
-  background: linear-gradient(90deg, #00b4d8, #0077b6); /* nouveau fond dégradé horizontal */
+  background: linear-gradient(135deg, #1e3a6b, #375ac4, #1e3a6b); /* effet métal */
   padding: 8px 20px;
   border-radius: 4px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2),
-              0 4px 10px rgba(0, 0, 0, 0.3); /* brillance */
-  color: white; /* texte blanc */
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3); /* brillance */
+  color: white; /* pour un bon contraste */
   font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* relief du texte */
-  font-size: 1.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* plus de relief au texte */
 }
 
 
