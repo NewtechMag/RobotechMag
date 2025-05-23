@@ -458,6 +458,25 @@
   setInterval(nextSlide, 4000); // autoplay
 </script>
 
+<script>
+  const track = document.querySelector('.lues-carousel-track');
+  let currentSlide = 0;
+  const totalSlides = document.querySelectorAll('.lues-carousel-card').length;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  document.querySelector('.carousel-arrow.left').addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  });
+
+  document.querySelector('.carousel-arrow.right').addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
+  });
+</script>
 
 
 
