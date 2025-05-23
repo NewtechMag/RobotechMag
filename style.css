@@ -1485,7 +1485,7 @@ h2 {
   padding: 20px;
   box-sizing: border-box;
   transform: translateY(40%);
-  transition: transform 0.4s ease;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); /* easeOutBack-like */
   pointer-events: none;
 }
 
@@ -1493,6 +1493,7 @@ h2 {
   transform: translateY(0%);
   pointer-events: auto;
 }
+
 
 .lues-card-content h3 {
   margin: 0 0 8px 0;
