@@ -407,7 +407,7 @@
       }
     });
   </script>
-<script>
+<scrip
   
   document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector('.lues-carousel-track');
@@ -418,6 +418,32 @@
       index = (index + 1) % cards.length;
       track.style.transform = `translateX(-${index * 100}%)`;
     }, 5000);
+  });
+</script
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector('.lues-carousel-track');
+    const cards = document.querySelectorAll('.lues-carousel-card');
+    const leftArrow = document.querySelector('.lues-carousel-arrow.left');
+    const rightArrow = document.querySelector('.lues-carousel-arrow.right');
+    let index = 0;
+
+    // Ajuste la largeur du track dynamiquement
+    track.style.width = `${cards.length * 100}%`;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * (100 / cards.length)}%)`;
+    }
+
+    rightArrow.addEventListener('click', () => {
+      index = (index + 1) % cards.length;
+      updateCarousel();
+    });
+
+    leftArrow.addEventListener('click', () => {
+      index = (index - 1 + cards.length) % cards.length;
+      updateCarousel();
+    });
   });
 </script>
 
