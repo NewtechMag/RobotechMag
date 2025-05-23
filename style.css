@@ -1492,3 +1492,30 @@ h2 {
   margin: 5px 0 0;
   font-size: 0.95em;
 }
+.lues-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+.lues-carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+.lues-carousel-arrow.left {
+  left: 10px;
+}
+.lues-carousel-arrow.right {
+  right: 10px;
+}
+
