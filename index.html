@@ -274,43 +274,48 @@
     </div>
  
   </section>
-   <section class="Les-plus-lues">
+<section class="Les-plus-lues">
   <div class="headline-banner">
     <h2>Les plus lues</h2>
   </div>
 
   <div class="lues-carousel-container">
-    <div class="lues-carousel-arrow left">&#10094;</div>
-<div class="lues-carousel-arrow right">&#10095;</div>
-  <div class="lues-carousel-track">
-    <div class="lues-carousel-card" class="carousel-item" style="background-image: url('Osaka-Metropolitan-University-robot.png');">
-      <a href="article-un-robot-japonais-pour-la-cueillette-des-fraises.html">
-      <div class="lues-card-content">
-         <h3>Un robot japonais pour la cueillette des fraises</h3>
-          <p>Les défis de la robotique agricole</p>
+    <div class="lues-carousel-track">
+      <div class="lues-carousel-card" style="background-image: url('Osaka-Metropolitan-University-robot.png');">
+        <a href="article-un-robot-japonais-pour-la-cueillette-des-fraises.html">
+          <div class="lues-card-content">
+            <h3>Un robot japonais pour la cueillette des fraises</h3>
+            <p>Les défis de la robotique agricole</p>
+          </div>
+        </a>
       </div>
-      </a>
-    </div>
-    <div class="lues-carousel-card">
-      <a href="article-UR15.html" class="carousel-item" style="background-image: url('UR15-1.webp');">
-      <div class="lues-card-content">
-        <h3>Universal Robots lance le UR15</h3>
-        <p>Les cobots poursuivent leurs avancées</p>
+      <div class="lues-carousel-card" style="background-image: url('UR15-1.webp');">
+        <a href="article-UR15.html">
+          <div class="lues-card-content">
+            <h3>Universal Robots lance le UR15</h3>
+            <p>Les cobots poursuivent leurs avancées</p>
+          </div>
+        </a>
       </div>
-      </a>
-    </div>
-    <div class="lues-carousel-card">
-      <a href="article_first_robotics-2025.html" class="carousel-item" style="background-image: url('First_2025.jpg');">
-      <div class="lues-card-content">
-        <h3>Robotics World Championship 2025</h3>
-         <p>Un triomphe d'innovation et d'ingéniosité</p>
+      <div class="lues-carousel-card" style="background-image: url('First_2025.jpg');">
+        <a href="article_first_robotics-2025.html">
+          <div class="lues-card-content">
+            <h3>Robotics World Championship 2025</h3>
+            <p>Un triomphe d'innovation et d'ingéniosité</p>
+          </div>
+        </a>
       </div>
-      </a>
     </div>
-  </div>
-</div>
 
+    <!-- Flèches -->
+    <button class="lues-nav prev">&#10094;</button>
+    <button class="lues-nav next">&#10095;</button>
+
+    <!-- Points -->
+    <div class="lues-dots"></div>
+  </div>
 </section>
+
 </aside>
    
 </section>
@@ -409,31 +414,49 @@
   </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector('.lues-carousel-track');
-    const cards = document.querySelectorAll('.lues-carousel-card');
-    const leftArrow = document.querySelector('.lues-carousel-arrow.left');
-    const rightArrow = document.querySelector('.lues-carousel-arrow.right');
-    let index = 0;
+  const track = document.querySelector('.lues-carousel-track');
+  const cards = document.querySelectorAll('.lues-carousel-card');
+  const dotsContainer = document.querySelector('.lues-dots');
+  const prevBtn = document.querySelector('.lues-nav.prev');
+  const nextBtn = document.querySelector('.lues-nav.next');
+  let index = 0;
 
-    // Ajuste la largeur du track dynamiquement
-    track.style.width = `${cards.length * 100}%`;
-
-    function updateCarousel() {
-      track.style.transform = `translateX(-${index * (100 / cards.length)}%)`;
-    }
-
-    rightArrow.addEventListener('click', () => {
-      index = (index + 1) % cards.length;
-      updateCarousel();
-    });
-
-    leftArrow.addEventListener('click', () => {
-      index = (index - 1 + cards.length) % cards.length;
-      updateCarousel();
-    });
+  cards.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
   });
+
+  const dots = dotsContainer.querySelectorAll('span');
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[index]) dots[index].classList.add('active');
+  }
+
+  function goToSlide(i) {
+    index = i;
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    index = (index + 1) % cards.length;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + cards.length) % cards.length;
+    updateCarousel();
+  }
+
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  updateCarousel();
+  setInterval(nextSlide, 4000); // autoplay
 </script>
+
 
 
 
