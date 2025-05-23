@@ -1449,12 +1449,15 @@ h2 {
   width: 100%;
   height: 100%;
   position: relative;
+  perspective: 1000px;
+  overflow: hidden;
 }
 
 .lues-carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  width: 300%;
   height: 100%;
+  transition: transform 0.8s ease-in-out;
 }
 
 .lues-carousel-card {
@@ -1462,72 +1465,72 @@ h2 {
   height: 100%;
   background-size: cover;
   background-position: center;
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.6s ease, background-position 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
 .lues-carousel-card:hover {
-  transform: scale(1.02);
-  background-position: center top;
+  transform: scale(1.03) rotateX(2deg) rotateY(-2deg);
 }
 
-
- .lues-card-content {
+.lues-card-content {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 80%);
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
   color: white;
   padding: 20px;
-  width: 100%;
   box-sizing: border-box;
-  height: 40%; /* assure un espace visible */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  transform: translateY(40%);
+  transition: transform 0.4s ease;
+  pointer-events: none;
 }
 
+.lues-carousel-card:hover .lues-card-content {
+  transform: translateY(0%);
+  pointer-events: auto;
+}
 
-.lues-nav {
+.lues-card-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2em;
+}
+
+.lues-card-content p {
+  margin: 0;
+  font-size: 0.95em;
+  opacity: 0.9;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #333;
   color: white;
   border: none;
-  font-size: 24px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  padding: 10px 14px;
   z-index: 10;
-  border-radius: 0; /* rectangulaire */
+  font-size: 1.5em;
+  line-height: 1;
+  padding: 0;
   transition: background-color 0.3s;
 }
 
-.lues-nav:hover {
-  background-color: #003366; /* bleu foncé au hover */
+.carousel-arrow:hover {
+  background-color: #002244;
 }
 
-.lues-nav.prev { left: 10px; }
-.lues-nav.next { right: 10px; }
-
-.lues-dots {
-  text-align: center;
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
+.carousel-arrow.left {
+  left: 10px;
 }
 
-.lues-dots span {
-  height: 12px;
-  width: 12px;
-  margin: 0 4px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.lues-dots span.active {
-  background-color: #333;
+.carousel-arrow.right {
+  right: 10px;
 }
