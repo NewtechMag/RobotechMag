@@ -1463,17 +1463,30 @@ h2 {
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow: hidden;
+  transition: transform 0.6s ease, background-position 0.6s ease;
 }
 
-.lues-card-content {
+.lues-carousel-card:hover {
+  transform: scale(1.02);
+  background-position: center top;
+}
+
+
+ .lues-card-content {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 80%);
   color: white;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
+  height: 40%; /* assure un espace visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
 
 .lues-nav {
   position: absolute;
@@ -1484,9 +1497,14 @@ h2 {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 14px;
   z-index: 10;
-  border-radius: 50%;
+  border-radius: 0; /* rectangulaire */
+  transition: background-color 0.3s;
+}
+
+.lues-nav:hover {
+  background-color: #003366; /* bleu foncé au hover */
 }
 
 .lues-nav.prev { left: 10px; }
