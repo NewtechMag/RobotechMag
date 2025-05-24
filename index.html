@@ -430,10 +430,9 @@
   const dots = document.querySelectorAll('.lues-dots button');
 
   function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
-  }
+  const cardWidth = cards[0].offsetWidth + 20; // 20 = column-gap
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
 
   nextBtn.addEventListener('click', () => {
     index = (index + 1) % cards.length;
