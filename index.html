@@ -415,73 +415,53 @@
   </script>
 
 <script>
-  const track = document.querySelector('.lues-carousel-track');
-  const cards = document.querySelectorAll('.lues-carousel-card');
-  const dotsContainer = document.querySelector('.lues-dots');
-  const prevBtn = document.querySelector('.lues-nav.prev');
-  const nextBtn = document.querySelector('.lues-nav.next');
-  let index = 0;
-
-  cards.forEach((_, i) => {
-    const dot = document.createElement('span');
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  });
-
-  const dots = dotsContainer.querySelectorAll('span');
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[index]) dots[index].classList.add('active');
-  }
-
-  function goToSlide(i) {
-    index = i;
-    updateCarousel();
-  }
-
-  function nextSlide() {
-    index = (index + 1) % cards.length;
-    updateCarousel();
-  }
-
-  function prevSlide() {
-    index = (index - 1 + cards.length) % cards.length;
-    updateCarousel();
-  }
-
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
-
-  updateCarousel();
-  setInterval(nextSlide, 4000); // autoplay
-</script>
-
-<script>
   document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector('.lues-carousel-track');
+    const cards = document.querySelectorAll('.lues-carousel-card');
     const leftArrow = document.querySelector('.carousel-arrow.left');
     const rightArrow = document.querySelector('.carousel-arrow.right');
-    const totalCards = document.querySelectorAll('.lues-carousel-card').length;
+    const dotsContainer = document.querySelector('.lues-dots');
     let currentIndex = 0;
 
+    // Créer les dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.classList.add('lues-dot');
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('span');
+
     function updateCarousel() {
-      const offset = -100 * currentIndex;
-      track.style.transform = `translateX(${offset}%)`;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[currentIndex]) dots[currentIndex].classList.add('active');
     }
 
     rightArrow.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % totalCards;
+      currentIndex = (currentIndex + 1) % cards.length;
       updateCarousel();
     });
 
     leftArrow.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
       updateCarousel();
     });
+
+    // Optionnel : autoplay
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateCarousel();
+    }, 6000); // toutes les 6 secondes
+
+    updateCarousel();
   });
 </script>
+
 
 
 
