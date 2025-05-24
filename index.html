@@ -412,52 +412,44 @@
   </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const track = document.querySelector('.lues-carousel-track');
-    const cards = document.querySelectorAll('.lues-carousel-card');
-    const leftArrow = document.querySelector('.carousel-arrow.left');
-    const rightArrow = document.querySelector('.carousel-arrow.right');
-    const dotsContainer = document.querySelector('.lues-dots');
-    let currentIndex = 0;
+  const track = document.querySelector('.lues-carousel-track');
+  const cards = document.querySelectorAll('.lues-carousel-card');
+  const prevBtn = document.querySelector('.carousel-arrow.left');
+  const nextBtn = document.querySelector('.carousel-arrow.right');
+  const dotsContainer = document.querySelector('.lues-dots');
 
-    // Créer les dots
-    cards.forEach((_, i) => {
-      const dot = document.createElement('span');
-      dot.classList.add('lues-dot');
-      dot.addEventListener('click', () => {
-        currentIndex = i;
-        updateCarousel();
-      });
-      dotsContainer.appendChild(dot);
-    });
+  let index = 0;
 
-    const dots = dotsContainer.querySelectorAll('span');
-
-    function updateCarousel() {
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-      dots.forEach(dot => dot.classList.remove('active'));
-      if (dots[currentIndex]) dots[currentIndex].classList.add('active');
-    }
-
-    rightArrow.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % cards.length;
+  // Créer les points
+  cards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    if (i === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+    dot.addEventListener('click', () => {
+      index = i;
       updateCarousel();
     });
+  });
 
-    leftArrow.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      updateCarousel();
-    });
+  const dots = document.querySelectorAll('.lues-dots button');
 
-    // Optionnel : autoplay
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % cards.length;
-      updateCarousel();
-    }, 6000); // toutes les 6 secondes
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
 
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % cards.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + cards.length) % cards.length;
     updateCarousel();
   });
 </script>
+
 
 
 
