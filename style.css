@@ -1536,3 +1536,22 @@ h2 {
 .carousel-arrow.right {
   right: 10px;
 }
+.lues-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.lues-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lues-dot.active {
+  background-color: #333;
+}
