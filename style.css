@@ -1469,13 +1469,12 @@ h2 {
 }
 
 .lues-card-content {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); /* Pour Safari */
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  padding: 30px 20px 20px;
+  border-radius: 0 0 16px 16px;
+  width: 100%;
 }
+
 
 
 .lues-card-content h3 {
