@@ -1555,7 +1555,7 @@ h2 {
   left: 0;
   width: 200%; /* double largeur pour la boucle */
   height: 100%;
-  background-image: url('/chemin/vers/ta-fresque.png'); /* remplace avec le bon chemin */
+  background-image: url('ChatGPT Image 24 mai 2025, 02_26_07.png'); /* remplace avec le bon chemin */
   background-repeat: repeat-x;
   background-size: contain; /* ou "cover" si tu préfères */
   animation: scroll-bg 60s linear infinite;
