@@ -1301,7 +1301,7 @@ blockquote {
   max-height: 400px;
   border-radius: 6px;
   display: block;
-  margin-left: auto;
+  margin-left: 20px;
   margin-right: auto;
 }
 
