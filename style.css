@@ -1328,9 +1328,10 @@ blockquote {
 }
 .aside-colonne img {
   /* styles ici */
-  width: 60%;
+  width: 65%;
   border-radius: 10px;
   margin-bottom: 10px;
+  margin-left: 110px;
 }
 
 .kit, .instagram {
