@@ -1073,7 +1073,6 @@ blockquote {
 }
 
 .theme-robotique-item {
-  min-height: 180px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -1111,7 +1110,6 @@ blockquote {
 }
 
 .theme-robotique-overlay p {
-  max-height: 3.6em;
   margin: 0.5rem 0 0;
   font-size: 0.95rem;
   color: #555;
