@@ -1267,7 +1267,7 @@ blockquote {
 }
 
 .robotique-item {
-  position:relative;
+  position: relative;
   display: flex;
   text-decoration: none;
   background: white;
@@ -1275,17 +1275,34 @@ blockquote {
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   color: inherit;
+
+  /* Fixe une taille uniforme */
+  height: 180px; /* ajuste selon ton design */
 }
 
 .robotique-item img {
   width: 220px;
-  height: 40%;
+  height: 100%; /* prend toute la hauteur du conteneur */
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .robotique-item .text {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  flex: 1;
 }
+
+.robotique-item .text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3.6em; /* limite à 2 lignes */
+  line-height: 1.2em;
+}
+
 /* Publicité */
 .kit {
   flex: 1;
