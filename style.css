@@ -820,7 +820,7 @@ h2 {
   width: 100%;
   height: auto;
   max-height: 550px;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
