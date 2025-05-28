@@ -818,9 +818,8 @@ h2 {
 
 .article-image {
   width: 100%;
-  height: auto;
   max-height: 550px;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
