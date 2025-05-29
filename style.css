@@ -1578,12 +1578,12 @@ h2 {
   top: 0;
   left: 0;
   width: 200%; /* double largeur pour la boucle */
-  height: 100%;
+  height: 200%;
   background-image: url('fresque1.png'); /* remplace avec le bon chemin */
   background-repeat: repeat-x;
   background-size: contain; /* ou "cover" si tu préfères */
   animation: scroll-bg 60s linear infinite;
-  opacity: 0.6; /* ajuste pour un effet subtil derrière */
+  opacity: 0.4; /* ajuste pour un effet subtil derrière */
 }
 
 /* Animation de défilement */
