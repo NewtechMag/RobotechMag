@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas : un humanoïde plus autonome que jamais</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+  <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="article-container">
+      <h1>Atlas poursuit son évolution</h1>
+      <p class="date">Publié le 2 juin 2025</p>
+      <img src="Capture- perception-adaptabilité-atlas.png" alt="Le robot Atlas en action" class="article-image" />
+        <p class="image-caption">Comment le robot perçoit et réagit à son environnement. Source: Boston Dynamics</p>
+
+
+      <p>Dans un article récent, nous avions évoqué l’attrait des investisseurs pour les robots spécialisés, au détriment des robots humanoïdes généralistes. L’un des points négatifs soulevés était la question de leur capacité à s’adapter et évoluer dans des environnements imprévisibles et complexes.</p>
+
+      <p>Cette semaine, <strong>Boston Dynamics</strong> est venu démontrer que les robots humanoïdes n’ont pas dit leur dernier mot. L’entreprise a récemment publié une vidéo pour illustrer les capacités de perception en temps réel de son nouveau robot <strong>Atlas électrique</strong>.</p>
+
+<h2>Un humanoïde plus autonome que jamais</h2>
+
+ <div class="video-wrapper">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/oe1dke3Cf7I?si=SvinErFEv6JigX7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+      <p>Le but de cette vidéo est de montrer comment Atlas agit en temps réel dans un environnement industriel complexe, en enregistrant activement le monde qui l’entoure et en évaluant la topologie à la fois des objets et des surfaces.</p>
+
+      <p>Pour cela, Atlas utilise un système de perception sophistiqué basé sur des caméras de profondeur à temps de vol, appelées <strong>ToF (Time of Flight)</strong>. Ces caméras mesurent la distance entre le robot et son environnement en envoyant une lumière infrarouge, puis en calculant le temps que met cette lumière à revenir — un principe similaire au sonar, mais utilisant la lumière au lieu du son.</p>
+
+      <p>Ces émissions lumineuses permettent à Atlas de générer un nuage de points, représentant la forme, la taille et la position des objets autour de lui. Ces données sont ensuite traitées par un algorithme de segmentation multi-plans, qui permet de modéliser l’environnement en 3D et en temps réel.</p>
+
+      <p>L’ensemble de ce processus est orchestré par le système de perception appelé <strong>SuperTracker</strong>, développé par Boston Dynamics. Ce système fusionne de manière intelligente les données de vision, de kinématique (liées aux mouvements du robot) et, si nécessaire, de capteurs de force, afin de suivre les objets de manière fiable en temps réel — même lorsque ceux-ci ou le robot sont en mouvement.</p>
+
+      <p>Mais Atlas ne se contente pas de détecter les objets : il est également capable de les reconnaître et d’adapter ses actions en fonction de ce qu’il manipule, comme on peut le voir dans la vidéo, lorsqu’il réagit à une situation imprévue.</p>
+
+      <p>Par exemple, si une pièce tombe au sol, le robot peut la localiser, évaluer sa forme, identifier de quel objet il s’agit et la remettre correctement à sa place — démontrant ainsi une capacité d’adaptation impressionnante.</p>
+
+      <p>Lorsqu’un objet est visible, Atlas utilise un modèle d’estimation de pose basé sur le rendu et la comparaison. Il compare l’image captée par sa caméra à des rendus générés à partir de modèles CAO (Conception Assistée par Ordinateur), en s’appuyant sur un grand ensemble de données synthétiques simulées (pour entrainer l'IA). Ce processus permet de déterminer la position et l’orientation de l’objet, même à partir d’une seule caméra.</p>
+
+      <h2>Mais l'autonomie a ses contraintes</h2>
+      
+      <p>Atlas est connu pour sa grande fluidité de mouvement démontrée à de nombreuses reprises — souvent grâce à des mouvements capturés via motion capture.</p>
+
+      <p>Or, dans cette nouvelle démonstration, la fluidité laisse place à un enchaînement de gestes mécaniques. On perçoit une forme de lenteur maîtrisée, presque réfléchie qui est paradoxalement la conséquence de son autonomie.</p>
+
+      <p>En effet, Les mouvements trahissent un traitement progressif de l'information, Atlas prennant ses décisions en temps réel, sans intervention extérieure. Son IA doit effectuer un grand nombre de traitements à la volée, en combinant des données issues de la vision, de la kinématique (la position et les mouvements de ses articulations) et de capteurs de force, afin de maintenir une compréhension précise de son environnement, même lorsqu’il interagit avec celui-ci ou se déplace.</p>
+
+      <p>Cette autonomie cognitive marque une étape importante dans la robotique humanoïde.</p>
+
+<h2>Une réponse aux incertitudes?</h2>
+
+      <p>Avec des modèles d’IA évoluant de manière exponentielle devenant toujours plus rapides et intelligents, une conception entièrement électrique qui améliore la mobilité tout en simplifiant la maintenance, et une structure en titane et aluminium offrant un excellent rapport résistance/poids, cette démonstration vient balayer de nombreux doutes concernant la pertinence des robots humanoïdes dans des environnements industriels.</p>
+
+      <p>On se demande donc si les robots humanoïdes ne vont pas rejoindre en masse les lignes de production plus tôt que prévu.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script src="inject-layout.js"></script>
+</body>
+</html>
