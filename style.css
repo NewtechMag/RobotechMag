@@ -1611,7 +1611,13 @@ h2 {
 /* Partie gauche : "Nos partenaires" */
 .partners-label {
   flex: 0 0 180px;
-  background:linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  background: linear-gradient(90deg,
+    #0a1f44,  /* bleu nuit */
+    #1b3a73,  /* bleu profond saturé */
+    #2278b5,  /* bleu électrique */
+    #1b3a73,
+    #0a1f44
+  );
   color: white;
   display: flex;
   justify-content: center;
