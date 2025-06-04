@@ -1595,71 +1595,107 @@ h2 {
     transform: translateX(-50%);
   }
 }
-  * {
+
+ * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .mondrian-wrapper {
+    .partenaire-section {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 60px 20px;
       background-color: #f4f4f4;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
     }
 
-    .mondrian-grid {
+    .mondrian-container {
       display: grid;
-      grid-template-columns: 200px 300px;
-      grid-template-rows: 200px 300px;
-      gap: 10px;
-      transform: rotate(-45deg);
+      grid-template-columns: 200px 320px;
+      grid-template-rows: 200px 200px;
+      transition: grid-template-columns 0.6s ease;
     }
 
-    .square-title {
-      grid-column: 1;
-      grid-row: 2;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    .mondrian-container:hover {
+      grid-template-columns: 130px 390px;
+    }
+
+    .title-box {
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* Bleu plus pro et profond */
       color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.3rem;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      transition: background 0.4s ease;
-      z-index: 2;
+      border-radius: 10px 0 0 10px;
+      grid-column: 1;
+      grid-row: 2;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.6s ease;
+      overflow: hidden;
+      position: relative;
     }
 
-    .square-logos {
-      grid-column: 2;
-      grid-row: 1;
+    .title-text {
+      opacity: 1;
+      transition: opacity 0.6s ease;
+      z-index: 1;
+    }
+
+    .mondrian-container:hover .title-text {
+      opacity: 0;
+    }
+
+    .logos-box {
       background: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 30px;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      z-index: 1;
+      border-radius: 0 10px 10px 0;
+      grid-column: 2;
+      grid-row: 1;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+      transition: all 0.6s ease;
     }
 
     .partner-logo {
-      width: 80px;
-      height: 80px;
+      width: 120px;
+      height: 120px;
       filter: grayscale(100%) brightness(0.7);
-      transition: transform 0.4s ease, filter 0.4s ease;
+      transition: filter 0.4s ease, transform 0.4s ease;
     }
 
     .partner-logo:hover {
-      transform: scale(1.15);
       filter: grayscale(0%) brightness(1);
+      transform: scale(1.15);
     }
 
-    /* Unrotate inner content */
-    .mondrian-grid > div {
-      transform: rotate(45deg);
+    .partner-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      .mondrian-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .title-box, .logos-box {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .mondrian-container:hover {
+        grid-template-columns: none;
+      }
     }
