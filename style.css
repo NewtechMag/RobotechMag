@@ -1605,12 +1605,13 @@ h2 {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: all 0.5s ease;
+  max-width: 1100px;
 }
 
 /* Partie gauche : "Nos partenaires" */
 .partners-label {
   flex: 0 0 180px;
-  background: linear-gradient(135deg, #415a77, #2a4d69, #1b263b);
+  background:linear-gradient(to top, rgba(0,0,0,0.5), transparent);
   color: white;
   display: flex;
   justify-content: center;
