@@ -1612,7 +1612,7 @@ h2 {
 
 /* Partie gauche : "Nos partenaires" */
 .partners-label {
-  flex: 0 0 180px;
+  flex: 0 1 180px;
   background: linear-gradient(90deg,
     #0a1f44,  /* bleu nuit */
     #1b3a73,  /* bleu profond saturé */
@@ -1645,7 +1645,7 @@ h2 {
 
 /* Partie droite : logos */
 .partners-logos {
-  flex: 1;
+  flex: 1 1 auto;
   background: #fff;
   display: flex;
   align-items: center;
@@ -1655,7 +1655,7 @@ h2 {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   gap: 30px;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   transition: flex-grow 0.5s ease;
 }
