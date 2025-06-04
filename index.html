@@ -350,28 +350,19 @@
 </section>
  </div>
 
-  <section class="partners-section-horizontal">
-  <div class="partners-label">
-    <h2>Nos partenaires</h2>
+  <div class="partners-container">
+    <section class="partners-section-horizontal" id="partners-section">
+      <div class="partners-label">
+        <h2>Nos partenaires</h2>
+      </div>
+      <div class="partners-logos">
+        <div class="partner-logo"><img src="https://via.placeholder.com/100x100?text=1" alt="Logo 1"></div>
+        <div class="partner-logo"><img src="https://via.placeholder.com/100x100?text=2" alt="Logo 2"></div>
+        <div class="partner-logo"><img src="https://via.placeholder.com/100x100?text=3" alt="Logo 3"></div>
+        <div class="partner-logo"><img src="https://via.placeholder.com/100x100?text=4" alt="Logo 4"></div>
+      </div>
+    </section>
   </div>
-  <div class="partners-logos">
-    <div class="partner-logo" style="--offset: 0.5;">
-      <img src="Logo_FFCRobotique_transp_fondclair_horiz-300x75.png" alt="FFCRobotique" />
-    </div>
-    <div class="partner-logo" style="--offset: 0.5;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.sv" alt="" />
-    </div>
-    <div class="partner-logo" style="--offset: 0.8;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.sv" alt="" />
-    </div>
-    <div class="partner-logo" style="--offset: 0.3;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Google_2015_logo.sv" alt="" />
-    </div>
-    <div class="partner-logo" style="--offset: 0.6;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.sv" alt="" />
-    </div>
-  </div>
-</section>
   
  <footer class="site-footer">
   <div class="footer-separator"></div>
@@ -504,29 +495,6 @@
   });
 </script>
 
-<script>
-  const section = document.querySelector('.partners-section-horizontal');
-  const label = document.querySelector('.partners-label');
-  const logos = document.querySelector('.partners-logos');
-
-  section.addEventListener('mouseover', e => {
-    if (e.target.closest('.partners-logos')) {
-      logos.style.flexGrow = '1.6';      // Zoom un peu plus fort sur logos
-      label.style.flexBasis = '130px';
-      label.style.fontSize = '0.95rem';
-    } else if (e.target.closest('.partners-label')) {
-      label.style.flexBasis = '240px';
-      label.style.fontSize = '1.6rem';
-      logos.style.flexGrow = '1';
-    }
-  });
-
-  section.addEventListener('mouseleave', e => {
-    label.style.flexBasis = '180px';
-    label.style.fontSize = '1.2rem';
-    logos.style.flexGrow = '1';
-  });
-</script>
 
 
 
