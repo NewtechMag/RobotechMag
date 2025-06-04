@@ -1596,3 +1596,86 @@ h2 {
   }
 }
 
+/* Conteneur partenaires adapté */
+.partners-wrapper {
+  max-width: 1000px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+  background: white;
+  font-family: inherit; /* garde la même font */
+}
+
+/* Titre "Nos partenaires" */
+.partners-title {
+  font-size: 1.8rem; /* un peu plus petit que tes h2 habituels */
+  font-weight: 700;
+  color: #123; /* proche de ta couleur texte .text h3 */
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+  user-select: none;
+}
+
+/* Grid responsive en flexbox, dans l’esprit de tes articles */
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* centrer les logos */
+}
+
+/* Chaque case logo : style proche de tes article-cards */
+.partner-card {
+  flex: 1 1 140px; /* flexible avec min 140px */
+  max-width: 180px;
+  background: #f8f8f8; /* léger gris comme ta .kit */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.3s ease,
+    filter 0.4s ease;
+  filter: grayscale(100%) brightness(0.8);
+  user-select: none;
+  /* hauteur fixe pour homogénéité */
+  height: 110px;
+}
+
+/* Zoom + couleur au hover */
+.partner-card:hover {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+/* Logo contenu */
+.partner-card img {
+  max-width: 100%;
+  max-height: 70px; /* un peu plus petit que ta hauteur */
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+  .partner-card {
+    flex: 1 1 120px;
+    max-width: 140px;
+    height: 90px;
+    padding: 15px;
+  }
+  .partner-card img {
+    max-height: 55px;
+  }
+  .partners-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+}
+
