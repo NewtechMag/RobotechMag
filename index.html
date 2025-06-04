@@ -350,17 +350,25 @@
 </section>
  </div>
 
-  <div class="partners-container">
-    <section class="partners-section-horizontal" id="partners-section">
-      <div class="partners-label">
-        <h2>Nos partenaires</h2>
-      </div>
-      <div class="partners-logos">
-        <div class="partner-logo"><img src="Logo_FFCRobotique_transp_fondclair_horiz-300x75.png" alt="Logo 1"></div>
-        
-      </div>
-    </section>
+ <section class="partners-cards-wrapper">
+<section class="parallax-section">
+  <div class="layer background"></div>
+  <div class="layer foreground">
+    <h2>Nos partenaires</h2>
   </div>
+</section>
+
+
+
+  <div class="partners-cards">
+    <div class="partner-card">
+      <img src="https://via.placeholder.com/150x150?text=Logo+1" alt="Partenaire 1">
+    </div>
+    <div class="partner-card">
+      <img src="https://via.placeholder.com/150x150?text=Logo+2" alt="Partenaire 2">
+    </div>
+  </div>
+</section>
   
  <footer class="site-footer">
   <div class="footer-separator"></div>
@@ -495,6 +503,14 @@
 
 
 
+</style>
+<script>
+  const title = document.getElementById('parallax-title');
+  window.addEventListener('scroll', () => {
+    const offset = window.scrollY;
+    title.style.transform = `translateY(${offset * 0.3}px)`;
+  });
+</script>
 
 
 
