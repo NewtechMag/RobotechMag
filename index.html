@@ -523,40 +523,37 @@
   });
 </script>
 
-  <script>
-
-window.addEventListener("load", () => {
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".carousel-container");
   const track = container.querySelector(".carousel-track");
-  const items = track.querySelectorAll(".carousel-item");
-  const prevBtn = container.querySelector(".carousel-prev");
-  const nextBtn = container.querySelector(".carousel-next");
-  const totalItems = items.length;
-
+  const items = Array.from(track.querySelectorAll(".carousel-item"));
   let currentIndex = 0;
   let interval;
 
-  // Fonction pour mettre à jour le carrousel
+  // Fonction pour mettre à jour la position du carousel et activer le texte
   function updateCarousel() {
-    const itemWidth = items[0].offsetWidth;
-    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    const width = items[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * width}px)`;
+
+    // Activer l'overlay du slide courant, désactiver les autres
+    items.forEach((item, idx) => {
+      const overlay = item.querySelector(".overlay");
+      if (!overlay) return;
+      if (idx === currentIndex) {
+        overlay.style.transform = "translateY(0%)";
+        overlay.style.opacity = "1";
+      } else {
+        overlay.style.transform = "translateY(100%)";
+        overlay.style.opacity = "0";
+      }
+    });
   }
 
-  // Boutons de navigation
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % totalItems;
-    updateCarousel();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-    updateCarousel();
-  });
-
-  // Auto-rotation
+  // Auto-rotation toutes les 3 secondes
   function startAutoRotate() {
     interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalItems;
+      currentIndex = (currentIndex + 1) % items.length;
       updateCarousel();
     }, 3000);
   }
@@ -565,13 +562,18 @@ window.addEventListener("load", () => {
     clearInterval(interval);
   }
 
-  // Gérer le survol
+  // Démarrer auto-rotation
+  startAutoRotate();
+
+  // Stopper au hover, reprendre au leave
   container.addEventListener("mouseenter", stopAutoRotate);
   container.addEventListener("mouseleave", startAutoRotate);
 
-  // Initialisation
+  // Position initiale
   updateCarousel();
-  startAutoRotate();
+
+  // Recalcule en cas de resize (responsive)
+  window.addEventListener("resize", updateCarousel);
 });
 </script>
 
