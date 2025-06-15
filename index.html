@@ -553,6 +553,36 @@
   // Stopper la rotation au survol
   document.querySelector('.carousel-container').addEventListener('mouseenter', stopAutoRotate);
   document.querySelector('.carousel-container').addEventListener('mouseleave', startAutoRotate);
+
+    window.addEventListener("load", () => {
+  const container = document.querySelector(".carousel-container");
+  const track = container.querySelector(".carousel-track");
+  const items = track.querySelectorAll(".carousel-item");
+  const prevBtn = container.querySelector(".carousel-prev");
+  const nextBtn = container.querySelector(".carousel-next");
+
+  let currentIndex = 0;
+  const itemWidth = items[0].offsetWidth;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < items.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+});
+
 </script>
 
 
