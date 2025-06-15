@@ -515,15 +515,44 @@
   });
 </script>
 
-
-
-</style>
 <script>
   const title = document.getElementById('parallax-title');
   window.addEventListener('scroll', () => {
     const offset = window.scrollY;
     title.style.transform = `translateY(${offset * 0.3}px)`;
   });
+</script>
+
+  <script>
+  const track = document.querySelector('.carousel-track');
+  const items = document.querySelectorAll('.carousel-item');
+  const totalItems = items.length;
+  let currentIndex = 0;
+  let interval;
+
+  function showSlide(index) {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    showSlide(currentIndex);
+  }
+
+  function startAutoRotate() {
+    interval = setInterval(nextSlide, 3000);
+  }
+
+  function stopAutoRotate() {
+    clearInterval(interval);
+  }
+
+  // Démarrer l’auto-rotation
+  startAutoRotate();
+
+  // Stopper la rotation au survol
+  document.querySelector('.carousel-container').addEventListener('mouseenter', stopAutoRotate);
+  document.querySelector('.carousel-container').addEventListener('mouseleave', startAutoRotate);
 </script>
 
 
