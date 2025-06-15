@@ -524,66 +524,57 @@
 </script>
 
   <script>
-  const track = document.querySelector('.carousel-track');
-  const items = document.querySelectorAll('.carousel-item');
+
+window.addEventListener("load", () => {
+  const container = document.querySelector(".carousel-container");
+  const track = container.querySelector(".carousel-track");
+  const items = track.querySelectorAll(".carousel-item");
+  const prevBtn = container.querySelector(".carousel-prev");
+  const nextBtn = container.querySelector(".carousel-next");
   const totalItems = items.length;
+
   let currentIndex = 0;
   let interval;
 
-  function showSlide(index) {
-    track.style.transform = `translateX(-${index * 100}%)`;
+  // Fonction pour mettre à jour le carrousel
+  function updateCarousel() {
+    const itemWidth = items[0].offsetWidth;
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
   }
 
-  function nextSlide() {
+  // Boutons de navigation
+  nextBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % totalItems;
-    showSlide(currentIndex);
-  }
+    updateCarousel();
+  });
 
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+  });
+
+  // Auto-rotation
   function startAutoRotate() {
-    interval = setInterval(nextSlide, 3000);
+    interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    }, 3000);
   }
 
   function stopAutoRotate() {
     clearInterval(interval);
   }
 
-  // Démarrer l’auto-rotation
+  // Gérer le survol
+  container.addEventListener("mouseenter", stopAutoRotate);
+  container.addEventListener("mouseleave", startAutoRotate);
+
+  // Initialisation
+  updateCarousel();
   startAutoRotate();
-
-  // Stopper la rotation au survol
-  document.querySelector('.carousel-container').addEventListener('mouseenter', stopAutoRotate);
-  document.querySelector('.carousel-container').addEventListener('mouseleave', startAutoRotate);
-
-    window.addEventListener("load", () => {
-  const container = document.querySelector(".carousel-container");
-  const track = container.querySelector(".carousel-track");
-  const items = track.querySelectorAll(".carousel-item");
-  const prevBtn = container.querySelector(".carousel-prev");
-  const nextBtn = container.querySelector(".carousel-next");
-
-  let currentIndex = 0;
-  const itemWidth = items[0].offsetWidth;
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-  }
-
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex < items.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-
-  prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
 });
-
 </script>
+
 
 
 
