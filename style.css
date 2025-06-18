@@ -1255,6 +1255,7 @@ blockquote {
   gap: 30px;
   margin-top: 40px;
   align-items: flex-start;
+  align-items: stretch;
 }
 
 /* Robotique */
@@ -1342,9 +1343,10 @@ blockquote {
 }
 .aside-colonne {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  position: sticky;
+  top: 20px; /* espace depuis le haut lors du scroll */
+  align-self: flex-start;
+  height: fit-content; /* s’adapte au contenu pour sticky */
 }
 .aside-colonne img {
   /* styles ici */
