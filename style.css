@@ -629,7 +629,8 @@ main {
   transition: all 0.4s ease;
 }
 
-.carousel-item:hover .overlay {
+/* Affiche l'overlay si l'item est actif (slide visible) */
+.carousel-item.active .overlay {
   transform: translateY(0%);
   opacity: 1;
 }
