@@ -454,139 +454,67 @@
   </script>
 
   <!-- CAROUSEL (si utilisé quelque part) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const track = document.querySelector('.carousel-track');
-      const items = document.querySelectorAll('.carousel-item');
-      const prevButton = document.querySelector('.carousel-btn.prev');
-      const nextButton = document.querySelector('.carousel-btn.next');
-
-      if (track && items.length && prevButton && nextButton) {
-        let index = 0;
-        const totalItems = items.length;
-
-        function updateCarousel() {
-          const offset = -index * 100;
-          track.style.transform = `translateX(${offset}%)`;
-        }
-
-        nextButton.addEventListener('click', () => {
-          index = (index + 1) % totalItems;
-          updateCarousel();
-        });
-
-        prevButton.addEventListener('click', () => {
-          index = (index - 1 + totalItems) % totalItems;
-          updateCarousel();
-        });
-
-        // Auto défilement si souhaité :
-        // setInterval(() => {
-        //   index = (index + 1) % totalItems;
-        //   updateCarousel();
-        // }, 5000);
-      }
-    });
-  </script>
-
 <script>
-  const track = document.querySelector('.lues-carousel-track');
-  const cards = document.querySelectorAll('.lues-carousel-card');
-  const prevBtn = document.querySelector('.carousel-arrow.left');
-  const nextBtn = document.querySelector('.carousel-arrow.right');
-  const dotsContainer = document.querySelector('.lues-dots');
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".carousel-container");
+    const track = container.querySelector(".carousel-track");
+    const items = Array.from(track.querySelectorAll(".carousel-item"));
+    const prevButton = document.querySelector(".carousel-btn.prev");
+    const nextButton = document.querySelector(".carousel-btn.next");
+    let currentIndex = 0;
+    let interval;
 
-  let index = 0;
+    function updateCarousel() {
+      const width = items[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentIndex * width}px)`;
 
-  // Créer les points
-  cards.forEach((_, i) => {
-    const dot = document.createElement('button');
-    if (i === 0) dot.classList.add('active');
-    dotsContainer.appendChild(dot);
-    dot.addEventListener('click', () => {
-      index = i;
-      updateCarousel();
-    });
-  });
+      items.forEach((item, idx) => {
+        item.classList.toggle("active", idx === currentIndex);
+      });
+    }
 
-  const dots = document.querySelectorAll('.lues-dots button');
+    function startAutoRotate() {
+      interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+      }, 5000);
+    }
 
-  function updateCarousel() {
-  const cardWidth = cards[0].offsetWidth + 20; // 20 = column-gap
-  track.style.transform = `translateX(-${index * cardWidth}px)`;
-}
+    function stopAutoRotate() {
+      clearInterval(interval);
+    }
 
-  nextBtn.addEventListener('click', () => {
-    index = (index + 1) % cards.length;
-    updateCarousel();
-  });
+    if (prevButton && nextButton) {
+      prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel();
+      });
 
-  prevBtn.addEventListener('click', () => {
-    index = (index - 1 + cards.length) % cards.length;
-    updateCarousel();
+      nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+      });
+    }
+
+    startAutoRotate();
+
+    container.addEventListener("mouseenter", stopAutoRotate);
+    container.addEventListener("mouseleave", startAutoRotate);
+    window.addEventListener("resize", updateCarousel);
+
+    updateCarousel(); // Initialisation
   });
 </script>
 
 <script>
-  const title = document.getElementById('parallax-title');
-  window.addEventListener('scroll', () => {
-    const offset = window.scrollY;
-    title.style.transform = `translateY(${offset * 0.3}px)`;
-  });
-</script>
-
- <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".carousel-container");
-  const track = container.querySelector(".carousel-track");
-  const items = Array.from(track.querySelectorAll(".carousel-item"));
-  let currentIndex = 0;
-  let interval;
-
-  // Fonction pour mettre à jour la position du carousel et activer le texte
-  function updateCarousel() {
-    const width = items[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentIndex * width}px)`;
-
-    // Activer l'overlay du slide courant, désactiver les autres
-    items.forEach((item, idx) => {
-      const overlay = item.querySelector(".overlay");
-      if (!overlay) return;
-      if (idx === currentIndex) {
-        overlay.style.transform = "translateY(0%)";
-        overlay.style.opacity = "1";
-      } else {
-        overlay.style.transform = "translateY(100%)";
-        overlay.style.opacity = "0";
-      }
+  // Effet de parallaxe sur le titre
+  const title = document.getElementById("parallax-title");
+  if (title) {
+    window.addEventListener("scroll", () => {
+      const offset = window.scrollY;
+      title.style.transform = `translateY(${offset * 0.3}px)`;
     });
   }
-
-  // Auto-rotation toutes les 3 secondes
-  function startAutoRotate() {
-    interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateCarousel();
-    }, 5000);
-  }
-
-  function stopAutoRotate() {
-    clearInterval(interval);
-  }
-
-  // Démarrer auto-rotation
-  startAutoRotate();
-
-  // Stopper au hover, reprendre au leave
-  container.addEventListener("mouseenter", stopAutoRotate);
-  container.addEventListener("mouseleave", startAutoRotate);
-
-  // Position initiale
-  updateCarousel();
-
-  // Recalcule en cas de resize (responsive)
-  window.addEventListener("resize", updateCarousel);
-});
 </script>
 
 
