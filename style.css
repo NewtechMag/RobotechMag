@@ -1788,7 +1788,7 @@ h2 {
 
 /* Taille fixe pour petites cartes pour éviter chevauchement */
 .article-card.small {
-  height: 300px;
+  height: 200px;
 }
 
 /* Image des cartes */
@@ -1879,7 +1879,4 @@ h2 {
   max-height: 60px;
 }
 
-/* Bordure rouge temporaire pour debug, tu peux retirer */
-.article-card {
-  border: 1px solid red;
-}
+
