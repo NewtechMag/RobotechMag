@@ -1745,31 +1745,21 @@ h2 {
   text-decoration: underline;
 }
 
-/* Titre stylisé */
 .section-title {
-  background: linear-gradient(90deg,
-    #0a1f44,
-    #1b3a73,
-    #2278b5,
-    #1b3a73,
-    #0a1f44
-  );
+  background: linear-gradient(90deg, #0a1f44, #1b3a73, #2278b5, #1b3a73, #0a1f44);
   padding: 8px 20px;
   border-radius: 4px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow:
-    inset 0 0 10px rgba(255, 255, 255, 0.15),
-    0 4px 12px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.15), 0 4px 12px rgba(0, 0, 0, 0.35);
   color: white;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
   font-size: 1.5em;
 }
 
-/* Grille des articles */
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1780,55 +1770,83 @@ h2 {
 .robotech-card {
   position: relative;
   display: block;
-  text-decoration: none;
-  color: inherit;
-  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .robotech-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.robotech-card img {
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  z-index: 1;
   transition: transform 0.3s ease;
 }
 
-.robotech-card:hover img {
+.robotech-card:hover .card-image {
   transform: scale(1.05);
 }
 
-.robotech-text {
+.robotech-overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
   padding: 16px;
+  background: rgba(0, 0, 0, 0.6); /* fond sombre semi-transparent uniquement en bas */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.robotech-text h3 {
-  margin: 0 0 10px;
+.robotech-overlay-text h3 {
+  margin: 0 0 6px;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #0a1f44;
+  z-index: 3;
 }
 
-.robotech-text p.subtitle {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
-  color: #555;
+.robotech-overlay-text p.subtitle {
+  margin: 0 0 10px;
   font-size: 0.95rem;
+  color: #eee;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
 }
 
-.robotech-card:hover .robotech-text p.subtitle {
+.robotech-card:hover .subtitle {
   opacity: 1;
-  max-height: 200px;
+}
+
+.article-themes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  z-index: 3;
+}
+
+.article-theme {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 /* Responsive */
@@ -1842,22 +1860,5 @@ h2 {
   .articles-grid {
     grid-template-columns: 1fr;
   }
-
-  .robotech-card img {
-    height: 200px;
-  }
-}
-.image-container {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
 }
 
