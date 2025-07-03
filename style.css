@@ -1810,7 +1810,8 @@ h2 {
 .card-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center center; /* 👈 centrer l'image dans son cadre */
   transition: transform 0.3s ease;
 }
 
