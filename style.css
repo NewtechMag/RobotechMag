@@ -1041,13 +1041,7 @@ blockquote {
 }
 
 .article-theme {
-  background: linear-gradient(120deg, 
-  #0d1b4c 0%,      /* Bleu très foncé, presque nuit */
-  #1a3a8c 25%,     /* Bleu profond */
-  #2451b2 50%,     /* Bleu vif */
-  #3a7ae0 75%,     /* Bleu clair et lumineux */
-  #76baff 100%     /* Bleu très clair, presque cyan */
-);
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
   color: white;
   padding: 2px 6px;
   font-size: 0.5rem;
