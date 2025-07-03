@@ -1041,7 +1041,7 @@ blockquote {
 }
 
 .article-theme {
-  background-color: linear-gradient(120deg, 
+  background: linear-gradient(120deg, 
   #0d1b4c 0%,      /* Bleu très foncé, presque nuit */
   #1a3a8c 25%,     /* Bleu profond */
   #2451b2 50%,     /* Bleu vif */
