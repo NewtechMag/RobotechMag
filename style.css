@@ -1041,7 +1041,13 @@ blockquote {
 }
 
 .article-theme {
-  background-color: #007bff;
+  background-color: linear-gradient(120deg, 
+  #0d1b4c 0%,      /* Bleu très foncé, presque nuit */
+  #1a3a8c 25%,     /* Bleu profond */
+  #2451b2 50%,     /* Bleu vif */
+  #3a7ae0 75%,     /* Bleu clair et lumineux */
+  #76baff 100%     /* Bleu très clair, presque cyan */
+);
   color: white;
   padding: 2px 6px;
   font-size: 0.5rem;
@@ -1841,24 +1847,6 @@ h2 {
   opacity: 0.85;
 }
 
-/* Thèmes en bas */
-.article-themes {
-  margin-top: auto;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.article-theme {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #eee;
-  user-select: none;
-}
 
 /* Responsive */
 @media screen and (max-width: 1024px) {
