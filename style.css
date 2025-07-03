@@ -1748,7 +1748,7 @@ h2 {
 .grid-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 px; /* pour un peu d'espace sur mobile */
+  padding: 0px; /* pour un peu d'espace sur mobile */
 }
 
 .section-title {
