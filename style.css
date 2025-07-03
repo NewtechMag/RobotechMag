@@ -1824,6 +1824,7 @@ h2 {
   bottom: 0;
   width: 100%;
   backdrop-filter: blur(4px); /* optionnel : flou derrière le texte */
+  transition: transform 0.8s ease-in-out, padding-bottom 0.3s ease;
 }
 
 .robotech-text h3 {
@@ -1835,21 +1836,24 @@ h2 {
 }
 
 .robotech-text .subtitle {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #ddd;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  height: 0;            /* AJOUTÉ */
+  overflow: hidden;     /* AJOUTÉ */
+  transition: 
+    opacity 0.4s ease, 
+    transform 0.4s ease,
+    height 0.3s ease;   /* MODIFIÉ pour gérer la hauteur */
 }
-
-/* Apparition du sous-titre au hover */
+.robotech-card:hover .robotech-text {
+  transform: translateY(-20px);
+  padding-bottom: 12px;
+}
 .robotech-card:hover .subtitle {
   opacity: 0.85;
   transform: translateY(0);
+  height: auto;        /* AJOUTÉ */
 }
-
 
 /* Responsive */
 @media screen and (max-width: 1024px) {
