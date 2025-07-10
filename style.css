@@ -1867,4 +1867,20 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+.publicite-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.publicite-banner img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
