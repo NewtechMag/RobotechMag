@@ -1833,7 +1833,11 @@ h2 {
   font-weight: 700;
   line-height: 1.2;
   color: white;
+  word-wrap: break-word;   /* permet de couper les longs mots */
+  overflow-wrap: break-word; /* recommandé aussi */
+  white-space: normal;     /* autorise les retours à la ligne */
 }
+
 
 .robotech-text .subtitle {
   opacity: 0;
