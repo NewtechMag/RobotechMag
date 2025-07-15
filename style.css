@@ -1987,3 +1987,34 @@ th {
   font-size: 22px;
   font-weight: bold;
 }
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.expert-subtitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.expert-subtitle span {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #003049;
+  letter-spacing: 1px;
+}
+
+.expert-subtitle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  border-radius: 2px;
+}
