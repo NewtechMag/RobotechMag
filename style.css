@@ -1887,3 +1887,103 @@ h2 {
   border-radius: 10px; /* arrondi intérieur un peu plus petit que l’extérieur */
   display: block;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  
+  /* Fond dégradé bleu métal */
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  
+  /* Ombre douce et profonde pour le relief */
+  box-shadow: 0 6px 15px rgba(0, 116, 182, 0.4);
+  
+  border-radius: 8px;
+  overflow: hidden; /* Pour arrondir les bords */
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.6rem 1rem;
+  text-align: left;
+
+  /* Fond blanc semi-transparent pour contraster avec le fond du tableau */
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.85);
+  font-weight: bold;
+}
+
+.repere {
+  background-color: rgba(0, 116, 182, 0.1); /* bleu doux, très clair */
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 6px 15px rgba(0, 116, 182, 0.2); /* ombre légère bleutée */
+  color: #203864; /* texte bleu foncé */
+  font-weight: 600;
+  
+   box-shadow: 0 6px 15px rgba(0, 116, 182, 0.4);
+}
+.author-card-wrapper {
+  background: linear-gradient(90deg, #00b4d8, #0077b6); /* Cadre dégradé */
+  padding: 3px;
+  border-radius: 8px;
+  position: sticky;
+  top: 100px;
+  flex: 0 0 220px;
+  height: fit-content;
+  z-index: 1;
+  margin-right: 2rem; /* <-- Espace entre la fiche et l'article */
+}
+
+.author-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(32, 56, 100, 0.15);
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+.author-photo {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+.expert-banner {
+  background: linear-gradient(90deg,
+    #0a1f44,
+    #1b3a73,
+    #2278b5,
+    #1b3a73,
+    #0a1f44
+  );
+  padding: 8px 16px;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    inset 0 0 10px rgba(255, 255, 255, 0.12),
+    0 3px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  position: sticky;
+  top: 70px; /* pour coller avec le wrapper */
+  z-index: 2;
+}
+
+.expert-banner h2 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
