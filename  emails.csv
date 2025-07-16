@@ -1,0 +1,4 @@
+/public_html/
+    index.html
+    save_email.php
+    emails.csv  ← créé automatiquement après le premier enregistrement
