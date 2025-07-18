@@ -636,6 +636,30 @@
   }
 </script>
 
+<script>
+  const form = document.getElementById('newsletter-form');
+  const message = document.getElementById('newsletter-message');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const email = form.email.value;
+    const scriptURL = 'https://script.google.com/macros/s/TON_SCRIPT_ID/exec';
+
+    fetch(scriptURL, { 
+      method: 'POST', 
+      body: new FormData(form)
+    })
+    .then(() => {
+      message.textContent = "Merci ! Vous êtes inscrit(e).";
+      form.reset();
+    })
+    .catch(() => {
+      message.style.color = 'red';
+      message.textContent = "Erreur, réessayez plus tard.";
+    });
+  });
+</script>
 
 
 
