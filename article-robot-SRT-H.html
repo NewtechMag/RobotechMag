@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La robotique chirurgicale franchit un cap historique</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+  <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="article-container">
+      <h1>La robotique chirurgicale franchit un cap</h1>
+      <p class="date">Par O. Héniel · Publié le 23 juillet 2025</p>
+      <img src="robot-chirurgical.webp" alt="Robot chirurgical autonome SRT-H" class="article-image" />
+      <p class="image-caption">Le robot SRT-H développé par l’Université Johns Hopkins démontre son travail de précision. Source : Science Robotics</p>
+
+      <p>La robotique chirurgicale vient de franchir une étape majeure. Un robot guidé par intelligence artificielle a réussi une phase clé d’une opération sans intervention humaine directe.</p>
+
+      <p>Ce sont des chercheurs de l’Université Johns Hopkins, à Baltimore, qui ont dirigé les expérimentations et affirment aujourd’hui que leur robot expérimental est capable d’effectuer, de manière autonome, une étape délicate et complexe d’une opération courante de la vésicule biliaire.</p>
+
+      <p>Alors que la chirurgie assistée par robot existe déjà, l’autonomie totale représente une véritable révolution. C’est l’apport de l’IA qui marque ici une avancée décisive par rapport aux anciens modèles, toujours opérés à distance par un chirurgien. Ce nouveau modèle, baptisé <strong>SRT-H</strong>, utilise l’IA pour prendre des décisions indépendantes et réagir face à d’éventuelles complications inattendues, grâce à sa compréhension de l’environnement et de la tâche qui lui incombe.</p>
+
+      <blockquote>
+        <p><em>« Cette avancée nous fait passer de robots capables d’exécuter des tâches chirurgicales spécifiques à des robots qui comprennent réellement les procédures chirurgicales »</em>, déclare <strong>Axel Krieger</strong>, directeur de recherche à l’Université Johns Hopkins.</p>
+      </blockquote>
+
+      <h2>Le principe d’apprentissage</h2>
+      <p>Contrairement aux modèles de robots chirurgicaux actuellement disponibles, comme le <strong>Da Vinci Surgical System</strong> d’Intuitive Surgical – utilisé dans plus de 12 millions de procédures – le Da Vinci fonctionne selon un mode maître-esclave : le chirurgien humain contrôle en temps réel chaque mouvement via une interface, le robot exécutant mécaniquement les gestes avec précision mais sans aucune autonomie cognitive.</p>
+
+      <p>Le SRT-H, lui, repose sur une architecture hiérarchique conférant un certain niveau d’autonomie. Il possède un « cerveau » en plusieurs couches : D'abords la planification via IA, avec des modèles de type LLM (Large Language Model), dans un second temps la génération autonome de trajectoires, adaptées en fonction de l’analyse de la situation.</p>
+      
+      <p>Il s’agit d’une succession d’analyses, de décisions et d’actions, sous supervision humaine, mais sans intervention manuelle continue. Le robot est également interactif : il peut répondre à des commandes vocales (par exemple : « Saisis la tête de la vésicule ») et accepter des corrections en temps réel.</p>
+
+      <h2>L’apprentissage par imitation</h2>
+      <p>Reposant sur une architecture d’apprentissage automatique comparable à celle de ChatGPT, le robot SRT-H a été entraîné grâce à l’apprentissage par imitation. Pour ce faire, il a analysé des vidéos de chirurgiens effectuant des ablations de vésicule biliaire sur des spécimens porcins, selon des travaux publiés dans <em>Science Robotics</em>.</p>
+
+      <p>Les chercheurs ont ensuite évalué le système sur huit ensembles distincts de foies et de vésicules biliaires de porcs. Cette phase, qui consiste à détacher la vésicule du foie, dure plusieurs minutes et exige l’utilisation coordonnée de différents instruments (saisir, poser des clips, découper), avec des ajustements et des décisions typiques de la pratique chirurgicale.</p>
+
+      <p>Un aspect crucial de l’étude est l’utilisation d’organes présentant une grande variabilité anatomique, afin de simuler la diversité rencontrée chez les patients humains. Bien que le robot ait réalisé ces procédures avec une précision de 100 %, son temps d’exécution reste supérieur à celui d’un chirurgien expérimenté.</p>
+
+      <h2>Vers quelle médecine ?</h2>
+      <p>Une telle technologie soulève des questions, notamment juridiques et éthiques. Qui sera responsable en cas d’erreur ?</p>
+
+      <p>Cependant, l’intégration de robots chirurgicaux autonomes promet de répondre à plusieurs défis dans le domaine de la santé. Principalement la réduction des erreurs humaines, grâce à une machine insensible à la fatigue ou au stress.Aussi,la standardisation de la qualité des soins, avec une précision constante, indépendamment du lieu ou de l’opérateur et pour notamment répondre à la pénurie mondiale de chirurgiens, en offrant une solution aux déserts médicaux.</p>
+
+      <p>À terme, de tels systèmes pourraient fonctionner en quasi-autonomie, sous simple supervision, apportant une chirurgie avancée dans les zones les plus isolées et réduisant les inégalités d’accès aux soins. Reste à savoir si les professionnels de santé et les patients accepteront de confier une telle responsabilité à une machine, même supervisée par l’humain.</p>
+    </div>
+  </main>
+   <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script src="inject-layout.js"></script>
+</body>
+</html>
