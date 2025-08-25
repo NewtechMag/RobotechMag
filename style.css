@@ -1874,17 +1874,28 @@ h2 {
   justify-content: center;
   align-items: center;
   margin: 40px auto;
-  padding: 5px; /* épaisseur du cadre */
-  background: linear-gradient(90deg, #00b4d8, #0077b6); /* cadre dégradé */
+  padding: 5px;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
   border-radius: 12px;
   max-width: 1100px;
   box-sizing: border-box;
+  overflow: hidden; /* masque ce qui dépasse */
 }
 
-.publicite-banner img {
+.slider {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slider a {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slider img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* arrondi intérieur un peu plus petit que l’extérieur */
+  border-radius: 10px;
   display: block;
 }
 table {
