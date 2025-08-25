@@ -1945,7 +1945,7 @@ th {
    box-shadow: 0 6px 15px rgba(0, 116, 182, 0.4);
 }
 main {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   position: relative;
 }
@@ -1966,6 +1966,10 @@ main {
   height: fit-content;
   z-index: 1;
   margin-right: 2rem; /* <-- Espace entre la fiche et l'article */
+}
+.author-card h3,
+.author-card p {
+  text-align: center;
 }
 
 .author-card {
@@ -2104,7 +2108,7 @@ main {
 
 
 /* Desktop */
-@media (min-width: 769px) {
+
   @media (min-width: 769px) {
   main {
     position: relative; /* permet de placer la sidebar en absolu */
@@ -2158,7 +2162,7 @@ main {
 
   .mobile-insert {
     display: block;
-    width: 100%;
+    width: 30%;
     margin: 1rem 0;
     position: relative; /* pas sticky */
     top: auto;
@@ -2174,10 +2178,5 @@ main {
   .desktop-only {
     display: none;
   }
-  
-}
-@media (max-width: 1400px) {
-  .author-card-wrapper.desktop-only {
-    display: none;
-  }
+
 }
