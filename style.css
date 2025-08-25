@@ -2162,7 +2162,7 @@ main {
 
   .mobile-insert {
     display: block;
-    width: 30%;
+    width: 80%;
     margin: 1rem 0;
     position: relative; /* pas sticky */
     top: auto;
