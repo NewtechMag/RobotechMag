@@ -1891,7 +1891,6 @@ h2 {
 }
 
 /* Responsive */
-/* ✅ Responsive */
 @media screen and (max-width: 1024px) {
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1914,7 +1913,9 @@ h2 {
     font-size: 0.9rem;
     line-height: 1.2;
   }
-  
+
+
+
   .card-image-wrapper {
     aspect-ratio: 3 / 4; /* un peu plus compact */
   }
