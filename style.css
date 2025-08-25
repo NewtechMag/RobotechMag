@@ -821,11 +821,14 @@ main {
 
 .article-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   background: #fff;
   padding: 30px 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+box-sizing: border-box; /* inclut padding */
+
 }
+
 
 /* Article content */
 .article-container h1 {
@@ -906,14 +909,6 @@ blockquote {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    
-  width: 100%;
-    max-width: 1000px;
-    padding: 30px 20px;
-    box-sizing: border-box; /* inclut padding */
-    background: #fff;
-    ;
 }
 
 .article:hover {
