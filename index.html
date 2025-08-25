@@ -155,6 +155,7 @@
   </section>
 
   <!-- BANNIÈRE PUBLICITAIRE -->
+    <div class="publicite-banner-wrapper">
 <div class="publicite-banner">
   <div class="slider">
     <a href="https://www.fanuc.eu/fr-fr/" target="_blank" rel="noopener">
@@ -165,7 +166,7 @@
     </a>
   </div>
 </div>
-
+    </div>
 
     
   <div class="grid-container">
@@ -812,20 +813,26 @@ new FinisherHeader({
     "c"
   ]
 });
-</script>
-   <script>
+<script>
 let index = 0;
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slider a");
 const total = slides.length;
+const banner = document.querySelector(".publicite-banner");
 
 function showNextSlide() {
-  index = (index + 1) % total; // boucle infinie
-  slider.style.transform = `translateX(-${index * 100}%)`;
+  index = (index + 1) % total; 
+  const bannerWidth = banner.clientWidth; // largeur visible sans padding
+  slider.style.transform = `translateX(-${index * bannerWidth}px)`;
 }
 
-// Change de bannière toutes les 5 secondes
 setInterval(showNextSlide, 5000);
+
+// Recalcul sur redimensionnement
+window.addEventListener('resize', () => {
+  const bannerWidth = banner.clientWidth;
+  slider.style.transform = `translateX(-${index * bannerWidth}px)`;
+});
 </script>
 </body>
 </html>
