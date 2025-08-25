@@ -1944,6 +1944,12 @@ th {
   
    box-shadow: 0 6px 15px rgba(0, 116, 182, 0.4);
 }
+.article-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Carte auteur */
 .author-card-wrapper {
   background: linear-gradient(90deg, #00b4d8, #0077b6); /* Cadre dégradé */
   padding: 3px;
@@ -2028,5 +2034,123 @@ th {
   height: 3px;
   background: linear-gradient(90deg, #00b4d8, #0077b6);
   border-radius: 2px;
+}
+.article-wrapper {
+  display: flex;
+  flex-direction: column; /* empile verticalement */
+  align-items: center;    /* centre horizontalement tous les enfants */
+}
+
+.expert-subtitle-wrapper {
+  width: 100%;          /* occupe toute la largeur du conteneur */
+  display: flex;        /* activer flexbox */
+  justify-content: center; /* centrer horizontalement */
+  margin-bottom: 20px;  /* espace en dessous si nécessaire */
+}
+
+.expert-subtitle {
+  background-color: #f0f0f0; /* optionnel pour tester */
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+.expert-subtitle span {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #003049;
+  letter-spacing: 1px;
+}
+
+.expert-subtitle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  border-radius: 2px;
+}
+/* RESPONSIVE */
+/* Desktop : texte à gauche, carte sticky à droite */
+/* Article centré */
+.article-container {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+/* Carte auteur */
+.author-card-wrapper {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.expert-subtitle-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .article-wrapper {
+    flex: 1;
+  }
+
+  /* Carte desktop sticky */
+  .desktop-insert {
+    display: block;
+    position: sticky;
+    top: 100px;
+    width: 220px;
+  }
+
+  /* Cache la carte mobile */
+  .mobile-insert {
+    display: none;
+  }
+  
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    display: block;
+  }
+
+  .desktop-insert {
+    display: none; /* cache la carte sticky desktop */
+  }
+
+  .mobile-insert {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    position: relative; /* pas sticky */
+    top: auto;
+    z-index: auto;
+  }
+  .mobile-insert .expert-banner {
+    position: relative; /* plus sticky */
+    top: auto;
+    z-index: auto;
+  }
+
+  /* Cache la carte desktop */
+  .desktop-only {
+    display: none;
+  }
 }
 
