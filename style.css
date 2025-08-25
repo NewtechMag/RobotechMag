@@ -1944,6 +1944,12 @@ th {
   
    box-shadow: 0 6px 15px rgba(0, 116, 182, 0.4);
 }
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .article-container {
   max-width: 700px;
   margin: 0 auto;
@@ -1998,8 +2004,8 @@ th {
   font-size: 1.4em;
   font-weight: bold;
   font-family: 'Segoe UI', sans-serif;
-  position: sticky;
-  top: 70px; /* pour coller avec le wrapper */
+  position: relative;
+  top: auto; /* pour coller avec le wrapper */
   z-index: 2;
 }
 
@@ -2096,6 +2102,7 @@ th {
   margin-bottom: 1rem;
 }
 
+
 /* Desktop */
 @media (min-width: 769px) {
   @media (min-width: 769px) {
@@ -2112,15 +2119,13 @@ th {
   }
 
   /* Carte auteur sticky à droite sans pousser l’article */
-  .author-card-wrapper.desktop-only {
-    position: sticky;
-    top: 100px;
-    right: -280px;   /* décalage pour la placer à droite de l'article */
-    width: 250px;
-    height: fit-content;
-    margin: 0;
-  }
+.author-card-wrapper.desktop-only {
+  position: absolute;
+  top: 150px;
+  right: -50px;
+  width: 220px;
 }
+
 
   .article-wrapper {
     flex: 1;
@@ -2169,5 +2174,10 @@ th {
   .desktop-only {
     display: none;
   }
+  
 }
-
+@media (max-width: 1400px) {
+  .author-card-wrapper.desktop-only {
+    display: none;
+  }
+}
