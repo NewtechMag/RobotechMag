@@ -1902,15 +1902,14 @@ h2 {
     gap: 16px;
   }
 
-   .robotech-text {
-    padding: 4px 6px 6px 6px; /* encore plus fin */
+ .robotech-text {
+    padding: 4px 8px; /* encore plus fin */
     background: rgba(0, 0, 0, 0.3);
   }
 
   .robotech-text h3 {
-    font-size: 0.95rem;
-    line-height: 1.2;
-  }
+    font-size: 0.9rem;
+    line-hei
 
 
   .card-image-wrapper {
