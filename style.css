@@ -1888,18 +1888,28 @@ h2 {
 }
 
 /* Responsive */
+/* ✅ Responsive */
 @media screen and (max-width: 1024px) {
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 }
 
 @media screen and (max-width: 640px) {
   .articles-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* ✅ garde 2 colonnes */
+    gap: 16px;
+  }
+
+  .robotech-text h3 {
+    font-size: 1rem; /* un peu plus petit */
+  }
+
+  .card-image-wrapper {
+    aspect-ratio: 3 / 4; /* un peu plus compact */
   }
 }
-
 .publicite-banner-wrapper {
   margin: 40px auto;
   padding: 5px; /* épaisseur du cadre */
