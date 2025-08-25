@@ -672,6 +672,37 @@ main {
 .carousel-item .overlay p {
   color: white;
 }
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 250px; /* moins haut sur mobile */
+  }
+
+  .carousel-item img {
+    object-fit: cover; /* garde l’image centrée */
+  }
+
+  .carousel-btn {
+    font-size: 20px;   /* flèches plus petites */
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    height: 200px; /* encore plus bas pour petits écrans */
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    padding: 5px 8px;
+  }
+
+  .carousel-item .overlay {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
 /* Cercles bleus Accueil + Burger */
 .home-circle a, .burger-circle button {
   display: flex;
