@@ -2098,11 +2098,28 @@ th {
 
 /* Desktop */
 @media (min-width: 769px) {
-  main {
+   main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
+    max-width: 1300px; /* largeur globale article + sidebar */
+    margin: 0 auto;
+  }
+
+  /* Article bien centré */
+  .article-container {
+    max-width: 1100px;
+    flex: 1; /* prend tout l’espace restant */
+  }
+
+  /* Carte auteur réduite */
+  .author-card-wrapper.desktop-only {
+    flex: 0 0 250px; /* largeur fixe 250px */
+    margin: 0;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
   }
 
   .article-wrapper {
