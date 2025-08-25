@@ -906,6 +906,14 @@ blockquote {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    
+  width: 100%;
+    max-width: 1000px;
+    padding: 30px 20px;
+    box-sizing: border-box; /* inclut padding */
+    background: #fff;
+    ;
 }
 
 .article:hover {
