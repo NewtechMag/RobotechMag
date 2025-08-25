@@ -1902,16 +1902,16 @@ h2 {
     gap: 16px;
   }
 
- .robotech-text {
+  .robotech-text {
     padding: 4px 8px; /* encore plus fin */
     background: rgba(0, 0, 0, 0.3);
   }
 
   .robotech-text h3 {
     font-size: 0.9rem;
-    line-hei
-
-
+    line-height: 1.2;
+  }
+  
   .card-image-wrapper {
     aspect-ratio: 3 / 4; /* un peu plus compact */
   }
