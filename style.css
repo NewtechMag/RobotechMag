@@ -1869,34 +1869,39 @@ h2 {
   }
 }
 
-.publicite-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.publicite-banner-wrapper {
   margin: 40px auto;
-  padding: 5px;
+  padding: 5px; /* épaisseur du cadre */
   background: linear-gradient(90deg, #00b4d8, #0077b6);
   border-radius: 12px;
   max-width: 1100px;
   box-sizing: border-box;
-  overflow: hidden; /* masque ce qui dépasse */
 }
 
+/* Conteneur du slider sans padding pour que le calcul JS fonctionne */
+.publicite-banner {
+  overflow: hidden;
+  border-radius: 10px; /* arrondi intérieur légèrement plus petit que le cadre */
+  position: relative;
+}
+
+/* Slider */
 .slider {
   display: flex;
+  width: 100%;
   transition: transform 0.8s ease-in-out;
 }
 
 .slider a {
-  min-width: 100%;
-  box-sizing: border-box;
+  flex: 0 0 100%;
+  width: 100%;
 }
 
 .slider img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
   display: block;
+  border-radius: 10px; /* même que le conteneur */
 }
 table {
   width: 100%;
