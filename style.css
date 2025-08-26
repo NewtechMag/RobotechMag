@@ -507,6 +507,30 @@ main {
     left: -20%;
   }
 }
+/* Version responsive mobile */
+@media (max-width: 768px) {
+  .logo-wrapper {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    height: 100px; /* réduit la hauteur */
+  }
+
+  #lottie-animation {
+    top: -30px; /* moins haut */
+    width: 100px; 
+    height: 100px;
+  }
+
+  .logo {
+    font-size: 50px; /* réduit la taille du logo */
+  }
+
+  .logo-subtitle {
+    font-size: 10px; /* plus petit pour mobile */
+    letter-spacing: 0.5px;
+    margin-top: 3px;
+  }
+}
 
 
 /* NAVIGATION */
