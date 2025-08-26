@@ -2255,3 +2255,27 @@ main {
   }
 
 }
+.text-with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.text-content {
+  flex: 2;
+}
+
+.image-side {
+  flex: 1;
+  max-width: 300px; /* largeur max de l’image */
+}
+
+.image-side img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
