@@ -2278,4 +2278,18 @@ main {
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+@media (max-width: 768px) {
+  .text-with-image {
+    flex-direction: column; /* empile image et texte verticalement */
+    gap: 10px; /* espace réduit entre image et texte */
+  }
 
+  .image-side {
+    max-width: 100%; /* image prend toute la largeur disponible */
+    margin-bottom: 10px; /* petit espace avant le texte */
+  }
+
+  .text-content {
+    flex: unset; /* supprime la proportion flex pour le texte */
+  }
+}
