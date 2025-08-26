@@ -2193,7 +2193,7 @@ main {
 
   /* Article centré */
   .article-container {
-    max-width: 700px; /* ou 1100px selon ton choix */
+    max-width: 750px; /* ou 1100px selon ton choix */
     margin: 0 auto;
   }
 
@@ -2201,8 +2201,8 @@ main {
 .author-card-wrapper.desktop-only {
   position: absolute;
   top: 150px;
-  right: -50px;
-  width: 220px;
+  right: -150px;
+  width: 320px;
 }
 
 
