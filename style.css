@@ -2263,12 +2263,12 @@ main {
 }
 
 .text-content {
-  flex: 2;
+  flex: 1;
 }
 
 .image-side {
-  flex: 1;
-  max-width: 300px; /* largeur max de l’image */
+  flex: 1.5;
+  max-width: none; /* largeur max de l’image */
 }
 
 .image-side img {
