@@ -19,6 +19,87 @@
   text-align: center;        /* Centré, pour un effet introductif */
   font-family: 'Georgia', serif; /* Police élégante et lisible */
 }
+     
+  .diagramme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .bloc-modele {
+    border: 2px solid black;
+    padding: 20px 40px;
+    max-width: 500px;
+    font-weight: bold;
+  }
+
+  .bloc-modele small {
+    display: block;
+    font-weight: normal;
+    margin-top: 8px;
+  }
+
+  .lignes {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Ligne centrale reliant le bloc du haut aux flèches */
+  .lignes::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: black;
+    transform: translateX(-50%);
+  }
+
+  .ligne {
+    position: relative;
+  }
+
+  /* Ligne verticale + flèche */
+  .ligne::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: black;
+    transform: translateX(-50%);
+  }
+
+  .ligne::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-top: 20px;
+    border: 6px solid transparent;
+    border-top: 8px solid black; /* flèche vers le bas */
+    transform: translateX(-50%);
+  }
+
+  .bloc-appli {
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    min-width: 160px;
+  }
+
+  .texte-bas {
+    margin-top: 20px;
+    font-size: 14px;
+    max-width: 600px;
+  }
+</style>
 .image-diagramme {
   text-align: center;
   margin: 25px auto;
@@ -257,11 +338,33 @@ Celui de garantir à l’humain le droit de rester maître de sa pensée, désor
 <p>Cette distinction majeure est synthétisée par le schéma ci-dessous et prépare la compréhension des enjeux de l’IA agentique, nouvelle itération de l’IA générative.</p>
 
 <!-- Bloc image de diagramme -->
-<div class="image-diagramme">
-  <img src="Diagramme.png" alt="Diagramme illustratif d'un modèle LLM">
 
 </div>
 
+      <div class="diagramme">
+
+  <div class="bloc-modele">
+    Modèle LLM (ex: GPT-4)
+    <small>→ Générateur généraliste de contenus<br>(textes, code, images…)</small>
+  </div>
+
+  <div class="lignes">
+    <div class="ligne">
+      <div class="bloc-appli">Chatbot RH<br>(recrutement)</div>
+    </div>
+    <div class="ligne">
+      <div class="bloc-appli">ChatGPT grand public</div>
+    </div>
+    <div class="ligne">
+      <div class="bloc-appli">Assistant médical</div>
+    </div>
+  </div>
+
+  <div class="texte-bas">
+    Le modèle généraliste alimente plusieurs applications, chacune soumise à des règles sectorielles spécifiques.
+  </div>
+
+</div>
 
 <h2> L’IA agentique : l’itération active de l’intelligence artificielle :</h2>
 
@@ -457,6 +560,7 @@ Préserver la richesse cognitive et culturelle des inférences agentiques, non p
   <script src="inject-layout.js"></script>
 </body>
 </html>
+
 
 
 
