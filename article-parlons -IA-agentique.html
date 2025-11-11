@@ -46,45 +46,62 @@
     gap: 150px;
     position: relative;
     width: 100%;
+    margin-top: 20px;
   }
 
-  /* Ligne centrale reliant le bloc du haut aux flèches */
+  /* Ligne verticale principale sous le bloc du haut */
   .lignes::before {
     content: '';
     position: absolute;
-    top: -20px;
+    top: -55px; /* descend un peu plus bas */
     left: 50%;
     width: 2px;
-    height: 20px;
+    height: 35px; /* rallongée pour toucher la ligne horizontale */
+    background-color: black;
+    transform: translateX(-50%);
+  }
+
+  /* Ligne horizontale reliant les trois lignes verticales */
+  .lignes::after {
+    content: '';
+    position: absolute;
+    top: -20px; /* point d’intersection avec la verticale */
+    left: 50%;
+    width: 710px;
+    height: 2px;
     background-color: black;
     transform: translateX(-50%);
   }
 
   .ligne {
     position: relative;
+    padding-top: 10px;
   }
 
-  /* Ligne verticale + flèche */
+  /* Lignes verticales descendant depuis la ligne horizontale */
   .ligne::before {
     content: '';
     position: absolute;
     top: -20px;
     left: 50%;
     width: 2px;
-    height: 20px;
+    height: 22px;
     background-color: black;
     transform: translateX(-50%);
   }
 
+  /* Flèche collée au bas de la ligne, juste au-dessus de la case */
   .ligne::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: -8px;
     left: 50%;
-    margin-top: 20px;
-    border: 6px solid transparent;
-    border-top: 8px solid black; /* flèche vers le bas */
     transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid black; /* pointe vers le bas */
   }
 
   .bloc-appli {
@@ -92,6 +109,7 @@
     padding: 10px 20px;
     border-radius: 4px;
     min-width: 160px;
+    background: white;
   }
 
   .texte-bas {
@@ -99,7 +117,13 @@
     font-size: 14px;
     max-width: 600px;
   }
-</style>
+
+  @media (max-width:520px){
+    .lignes { gap: 20px; }
+    .lignes::after { width: 200px; }
+    .bloc-appli { min-width: 260px; }
+  }
+
 .image-diagramme {
   text-align: center;
   margin: 25px auto;
@@ -560,6 +584,7 @@ Préserver la richesse cognitive et culturelle des inférences agentiques, non p
   <script src="inject-layout.js"></script>
 </body>
 </html>
+
 
 
 
