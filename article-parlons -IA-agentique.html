@@ -27,26 +27,60 @@
   font-family: 'Georgia', serif; /* Police élégante et lisible */
 }
 
-.image-diagramme {
-  text-align: center;
-  margin: 25px auto;
-  max-width: 500px;  /* plus petit qu'une grande image d'illustration */
-}
+.diagram-card {
+    font-size: 14px;
+    fill: #fffbe6;
+    stroke: #3a3a3a;
+    stroke-width: 1.8;
+    rx: 8;
+    ry: 8;
+    filter: url(#softShadow);
+  }
 
-.image-diagramme img {
-  width: 100%;
-  height: auto;
-  border: 1.5px solid #ccc;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
+  .card-text {
+    font-size: 13px;
+    fill: #111;
+    pointer-events: none;
+  }
 
-.image-diagramme .legende {
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 8px;
-  font-style: italic;
-}
+  .muted {
+    font-size: 12px;
+    fill: #333;
+    opacity: 0.9;
+  }
+
+  .risk {
+    font-size: 12px;
+    fill: #8b3000;
+  }
+
+  .connector {
+    stroke: #222;
+    stroke-width: 2.2;
+    fill: none;
+    marker-end: url(#arrow);
+    marker-start: none;
+  }
+
+  /* thinner connectors for diagonal variety */
+  .connector.thin { stroke-width: 1.8; opacity: 0.95; }
+
+  /* responsive container to center diagram */
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(20,20,20,0.06);
+  }
+
+  /* small screens: scale down svg */
+  @media (max-width:600px){
+    .wrap { padding: 8px; }
+    svg { width: 100%; height: auto; }
+  }
+     
 .diagramme {
     display: flex;
     flex-direction: column;
@@ -534,6 +568,7 @@ Préserver la richesse cognitive et culturelle des inférences agentiques, non p
   <script src="inject-layout.js"></script>
 </body>
 </html>
+
 
 
 
