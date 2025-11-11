@@ -112,11 +112,13 @@
     background: white;
   }
 
-  .texte-bas {
-    margin-top: 20px;
-    font-size: 14px;
-    max-width: 600px;
-  }
+ .texte-bas {
+  margin: 20px auto 0; /* centré horizontalement */
+  font-size: 14px;
+  max-width: 700px;     /* même largeur que .prelude-text */
+  line-height: 1.6;
+  text-align: center;   /* optionnel */
+}
 
   @media (max-width:520px){
     .lignes { gap: 20px; }
@@ -565,6 +567,7 @@ Préserver la richesse cognitive et culturelle des inférences agentiques, non p
   <script src="inject-layout.js"></script>
 </body>
 </html>
+
 
 
 
