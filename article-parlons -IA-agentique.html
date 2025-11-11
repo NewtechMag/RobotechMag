@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parlons d'IA agentique</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+   <style>.prelude-text {
+  font-size: 1.15rem;        /* Un peu plus grand que le texte normal */
+  font-style: italic;        /* Style italique pour le différencier */
+  color: #555555;            /* Gris doux */
+  line-height: 1.6;          /* Interligne aéré */
+  max-width: 700px;          /* Limiter la largeur pour une lecture agréable */
+  margin: 2rem auto 3rem;    /* Espacement vertical centré horizontalement */
+  padding-top: 0.5rem;
+  border-top: 2px solid #ccc; /* Ligne fine au-dessus */
+  text-align: center;        /* Centré, pour un effet introductif */
+  font-family: 'Georgia', serif; /* Police élégante et lisible */
+}
+
+.image-diagramme {
+  text-align: center;
+  margin: 25px auto;
+  max-width: 500px;  /* plus petit qu'une grande image d'illustration */
+}
+
+.image-diagramme img {
+  width: 100%;
+  height: auto;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.image-diagramme .legende {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 8px;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+  <!-- Inclusion du header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+         <div class="author-card-wrapper desktop-only">
+      <div class="expert-banner">
+        <h2>Notre expert</h2>
+      </div>
+      <div class="author-card">
+        <img src="DSC_7417-3.jpg" alt="Photo de l'auteur" class="author-photo">
+        <h3>Véronique Rondeau – Abouly</h3>
+        <p>Maître Véronique RONDEAU ABOULY dirige un cabinet indépendant en Droit du numérique, propriété intellectuelle et des Technologies avancées et de rupture</p>
+      </div>
+    </div>
+ <div class="article-wrapper">-
+    <div class="expert-subtitle-wrapper">
+  <div class="expert-subtitle"><span>Tribune d’expert</span></div>
+</div>
+       <div class="author-card-wrapper mobile-insert">
+   <div class="expert-banner">
+        <h2>Notre expert</h2>
+      </div>
+      <div class="author-card">
+        <img src="DSC_7417-3.jpg" alt="Photo de l'auteur" class="author-photo">
+        <h3>Véronique Rondeau – Abouly</h3>
+        <p>Maître Véronique RONDEAU ABOULY dirige un cabinet indépendant en Droit du numérique, propriété intellectuelle et des Technologies avancées et de rupture</p>
+      </div>
+  </div>
+
+    <div class="article-container">
+
+
+<h1>Parlons d'IA agentique</h1>
+
+<h2>Propos introductifs :</h2>
+
+<p>L’intelligence artificielle a fait irruption dans nos conversations quotidiennes en novembre 2022, lorsque OpenAI a mis à disposition du public, sous licences gratuites et payantes, son agent conversationnel Chat-GPT.</p>
+
+<p>Cette révélation au grand public de ce qui fut nommé l’IA générative s’est produite alors même que le futur Règlement européen à paraître sur l’intelligence artificielle, l’IA Act, venait de terminer ses définitions des SIA (Systèmes d’Intelligence Artificielle) en les définissant comme des systèmes relevant au sens très large de la prise de décision automatisée supervisée ou pas.</p>
+
+<p>Pour l’IA Act la définition des SIA s’est construite sur le parti pris technologique qu’il fallait encadrer le fonctionnement de :</p>
+
+<p>« Un système automatisé qui est conçu pour fonctionner à différents niveaux d'autonomie et peut faire preuve d'une capacité d'adaptation après son déploiement, et qui, pour des objectifs explicites ou implicites, déduit, à partir des entrées qu'il reçoit, la manière de générer des sorties telles que des prédictions, du contenu, dès qu'il reçoit, la manière de générer des sorties telles que des prédictions, du contenu, des recommandations ou des décisions qui peuvent influencer les environnements physiques ou virtuels. » (Article 3 IA Act)</p>
+
+<p>Cette définition ancre la gouvernance de l’IA dans une « approche par les risques » liés aux usages d’une matière première : les intrants informationnels.</p>
+
+<p>Les données d’entraînement, bien que structurantes, programment un cheminement vers un résultat ; toutefois, les réseaux de neurones (deep learning) introduisent une opacité sur l’explicabilité des données de sortie (outputs), rendant partielle la justification a posteriori par le data scientist.</p>
+
+<p>C’est au regard de cette évolution des technologies, notamment celles fondées sur le Traitement Automatique du Langage Naturel (TALN), que le régulateur européen a choisi de réguler l’utilisation des systèmes d’IA par une catégorisation transversale des risques, centrée sur les conséquences de ces usages sur les droits des personnes.</p>
+
+<p>L’objectif est de prévenir les atteintes à la dignité humaine et, plus largement, les effets juridiques ou les impacts susceptibles d’affecter une personne de manière significative, conformément à la logique de l’article 22, §1, du RGPD relatif aux décisions individuelles automatisées.</p>
+
+<p>Cette démarche spécifiquement européenne a conduit à classer les systèmes d’IA en « niveaux de risque », assortis d’obligations différenciées préalablement à leur mise sur le marché (ou à leur mise en service).</p>
+
+<p>La réglementation par niveaux de risque se répartit ainsi :</p>
+
+<p>Risques inacceptables (interdits) : certaines pratiques sont prohibées par principe (pas de mise sur le marché ni mise en service) ;</p>
+
+<p>Systèmes à haut risque : soumis à une évaluation de conformité (certification) avant mise sur le marché / mise en service, assortie d’obligations de gestion des risques, de qualité des données et de supervision humaine ;</p>
+
+<p>Risque limité ou minimal : obligations de transparence (par exemple : information claire de l’utilisateur), dont l’esprit rejoint les exigences de transparence du RGPD (art. 12), comme nous l’avions souligné dans notre article de juillet.(IA et RGPD)</p>
+
+<p>À ce stade, fin 2022, la régulation demeurait donc centrée sur la prévention des risques d’usage, envisagés par finalités métiers.</p>
+
+<p>C’est précisément à ce moment qu’apparaît l’IA générative, bouleversant l’équilibre initial et appelant une réévaluation du cadre d’écriture du règlement en cours.</p>
+
+<h2>IA générative : l’appropriation immédiate</h2>
+
+<p>En quelques semaines ; à partir de novembre 2022 ; avec la mise à disposition publique par OpenAI, l’IA générative est passée de la démonstration à « l’usage réflexe » :</p>
+
+<p>Une appropriation immédiate, visible « en direct » sous les yeux du législateur européen.</p>
+
+<p>Dans le même mouvement, s’est imposée la généralisation de l’accès à des systèmes d’IA à usage général (GPAI, General-Purpose AI), consacrant une nouvelle itération de l’usage de l’intelligence artificielle bien au-delà des cas d’emploi spécialisés.</p>
+
+<p>La preuve de cette itération se révèle dans l’article 2 de l’IA Act qui définit le périmètre de son champ d’application pour :</p>
+
+<p>« Les fournisseurs établis ou situés dans l'Union ou dans un pays tiers qui mettent sur le marché ou mettent en service à destination des utilisateurs de l’Union Européenne : des Systèmes d'IA :(SIA) ou des modèles d'IA à usage général »</p>
+
+<p>Cette distinction sémantique de l’article 2 est confirmée par les définitions de l’article 3. de l’IA Act.</p>
+
+<p>Cet article nomme les « outils technologiques » participant à la nouvelle réglementation, en cohérence avec la distinction posée par l’article 2 qui le précède.</p>
+
+<p>Le modèle d’IA à usage général (Article 3, §63) :</p>
+
+<p>Il est défini comme un modèle d’IA, y compris lorsqu’il est entraîné à l’aide d’un grand volume de données par auto-supervision à grande échelle, présentant une généralité significative et capable d’exécuter de manière compétente un large éventail de tâches distinctes.</p>
+
+<p>Le système d’IA à usage général (Article 3, §66) :</p>
+
+<p>Il est défini comme un système d’IA reposant sur un modèle d’IA à usage général et ayant la capacité de répondre à diverses finalités, tant pour une utilisation directe que pour une intégration dans d’autres systèmes d’IA.</p>
+
+<p>Ces deux définitions visent à encadrer 2 technologies complémentaires mais distinctes :</p>
+
+<p>Le modèle constitue la composante essentielle, un moteur générique et adaptable ;</p>
+
+<p>Le système intègre ce modèle avec d’autres éléments (interfaces, données contextuelles, modules de supervision, etc.) pour produire une application spécifique.</p>
+
+<p>En résumé, l’IA Act réglemente les LLM (Large Language Models) dans sa fonction « technologique » de modèles d’IA à usage général, capables d’accomplir une diversité de tâches grâce à leur généralité et à leur capacité d’adaptation.</p>
+
+<p>Mais l’intégration de cette technologie nouvelle dans un cadre de régulation, initialement fondé sur une logique de risques d’usage, visait surtout à prévenir les atteintes possibles aux droits fondamentaux des personnes résultant de traitements automatisés.</p>
+
+<p>Avec l’émergence des modèles génératifs, le risque se déplace :</p>
+
+<p>Il ne s’agit plus seulement de protéger la dignité de la personne affectée par une décision, mais de régir aussi ses droits quant à l’utilisation des contenus générés,</p>
+
+<p>Mais aussi de préserver les droits des tiers dont les contenus, œuvres ou données servent à entraîner le modèle.</p>
+
+<p>Mais au-delà c’est bien le prisme de la dignité dans l’interaction « homme–système » doit être redéfini.</p>
+
+<p>Ce changement d’échelle introduit un risque cognitif inédit et nouveau :</p>
+
+<p>Celui de garantir à l’humain le droit de rester maître de sa pensée, désormais sollicitée dans une cocréation algorithmique continue.</p>
+
+<p>Désormais, le savoir humain et sa capacité à comprendre le monde sont partagés, absorbés et reconfigurés par des architectures propriétaires, qui définissent silencieusement ce qui est appris, transmis et valorisé par le modèle.</p>
+
+<p>Cette distinction majeure est synthétisée par le schéma ci-dessous et prépare la compréhension des enjeux de l’IA agentique, nouvelle itération de l’IA générative.</p>
+
+
+
+<h2> IA générative : l’appropriation immédiate</h2>
+
+<p>En quelques semaines ; à partir de novembre 2022 ; avec la mise à disposition publique par OpenAI , l’IA générative est passée de la démonstration à « l’usage réflexe » : 
+Une appropriation immédiate, visible « en direct » sous les yeux du législateur européen.</p>
+
+<p>Dans le même mouvement, s’est imposée la généralisation de l’accès à des systèmes d’IA à usage général (GPAI, General-Purpose AI), consacrant une nouvelle itération de l’usage de l’intelligence artificielle bien au-delà des cas d’emploi spécialisés. 
+La preuve de cette itération se révèle dans l’article 2 de l’IA Act qui définit le périmètre de son champ d’application pour:
+« Les fournisseurs établis ou situés dans l'Union ou dans un pays tiers qui mettent sur
+le marché ou mettent en service à destination des utilisateurs de l’Union Européenne:
+des Systèmes d'IA :(SIA)
+ou des modèles d'IA à usage général » 
+Cette distinction sémantique de l’article 2 est confirmée par les définitions de l’article 3. de l’IA Act.</p>
+
+<p>Cet article  nomme les « outils technologiques » participant à la nouvelle réglementation, en cohérence avec la distinction posée par l’article 2 qui le précède.</p>
+
+<p>Le modèle d’IA à usage général (Article 3, §63) :
+Il est défini comme un modèle d’IA, y compris lorsqu’il est entraîné à l’aide d’un grand volume de données par auto-supervision à grande échelle, présentant une généralité significative et capable d’exécuter de manière compétente un large éventail de tâches distinctes.</p>
+
+<p>Le système d’IA à usage général (Article 3, §66) :
+Il est défini comme un système d’IA reposant sur un modèle d’IA à usage général et ayant la capacité de répondre à diverses finalités, tant pour une utilisation directe que pour une intégration dans d’autres systèmes d’IA.</p>
+
+<p>Ces deux définitions visent à encadrer 2 technologies complémentaires mais distinctes : 
+Le modèle constitue la composante essentielle, un moteur générique et adaptable ;
+Le système intègre ce modèle avec d’autres éléments (interfaces, données contextuelles, modules de supervision, etc.) pour produire une application spécifique.</p>
+
+<p>En résumé, l’IA Act réglemente les LLM (Large Language Models) dans sa fonction « technologique » de modèles d’IA à usage général, capables d’accomplir une diversité de tâches grâce à leur généralité et à leur capacité d’adaptation.</p>
+
+<p>Mais l’intégration de cette technologie nouvelle dans un cadre de régulation, initialement fondé sur une logique de risques d’usage, visait surtout à prévenir les atteintes possibles aux droits fondamentaux des personnes résultant de traitements automatisés.</p>
+
+<p>Avec l’émergence des modèles génératifs, le risque se déplace : 
+Il ne s’agit plus seulement de protéger la dignité de la personne affectée par une décision, mais de régir aussi ses droits quant à l’utilisation des contenus générés,
+Mais aussi de préserver les droits des tiers dont les contenus, œuvres ou données servent à entraîner le modèle.</p>
+
+<p>Mais au-delà c’est bien le prisme de la dignité dans l’interaction « homme–système » doit être redéfini.</p>
+
+<p>Ce changement d’échelle introduit un risque cognitif inédit et nouveau:
+Celui de garantir à l’humain le droit de rester maître de sa pensée, désormais sollicitée dans une cocréation algorithmique continue.</p>
+
+<p>Désormais, le savoir humain et sa capacité à comprendre le monde sont partagés, absorbés et reconfigurés par des architectures propriétaires, qui définissent silencieusement ce qui est appris, transmis et valorisé par le modèle.</p>
+
+<p>Cette distinction majeure est synthétisée par le schéma ci-dessous et prépare la compréhension des enjeux de l’IA agentique, nouvelle itération de l’IA générative.</p>
+
+<!-- Bloc image de diagramme -->
+<div class="image-diagramme">
+  <img src="exemple-diagramme.png" alt="Diagramme illustratif d'un modèle LLM">
+  <p class="legende">Exemple schématique : un modèle LLM alimentant plusieurs applications sectorielles.</p>
+</div>
+
+
+<h2> L’IA agentique : l’itération active de l’intelligence artificielle :</h2>
+
+<p>Le schéma ci-dessus aide à comprendre ce que les utilisateurs des systèmes d’IA à usage général perçoivent encore mal.
+Ils exploitent ces outils pour des usages très divers ,souvent professionnels ,avec des attentes précises en matière de résultats ou de données d’inférence fiables et spécialisées, sans toujours mesurer que :
+Aussi vaste que soit la puissance de calcul ou la fréquence des mises à jour, les inférences reposent sur un modèle fondamentalement général.</p>
+
+<p>Or, cette généralité intrinsèque, forgée par des intrants informationnels massifs et hétérogènes (comme les archives publiques illustrées dans le schéma 1 ci-dessus), introduit des biais subtils 
+Ces biais peuvent s’amplifier lorsque le système intègre une fonctionnalité agentique, c’est-à-dire la capacité à agir de manière proactive à partir du profil de l’utilisateur, de ses historiques d’utilisation, et des interconnexions techniques de son environnement de travail.</p>
+
+<p>En exploitant des API ou des espaces partagés, ces systèmes peuvent « enrichir » ou augmenter les prompts en lançant des initiatives ou des actions complémentaires, parfois au-delà de ce que l’utilisateur a explicitement formulé.</p>
+
+<p>C’est dans ce prolongement que l’IA agentique transforme la logique du modèle : 
+les « poids » du réseau, qui orientent les inférences, deviennent un enjeu central de gouvernance et de fiabilité cognitive.</p>
+
+<p>Figure 2 :Qualité des données et réentraînement dans la boucle agentique : l’IA agentique illustre la transition entre apprentissage initial, inférences et réinjection des données. La qualité des intrants détermine la pertinence cognitive des sorties</p>
+
+ <div class="wrap" role="region" aria-label="Diagramme du cycle d'entraînement et d'inférence d'un LLM">
+    <!-- SVG responsive -->
+    <svg viewBox="0 0 1100 700" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
+      <title id="title">Cycle Données → Modèle → Inférence → Ré-entraînement</title>
+      <desc id="desc">Diagramme montrant les connexions entre données d'entraînement, modèle de base, inférence et ré-entraînement, avec risques associés.</desc>
+
+      <defs>
+        <!-- Arrow marker -->
+        <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#222"/>
+        </marker>
+
+        <!-- Soft shadow for cards -->
+        <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.08"/>
+        </filter>
+      </defs>
+
+      <!-- Coordinates for boxes -->
+      <!-- Top-left -->
+      <g id="card-top-left" transform="translate(60,60)">
+        <rect class="diagram-card" width="420" height="160" />
+        <text x="18" y="30" class="card-text">
+          <tspan x="18" dy="0">Données d'entraînement</tspan>
+          <tspan x="18" dy="18">(publiques, propriétaires,</tspan>
+          <tspan x="18" dy="18">réseaux sociaux…)</tspan>
+        </text>
+        <text x="18" y="120" class="risk">⚠️ Risque : biais initiaux,</text>
+        <text x="18" y="138" class="risk">accès inégal aux données</text>
+      </g>
+
+      <!-- Top-right -->
+      <g id="card-top-right" transform="translate(620,60)">
+        <rect class="diagram-card" width="420" height="160" />
+        <text x="18" y="30" class="card-text">
+          <tspan x="18" dy="0">Modèle de base (LLM)</tspan>
+          <tspan x="18" dy="18">→ Apprentissage initial</tspan>
+          <tspan x="18" dy="18">(poids du réseau)</tspan>
+        </text>
+        <text x="18" y="120" class="risk">⚠️ Risque : dépendance</text>
+        <text x="18" y="138" class="risk">aux big tech & cloud</text>
+      </g>
+
+      <!-- Bottom-left -->
+      <g id="card-bottom-left" transform="translate(60,420)">
+        <rect class="diagram-card" width="420" height="160" />
+        <text x="18" y="30" class="card-text">
+          <tspan x="18" dy="0">Ré-entraînement</tspan>
+          <tspan x="18" dy="18">(données d'inférence</tspan>
+          <tspan x="18" dy="18">réinjectées)</tspan>
+        </text>
+        <text x="18" y="120" class="risk">⚠️ Risque : boucle auto-</text>
+        <text x="18" y="138" class="risk">renforcée des biais</text>
+      </g>
+
+      <!-- Bottom-right -->
+      <g id="card-bottom-right" transform="translate(620,420)">
+        <rect class="diagram-card" width="420" height="160" />
+        <text x="18" y="30" class="card-text">
+          <tspan x="18" dy="0">Inférence</tspan>
+          <tspan x="18" dy="18">(réponses générées</tspan>
+          <tspan x="18" dy="18">par l'IA agentique)</tspan>
+        </text>
+        <text x="18" y="120" class="risk">⚠️ Risque : erreurs</text>
+        <text x="18" y="138" class="risk">ou hallucinations</text>
+      </g>
+
+      <!-- Connectors (rectangle loop) -->
+      <!-- Top-left -> Top-right -->
+      <path class="connector" d="M 480 140 H 620" /> <!-- horizontal gap between boxes -->
+      <!-- Top-right -> Bottom-right -->
+      <path class="connector" d="M 840 220 V 420" />
+      <!-- Bottom-right -> Bottom-left -->
+      <path class="connector" d="M 620 500 H 480" />
+      
+      <!-- Diagonals -->
+      <!-- Top-left -> Bottom-right (diagonal) -->
+      <path class="connector thin" d="M 260 420 L 760 220" />
+
+
+      <!-- Optional labels on connectors (small, muted) -->
+      <text x="560" y="90" class="muted" text-anchor="middle">Flux d'entraînement</text>
+      <text x="560" y="610" class="muted" text-anchor="middle">Boucle de réinjection</text>
+
+    </svg>
+  </div>
+
+<p>L’IA agentique illustre la transition entre l’apprentissage initial, les inférences et la ré-injection des données.
+La qualité des intrants détermine directement la pertinence cognitive des sorties.
+La valeur perçue par l’utilisateur du système fondé sur un modèle réside dans sa capacité à répondre à ses prompts de manière probabiliste ou stochastique, en produisant la réponse la plus proche de l’intention exprimée.</p>
+
+<p>Mais la qualité de cette réponse, bien qu’influencée par la précision du prompt, dépend surtout, non pas uniquement du corpus d’entraînement, mais des “poids” du modèle.
+Ces poids sont des paramètres numériques qui pondèrent l’importance des connexions neuronales et guident les inférences (les sorties générées).</p>
+
+<p>Initialement calibrés par le responsable de traitement ou l’opérateur du modèle, selon des critères de gouvernance (fidélité, éthique, pertinence), ces poids évoluent ensuite par apprentissage, en interaction biface avec chaque utilisateur : préférences, historique de prompts, signaux implicites de feedback, etc.</p>
+
+<p>C’est ici qu’apparaît un « piège » souvent sous-estimé :
+Si le modèle reste trop généraliste et que l’utilisateur n’investit ni recherche ni raisonnement critique, les inférences s’appauvrissent ; les poids se recalibrent sur des corrélations superficielles, renforçant des biais de paresse cognitive.</p>
+
+<p>Cet appauvrissement des données d’apprentissage, notamment après réintégration des données d’inférence, constitue un risque majeur dans l’usage de l’IA agentique.</p>
+
+<p>Or L’IA agentique ne se contente pas de générer : 
+elle produit un contenu augmenté ;une sortie enrichie par des actions autonomes (requêtes, appels d’API, planification) et adaptée au contexte ; qui déclenche, oriente et enchaîne des opérations (recommandations, mises à jour, exécutions) dans la poursuite autonome d’un objectif.</p>
+
+<p>Mais cette poursuite autonome d’un objectif introduit une zone d’ombre nouvelle :
+l’agent ne décide plus seulement à partir de règles internes, mais au regard des poids de son modèle et de la représentation qu’il se construit de l’utilisateur ,à travers ses intrants, ses historiques, ses échanges, voire l’accès à son environnement numérique complet.</p>
+
+<p>Cette imbrication entre « cognition artificielle » et « intimité informationnelle » rappelle le cœur des débats de la directive ePrivacy, qui cherchait précisément à limiter l’accès au contenu et aux métadonnées des communications électroniques.</p>
+
+<p>Or, dans un système agentique, cette frontière s’efface : 
+pour être efficient, le modèle doit agréger ces données ,y compris contextuelles et comportementales, afin d’adapter sa décision.</p>
+
+<p>D’où la question centrale : 
+Faudra-t-il, pour encadrer ces agents, prévoir des garde-fous techniques ou juridiques comme des “oracles d’arbitrage”, permettant à l’utilisateur de reprendre la main sur la boucle décisionnelle ?</p>
+
+
+<h2> Conclusion provisoire :L’IA agentique bouscule la grille de risques de l’AI Act</h2>
+
+<p>Nous sommes, avec l’IA agentique, face à un défi qui dépasse la technique : un tournant qui interroge la définition même de l’humanité.</p>
+
+<p>Depuis toujours, l’homme s’est distingué par deux facultés indissociables ;penser par lui-même et sourire.</p>
+
+<p>Penser, c’est exercer sa liberté intérieure ; sourire, c’est en manifester la conscience.</p>
+
+<p>Ces 2 expressions de l’esprit humain reposent sur un même fondement : 
+la capacité à garder pour soi l’espace intime de la pensée, à demeurer maître de ce qui l’anime et de ce qu’il crée.</p>
+
+<p>Or, l’IA agentique ,en apprenant de nos interactions, en ajustant ses décisions selon les poids de son modèle et l’idée qu’elle se forge de notre profil cognitif fragilise cette frontière invisible entre l’humain et la machine.</p>
+
+<p>Le nouveau risque ne réside plus seulement dans la transparence de la gouvernance du modèle, mais dans la nécessité d’une prévention de la loyauté.</p>
+
+<p>L’enjeu devient celui de garantir à l’Humain le droit fondamental de rester seul avec le secret de sa pensée et de sa création.</p>
+
+<p>La vie privée cognitive apparaît ainsi comme une nouvelle frontière des libertés fondamentales et la loyauté ; concept jusqu’ici éthique ;doit désormais se muer en devoir de non-ingérence intellectuelle.</p>
+
+<p>À partir de là, la question n’est plus seulement celle du devoir de loyauté du système envers l’humain, mais celle d’une loyauté partagée entre le modèle et son utilisateur.</p>
+
+<p>Car si l’IA agentique agit selon les poids qu’elle ajuste à partir de nos propres interactions, alors la gouvernance du risque ne peut plus être seulement externe : 
+elle doit se déplacer vers l’intérieur même des usages, au cœur du dialogue homme-machine.</p>
+
+<p>Mais la charge de la preuve de la garantie ou de la prévenance de ces risques se déplace désormais aussi vers “l’utilisateur”, au sens large du terme :
+il lui revient d’interagir de manière critique et responsable avec des systèmes qui apprennent de ses biais.</p>
+
+<p>Cette responsabilité partagée fait resurgir sous un jour inédit les conséquences de l’usage de l’IA shadow par les collaborateurs des entreprises et institutions par des outils non déclarés, prompts parallèles ou usages non documentés.</p>
+
+<p>Cette évolution impose une refonte des chartes internes d’usage de l’IA et, plus largement, une gouvernance métier renforcée au sein des organisations.</p>
+
+<p>Dans les secteurs réglementés, au premier rang desquels notamment les services financiers et bancaires, une inférence appauvrie peut se traduire par des décisions automatisées biaisées, aux effets potentiellement graves sur les droits des personnes, ou susceptibles de les affecter de manière significative, selon la logique posée par l’article 22, § 1, du RGPD sur les décisions individuelles automatisées.</p>
+
+<p>Cette évolution, du paradigme de la régulation par le risque (AI Act) à celui de l’IA agentique, nous entraîne vers une économie de l’entraînement du modèle et du réglage des poids ;ces paramètres numériques appris par le modèle ;où la qualité des corpus et la traçabilité des paramètres orientent directement la fiabilité des décisions.</p>
+
+<p>C’est une orientation qui trouve un écho mondial dans la Déclaration des Nations Unies sur une intelligence artificielle durable et inclusive, adoptée à Paris en février 2025.</p>
+
+<p>Cette charte multipartite, signée par plus de soixante pays et organisations ,dont l’Union européenne, aligne explicitement l’IA sur les Objectifs de Développement Durable (ODD) et sur les droits humains fondamentaux.</p>
+
+<p>Elle dépasse la seule logique de prévention des risques pour promouvoir une intelligence artificielle de progrès, inclusive et tournée vers le bien commun :
+réduction des inégalités,
+croissance durable et responsable,
+gouvernance orientée vers la transparence et la participation.</p>
+
+<p>En promouvant la création de biens publics numériques open-source, des audits transparents et le renforcement des capacités humaines, la Déclaration  des Nations Unies trace aussi un horizon normatif :
+Faire de la capacité pour les utilisateurs de reprendre la main et d’exercer un contrôle effectif sur les LLM, y compris sur la gestion de leurs conséquences, un standard universel de protection des droits humains à l’ère de l’IA.</p>
+
+<p>Elle dessine ainsi un cadre où la gouvernance des données d’entraînement et des poids devient un véritable levier d’innovation éthique.</p>
+
+<p>C’est sans doute là que se jouera la prochaine étape de l’évolution de la régulation des usages de l’intelligence artificielle :
+Préserver la richesse cognitive et culturelle des inférences agentiques, non plus comme un simple enjeu de conformité, mais comme un enjeu loyal de civilisation partagée.</p>
+
+<p><em>Véronique Rondeau – Abouly<br>
+  Avocate en droit du numérique des données et de l’intelligence artificielle</em></p>
+  </div>
+  </main>
+<!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script src="inject-layout.js"></script>
+</body>
+</html>
+
