@@ -19,115 +19,7 @@
   text-align: center;        /* Centré, pour un effet introductif */
   font-family: 'Georgia', serif; /* Police élégante et lisible */
 }
-     
-  .diagramme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    max-width:700px
-  }
-
-  .bloc-modele {
-    border: 2px solid black;
-    padding: 20px 40px;
-    max-width: 450px;
-    font-weight: bold;
-  }
-
-  .bloc-modele small {
-    display: block;
-    font-weight: normal;
-    margin-top: 8px;
-  }
-
-  .lignes {
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-    position: relative;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  /* Ligne verticale principale sous le bloc du haut */
-  .lignes::before {
-    content: '';
-    position: absolute;
-    top: -55px; /* descend un peu plus bas */
-    left: 50%;
-    width: 2px;
-    height: 35px; /* rallongée pour toucher la ligne horizontale */
-    background-color: black;
-    transform: translateX(-50%);
-  }
-
-  /* Ligne horizontale reliant les trois lignes verticales */
-  .lignes::after {
-    content: '';
-    position: absolute;
-    top: -20px; /* point d’intersection avec la verticale */
-    left: 50%;
-    width: 710px;
-    height: 2px;
-    background-color: black;
-    transform: translateX(-50%);
-  }
-
-  .ligne {
-    position: relative;
-    padding-top: 10px;
-  }
-
-  /* Lignes verticales descendant depuis la ligne horizontale */
-  .ligne::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    width: 2px;
-    height: 22px;
-    background-color: black;
-    transform: translateX(-50%);
-  }
-
-  /* Flèche collée au bas de la ligne, juste au-dessus de la case */
-  .ligne::after {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 8px solid black; /* pointe vers le bas */
-  }
-
-  .bloc-appli {
-    border: 2px solid #007bff;
-    padding: 10px 20px;
-    border-radius: 4px;
-    min-width: 160px;
-    background: white;
-  }
-
- .texte-bas {
-  margin: 20px auto 0; /* centré horizontalement */
-  font-size: 14px;
-  max-width: 700px;     /* même largeur que .prelude-text */
-  line-height: 1.6;
-  text-align: center;   /* optionnel */
-}
-
-  @media (max-width:520px){
-    .lignes { gap: 20px; }
-    .lignes::after { width: 200px; }
-    .bloc-appli { min-width: 260px; }
-  }
-
-
+  
  .diagram-card {
     font-size: 14px;
     fill: #fffbe6;
@@ -568,6 +460,7 @@ Préserver la richesse cognitive et culturelle des inférences agentiques, non p
   <script src="inject-layout.js"></script>
 </body>
 </html>
+
 
 
 
